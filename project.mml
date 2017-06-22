@@ -2607,8 +2607,29 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "world",
-      "status": "off"
+      "name": "world"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -140.99778,
+        -54.89681,
+        141.03385176001382,
+        70.16419
+      ],
+      "id": "necountries",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/ne_110m_admin_0_boundary_lines_land.shp",
+        "id": "necountries",
+        "project": "tilemillstyle2d",
+        "srs": "+init=epsg:4326"
+      },
+      "layer": null,
+      "srs-name": "custom",
+      "srs": "+init=epsg:4326",
+      "advanced": {},
+      "name": "necountries"
     }
   ],
   "scale": 1,
