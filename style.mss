@@ -10,3 +10,9 @@ Map {
   }
   polygon-fill: #fff;
 }
+#roads-text-name {
+  line-color: #ffFF00
+}
+#text-poly {
+  line-color: #ff00FF
+}
