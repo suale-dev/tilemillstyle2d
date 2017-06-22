@@ -16,3 +16,26 @@ Map {
 #text-poly {
   line-color: #ff00FF
 }
+
+#world {
+polygon-fill: rgb(242,239,233);
+}
+#coast-poly{
+  polygon-fill: rgb(242,239,233);
+}
+#builtup
+{
+ polygon-fill:rgb(221,221,221);
+}
+#nepopulated{
+ text-face-name: book-fonts;
+ text-name:[NAME];
+ text-fill:rgb(128,128,128); 
+ text-size:8;
+ text-halo-fill:rgba(255,255,255,0.8);
+ text-halo-radius:2;
+}
+
+#landcover {
+polygon-fill:rgb(181,208,208);
+}

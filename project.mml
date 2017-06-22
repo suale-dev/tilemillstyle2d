@@ -20,16 +20,6 @@
   ],
   "Layer": [
     {
-      "id": "countries",
-      "name": "countries",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "geometry": "polygon",
-      "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
-        "type": "shape"
-      }
-    },
-    {
       "geometry": "unknown",
       "extent": [
         -179.99999692067183,
@@ -2087,7 +2077,10 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "citywalls",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "citywalls",
       "class": "",
@@ -2179,6 +2172,443 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "piers"
+    },
+    {
+      "geometry": "unknown",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,man_made from planet_osm_polygon where man_made in ('pier','breakwater','groyne')) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm"
+      },
+      "id": "piers-area",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "piers-area"
+    },
+    {
+      "geometry": "unknown",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way from planet_osm_polygon where leisure ='marina') as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm"
+      },
+      "id": "marinas-area",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "marinas-area"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        97.27967728645812,
+        8.179066498869185,
+        110.33724298464071,
+        25.54920919667936
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,name from planet_osm_line where waterway='dam') as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm",
+        "id": "dam",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "dam",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "dam"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        97.27967728645812,
+        8.179066498869185,
+        110.33724298464071,
+        25.54920919667936
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,waterway,disused,lock,name,      case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel      from planet_osm_line      where waterway in ('weir','river','canal','derelict_canal','stream','drain','ditch','wadi')        and (bridge is null or bridge not in ('yes','true','1','aqueduct'))      order by z_order  ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm"
+      },
+      "id": "water_lines",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water_lines"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        97.27967728645812,
+        8.179066498869185,
+        110.33724298464071,
+        25.54920919667936
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,waterway      from planet_osm_line      where waterway='river'  ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm",
+        "id": "water-lines-low-zoom",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "water-lines-low-zoom",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water-lines-low-zoom"
+    },
+    {
+      "geometry": "unknown",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,name,way_area      from planet_osm_polygon      where \"natural\"='glacier' and building is null      order by way_area desc    ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm"
+      },
+      "id": "glaciers-text",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "glaciers-text"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,\"natural\"      from planet_osm_polygon      where \"natural\" in ('marsh','wetland') and building is null      order by z_order,way_area desc  ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm"
+      },
+      "id": "water-areas-overlay",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water-areas-overlay"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,\"natural\",waterway,landuse,name      from planet_osm_polygon      where (waterway in ('dock','mill_pond','riverbank','canal')         or landuse in ('reservoir','water','basin')         or \"natural\" in ('lake','water','land','glacier','mud','bay'))         and building is null      order by z_order,way_area desc  ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm",
+        "id": "water_areas",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "water_areas",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water_areas"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        97.27967728645812,
+        8.179066498869185,
+        110.33724298464071,
+        25.54920919667936
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,waterway      from planet_osm_line      where waterway in ('stream','drain','ditch')        and (tunnel is null or tunnel != 'yes')    ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm"
+      },
+      "id": "water-lines-casing",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water-lines-casing"
+    },
+    {
+      "geometry": "unknown",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,leisure,       case when leisure='pitch' then 2            when leisure='track' then 1            else 0 end as prio       from planet_osm_polygon       where leisure in ('sports_centre','stadium','pitch','track')       order by z_order,prio,way_area desc   ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm"
+      },
+      "id": "sports_grounds",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "sports_grounds"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        97.27967728645812,
+        8.179066498869185,
+        110.33724298464071,
+        25.54920919667936
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way       from planet_osm_line       where man_made='cutline'  ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm",
+        "id": "landcover_line",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "landcover_line",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landcover_line"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway,       case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion       from planet_osm_polygon       where landuse is not null          or leisure is not null          or aeroway in ('apron','aerodrome')          or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard','prison')          or military in ('barracks','danger_area')          or \"natural\" in ('field','beach','desert','heath','mud','grassland','wood','sand','scrub')          or power in ('station','sub_station','generator')          or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo')          or highway in ('services','rest_area')       order by z_order,way_area desc  ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm",
+        "id": "landcover",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "landcover",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landcover"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -85.051,
+        179.38330358817018,
+        82.48332318035943
+      ],
+      "id": "nepopulated",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/ne_10m_populated_places.shp",
+        "id": "nepopulated",
+        "project": "tilemillstyle2d",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "nepopulated"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.12960815429688,
+        -53.16742324828472,
+        178.4432525634766,
+        70.99272918701169
+      ],
+      "id": "builtup",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/builtup_area.shp",
+        "id": "builtup",
+        "project": "tilemillstyle2d",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "builtup"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.051,
+        179.99999692067183,
+        83.66602
+      ],
+      "id": "coast-poly",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/processed_p.shp",
+        "id": "coast-poly",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "layer": null,
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "coast-poly"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.051,
+        179.99999692067183,
+        83.66602
+      ],
+      "id": "world",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/shoreline_300.shp"
+      },
+      "layer": null,
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "world",
+      "status": "off"
     }
   ],
   "scale": 1,
