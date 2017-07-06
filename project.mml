@@ -15,12 +15,7 @@
   "minzoom": 0,
   "maxzoom": 22,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-  "Stylesheet": [
-    "world.mss",
-    "style.mss",
-    "main.mss",
-    "landcover.mss"
-  ],
+  "Stylesheet": [],
   "Layer": [
     {
       "geometry": "polygon",
@@ -89,6 +84,28 @@
       "name": "builtup"
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        -140.99778,
+        -54.89681,
+        141.03385176001382,
+        70.16419
+      ],
+      "id": "necountries",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/ne_110m_admin_0_boundary_lines_land.shp",
+        "id": "necountries",
+        "project": "tilemillstyle2d",
+        "srs": "+init=epsg:4326"
+      },
+      "layer": null,
+      "srs-name": "custom",
+      "srs": "+init=epsg:4326",
+      "advanced": {},
+      "name": "necountries"
+    },
+    {
       "geometry": "point",
       "extent": [
         -179.58997888396897,
@@ -113,18 +130,46 @@
     {
       "geometry": "polygon",
       "extent": [
-        102.11519478578562,
-        8.179066498869185,
-        109.67098458473359,
-        24.04244899684977
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion from planet_osm_polygon where landuse is not null or leisure is not null or aeroway in ('apron','aerodrome') or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard','prison') or military in ('barracks','danger_area') or \"natural\" in ('field','beach','desert','heath','mud','grassland','wood','sand','scrub') or power in ('station','sub_station','generator') or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo') or highway in ('services','rest_area') order by z_order,way_area desc) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456"
+      },
+      "id": "landcover",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landcover"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
       ],
       "Datasource": {
         "type": "postgis",
         "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion from planet_osm_polygon where landuse is not null or leisure is not null or aeroway in ('apron','aerodrome') or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard','prison') or military in ('barracks','danger_area') or \"natural\" in ('field','beach','desert','heath','mud','grassland','wood','sand','scrub') or power in ('station','sub_station','generator') or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo') or highway in ('services','rest_area') order by z_order,way_area desc ) as _subquery",
         "key_field": "",
         "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "host": "localhost",
         "port": "5432",
         "user": "mapapi",
@@ -134,12 +179,124 @@
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "id": "landcover",
+      "id": "landcover-leisure",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover"
+      "name": "landcover-leisure"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion from planet_osm_polygon where landuse is not null or leisure is not null or aeroway in ('apron','aerodrome') or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard','prison') or military in ('barracks','danger_area') or \"natural\" in ('field','beach','desert','heath','mud','grassland','wood','sand','scrub') or power in ('station','sub_station','generator') or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo') or highway in ('services','rest_area') order by z_order,way_area desc ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456"
+      },
+      "id": "landcover-tourism",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landcover-tourism"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion from planet_osm_polygon where landuse is not null or leisure is not null or aeroway in ('apron','aerodrome') or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard','prison') or military in ('barracks','danger_area') or \"natural\" in ('field','beach','desert','heath','mud','grassland','wood','sand','scrub') or power in ('station','sub_station','generator') or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo') or highway in ('services','rest_area') order by z_order,way_area desc) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456"
+      },
+      "id": "landcover-landuse",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landcover-landuse"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion from planet_osm_polygon where landuse is not null or leisure is not null or aeroway in ('apron','aerodrome') or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard','prison') or military in ('barracks','danger_area') or \"natural\" in ('field','beach','desert','heath','mud','grassland','wood','sand','scrub') or power in ('station','sub_station','generator') or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo') or highway in ('services','rest_area') order by z_order,way_area desc ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456"
+      },
+      "id": "landcover-natural",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landcover-natural"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion from planet_osm_polygon where landuse is not null or leisure is not null or aeroway in ('apron','aerodrome') or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard','prison') or military in ('barracks','danger_area') or \"natural\" in ('field','beach','desert','heath','mud','grassland','wood','sand','scrub') or power in ('station','sub_station','generator') or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo') or highway in ('services','rest_area') order by z_order,way_area desc) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456"
+      },
+      "id": "landcover-amenity",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landcover-amenity"
     },
     {
       "geometry": "linestring",
@@ -219,7 +376,10 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "water-lines-casing",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "water-lines-casing",
       "class": "",
@@ -365,7 +525,10 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "water_lines",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "water_lines",
       "class": "",
@@ -520,28 +683,6 @@
     {
       "geometry": "linestring",
       "extent": [
-        -140.99778,
-        -54.89681,
-        141.03385176001382,
-        70.16419
-      ],
-      "id": "necountries",
-      "class": "",
-      "Datasource": {
-        "file": "world_boundaries/ne_110m_admin_0_boundary_lines_land.shp",
-        "id": "necountries",
-        "project": "tilemillstyle2d",
-        "srs": "+init=epsg:4326"
-      },
-      "layer": null,
-      "srs-name": "custom",
-      "srs": "+init=epsg:4326",
-      "advanced": {},
-      "name": "necountries"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
         97.27967728645812,
         8.179066498869185,
         110.33724298464071,
@@ -558,7 +699,10 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "tunnels",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "tunnels",
       "class": "",
@@ -624,7 +768,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "castle_walls_line"
+      "name": "castle_walls_line",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -683,34 +828,6 @@
       "name": "landuse_overlay"
     },
     {
-      "geometry": "linestring",
-      "extent": [
-        97.27967728645812,
-        8.179066498869185,
-        110.33724298464071,
-        25.54920919667936
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select way,name from planet_osm_line where waterway='canal' and bridge in ('yes','true','1','aqueduct','swing','lift') order by z_order ) as _subquery",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
-        "host": "localhost",
-        "port": "5432",
-        "user": "mapapi",
-        "password": "123456",
-        "dbname": "osm"
-      },
-      "id": "waterway-bridges",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "waterway-bridges"
-    },
-    {
       "geometry": "point",
       "extent": [
         102.12105268578456,
@@ -764,7 +881,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "footbikecycle-tunnels"
+      "name": "footbikecycle-tunnels",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -792,7 +910,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "tracks-tunnels"
+      "name": "tracks-tunnels",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -816,14 +935,14 @@
         "dbname": "osm"
       },
       "id": "line-features",
-      "class": "",
+      "class": "cliffs barriers",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "line-features"
     },
     {
-      "geometry": "unknown",
+      "geometry": "polygon",
       "extent": [
         102.11519478578562,
         8.179066498869185,
@@ -844,7 +963,7 @@
         "dbname": "osm"
       },
       "id": "polygon-barriers",
-      "class": "",
+      "class": "barriers_area",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
@@ -1034,6 +1153,35 @@
       ],
       "Datasource": {
         "type": "postgis",
+        "table": "(select way,name from planet_osm_line where waterway='canal' and bridge in ('yes','true','1','aqueduct','swing','lift') order by z_order ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm"
+      },
+      "id": "waterway-bridges",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "waterway-bridges",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        97.27967728645812,
+        8.179066498869185,
+        110.33724298464071,
+        25.54920919667936
+      ],
+      "Datasource": {
+        "type": "postgis",
         "table": "(select way,highway,horse,bicycle,foot,construction,aeroway, case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel, case when bridge in ('yes','true','1','viaduct','swing','lift') then 'yes'::text else bridge end as bridge, case when railway in ('spur','siding') or (railway='rail' and service in ('spur','siding','yard')) then 'spur-siding-yard'::text else railway end as railway, case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text else service end as service from planet_osm_line where highway is not null or aeroway in ('runway','taxiway') or railway in ('light_rail','narrow_gauge','funicular','rail','subway','tram','spur','siding','platform','disused','abandoned','construction','miniature','turntable') order by z_order) as _subquery",
         "key_field": "",
         "geometry_field": "",
@@ -1050,7 +1198,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill"
+      "name": "minor-roads-fill",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -1078,7 +1227,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "turning_circle-fill"
+      "name": "turning_circle-fill",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1106,7 +1256,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "ferry-routes"
+      "name": "ferry-routes",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1134,7 +1285,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "aerialways"
+      "name": "aerialways",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1165,7 +1317,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads"
+      "name": "roads",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1193,7 +1346,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "direction_pre_bridges"
+      "name": "direction_pre_bridges",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1221,7 +1375,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "access-pre_bridges"
+      "name": "access-pre_bridges",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1249,7 +1404,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer0"
+      "name": "bridges_layer0",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1277,7 +1433,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access0"
+      "name": "bridges_access0",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1305,7 +1462,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions0"
+      "name": "bridges_directions0",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1333,7 +1491,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer1"
+      "name": "bridges_layer1",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1361,7 +1520,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access1"
+      "name": "bridges_access1",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1389,7 +1549,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions1"
+      "name": "bridges_directions1",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1417,7 +1578,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer2"
+      "name": "bridges_layer2",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1445,7 +1607,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access2"
+      "name": "bridges_access2",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1473,7 +1636,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions2"
+      "name": "bridges_directions2",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1501,7 +1665,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer3"
+      "name": "bridges_layer3",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1529,7 +1694,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access3"
+      "name": "bridges_access3",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1557,7 +1723,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions3"
+      "name": "bridges_directions3",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1585,7 +1752,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer4"
+      "name": "bridges_layer4",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1613,7 +1781,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access4"
+      "name": "bridges_access4",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1641,7 +1810,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions4"
+      "name": "bridges_directions4",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1669,7 +1839,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer5"
+      "name": "bridges_layer5",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1697,7 +1868,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access5"
+      "name": "bridges_access5",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1725,7 +1897,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions5"
+      "name": "bridges_directions5",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1753,7 +1926,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "trams"
+      "name": "trams",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1781,7 +1955,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "guideways"
+      "name": "guideways",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1809,7 +1984,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "admin-01234"
+      "name": "admin-01234",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1837,7 +2013,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "admin-5678"
+      "name": "admin-5678",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1865,7 +2042,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "admin-other"
+      "name": "admin-other",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -1893,7 +2071,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "placenames-large"
+      "name": "placenames-large",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -1921,7 +2100,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "placenames-capital"
+      "name": "placenames-capital",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -1949,7 +2129,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "placenames-medium"
+      "name": "placenames-medium",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -1977,7 +2158,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "placenames-small"
+      "name": "placenames-small",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2005,7 +2187,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations"
+      "name": "amenity-stations",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2033,7 +2216,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations-poly"
+      "name": "amenity-stations-poly",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2061,7 +2245,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols"
+      "name": "amenity-symbols",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2089,7 +2274,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly"
+      "name": "amenity-symbols-poly",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2117,7 +2303,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points"
+      "name": "amenity-points",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2145,7 +2332,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly"
+      "name": "amenity-points-poly",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2173,7 +2361,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_line"
+      "name": "power_line",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2204,7 +2393,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_minorline"
+      "name": "power_minorline",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2235,7 +2425,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_towers"
+      "name": "power_towers",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2266,7 +2457,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_poles"
+      "name": "power_poles",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2297,7 +2489,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-ref-low-zoom"
+      "name": "roads-text-ref-low-zoom",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2325,7 +2518,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-junctions"
+      "name": "highway-junctions",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2356,7 +2550,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-ref"
+      "name": "roads-text-ref",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2387,7 +2582,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-name"
+      "name": "roads-text-name",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2418,7 +2614,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text"
+      "name": "text",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2449,7 +2646,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly"
+      "name": "text-poly",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2480,7 +2678,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "area-text"
+      "name": "area-text",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2511,7 +2710,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "interpolation_lines"
+      "name": "interpolation_lines",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2542,7 +2742,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "housenumbers"
+      "name": "housenumbers",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2573,7 +2774,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "housenames"
+      "name": "housenames",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2604,7 +2806,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "misc_boundaries"
+      "name": "misc_boundaries",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2635,7 +2838,8 @@
       "srs-name": "custom",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over",
       "advanced": {},
-      "name": "theme_park"
+      "name": "theme_park",
+      "status": "off"
     }
   ],
   "scale": 1,
