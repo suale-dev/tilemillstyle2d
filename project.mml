@@ -15,7 +15,10 @@
   "minzoom": 0,
   "maxzoom": 22,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-  "Stylesheet": [],
+  "Stylesheet": [
+    "world.mss",
+    "main.mss"
+  ],
   "Layer": [
     {
       "geometry": "polygon",
@@ -1134,7 +1137,10 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "tracks-notunnel-nobridge",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "tracks-notunnel-nobridge",
       "class": "",
@@ -1146,60 +1152,89 @@
     {
       "geometry": "linestring",
       "extent": [
-        97.27967728645812,
-        8.179066498869185,
-        110.33724298464071,
-        25.54920919667936
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select way,name from planet_osm_line where waterway='canal' and bridge in ('yes','true','1','aqueduct','swing','lift') order by z_order ) as _subquery",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
-        "host": "localhost",
-        "port": "5432",
-        "user": "mapapi",
-        "password": "123456",
-        "dbname": "osm"
-      },
-      "id": "waterway-bridges",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "waterway-bridges",
-      "status": "off"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        97.27967728645812,
-        8.179066498869185,
-        110.33724298464071,
-        25.54920919667936
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
       ],
       "Datasource": {
         "type": "postgis",
         "table": "(select way,highway,horse,bicycle,foot,construction,aeroway, case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel, case when bridge in ('yes','true','1','viaduct','swing','lift') then 'yes'::text else bridge end as bridge, case when railway in ('spur','siding') or (railway='rail' and service in ('spur','siding','yard')) then 'spur-siding-yard'::text else railway end as railway, case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text else service end as service from planet_osm_line where highway is not null or aeroway in ('runway','taxiway') or railway in ('light_rail','narrow_gauge','funicular','rail','subway','tram','spur','siding','platform','disused','abandoned','construction','miniature','turntable') order by z_order) as _subquery",
         "key_field": "",
         "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "host": "localhost",
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "minor-roads-fill",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "minor-roads-fill",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill",
-      "status": "off"
+      "name": "minor-roads-fill"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,highway,horse,bicycle,foot,construction,aeroway, case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel, case when bridge in ('yes','true','1','viaduct','swing','lift') then 'yes'::text else bridge end as bridge, case when railway in ('spur','siding') or (railway='rail' and service in ('spur','siding','yard')) then 'spur-siding-yard'::text else railway end as railway, case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text else service end as service from planet_osm_line where highway is not null or aeroway in ('runway','taxiway') or railway in ('light_rail','narrow_gauge','funicular','rail','subway','tram','spur','siding','platform','disused','abandoned','construction','miniature','turntable') order by z_order) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "custom",
+        "extent": "20037508,-19929239,20037508,19929239",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456"
+      },
+      "id": "minor-roads-fill-highway",
+      "class": "",
+      "srs-name": "custom",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "minor-roads-fill-highway"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,highway,horse,bicycle,foot,construction,aeroway, case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel, case when bridge in ('yes','true','1','viaduct','swing','lift') then 'yes'::text else bridge end as bridge, case when railway in ('spur','siding') or (railway='rail' and service in ('spur','siding','yard')) then 'spur-siding-yard'::text else railway end as railway, case when service in ('parking_aisle','drive-through','driveway') then 'INT-minor'::text else service end as service from planet_osm_line where highway is not null or aeroway in ('runway','taxiway') or railway in ('light_rail','narrow_gauge','funicular','rail','subway','tram','spur','siding','platform','disused','abandoned','construction','miniature','turntable') order by z_order) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456"
+      },
+      "id": "minor-roads-fill-railway",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "minor-roads-fill-railway"
     },
     {
       "geometry": "point",
@@ -1227,8 +1262,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "turning_circle-fill",
-      "status": "off"
+      "name": "turning_circle-fill"
     },
     {
       "geometry": "linestring",
@@ -1256,8 +1290,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "ferry-routes",
-      "status": "off"
+      "name": "ferry-routes"
     },
     {
       "geometry": "linestring",
@@ -1285,24 +1318,23 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "aerialways",
-      "status": "off"
+      "name": "aerialways"
     },
     {
       "geometry": "linestring",
       "extent": [
-        101.7984731858299,
-        8.179066498869185,
-        109.67098458473359,
-        23.505452296911606
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
       ],
       "Datasource": {
         "type": "postgis",
         "table": "(select way,highway, case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel, case when railway='preserved' and service in ('spur','siding','yard') then 'INT-preserved-ssy'::text else railway end as railway from planet_osm_roads where highway is not null or (railway is not null and railway!='preserved' and (service is null or service not in ('spur','siding','yard'))) or railway='preserved' order by z_order ) as _subquery",
         "key_field": "",
         "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "11332154.1985793,913597.696143625,12208518.1587695,2693260.07288066",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "host": "localhost",
         "port": "5432",
         "user": "mapapi",
@@ -1312,13 +1344,40 @@
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "id": "roads",
+      "id": "roads-highway",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads",
-      "status": "off"
+      "name": "roads-highway"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427098,
+        179.99999692067183,
+        84.96651228427099
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,highway, case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel, case when railway='preserved' and service in ('spur','siding','yard') then 'INT-preserved-ssy'::text else railway end as railway from planet_osm_roads where highway is not null or (railway is not null and railway!='preserved' and (service is null or service not in ('spur','siding','yard'))) or railway='preserved' order by z_order) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "custom",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456"
+      },
+      "id": "roads-railway",
+      "class": "",
+      "srs-name": "custom",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads-railway"
     },
     {
       "geometry": "linestring",
@@ -1330,7 +1389,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select way, case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway from planet_osm_line where oneway is not null and (highway is not null or railway is not null or waterway is not null) and (bridge is null or bridge not in ('yes','true','1','viaduct','swing','lift')) ) as _subquery",
+        "table": "(select way,name from planet_osm_line where waterway='canal' and bridge in ('yes','true','1','aqueduct','swing','lift') order by z_order ) as _subquery",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -1341,13 +1400,12 @@
         "password": "123456",
         "dbname": "osm"
       },
-      "id": "direction_pre_bridges",
+      "id": "waterway-bridges",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "direction_pre_bridges",
-      "status": "off"
+      "name": "waterway-bridges"
     },
     {
       "geometry": "linestring",
@@ -1371,12 +1429,39 @@
         "dbname": "osm"
       },
       "id": "access-pre_bridges",
-      "class": "",
+      "class": "access",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "access-pre_bridges",
-      "status": "off"
+      "name": "access-pre_bridges"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        97.27967728645812,
+        8.179066498869185,
+        110.33724298464071,
+        25.54920919667936
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way, case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway from planet_osm_line where oneway is not null and (highway is not null or railway is not null or waterway is not null) and (bridge is null or bridge not in ('yes','true','1','viaduct','swing','lift')) ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "10829124.1400625,913597.696143625,12282685.7045839,2943354.85074564",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm"
+      },
+      "id": "direction_pre_bridges",
+      "class": "directions",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "direction_pre_bridges"
     },
     {
       "geometry": "linestring",
@@ -1400,12 +1485,11 @@
         "dbname": "osm"
       },
       "id": "bridges_layer0",
-      "class": "",
+      "class": "bridges_casing bridges_casing2 bridges_fill",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer0",
-      "status": "off"
+      "name": "bridges_layer0"
     },
     {
       "geometry": "linestring",
