@@ -84,7 +84,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "builtup"
+      "name": "builtup",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -106,7 +107,8 @@
       "srs-name": "custom",
       "srs": "+init=epsg:4326",
       "advanced": {},
-      "name": "necountries"
+      "name": "necountries",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -128,7 +130,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "nepopulated"
+      "name": "nepopulated",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -156,7 +159,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover"
+      "name": "landcover",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -187,7 +191,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-leisure"
+      "name": "landcover-leisure",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -215,7 +220,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-tourism"
+      "name": "landcover-tourism",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -243,7 +249,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-landuse"
+      "name": "landcover-landuse",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -271,7 +278,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-natural"
+      "name": "landcover-natural",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -299,7 +307,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-amenity"
+      "name": "landcover-amenity",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -330,7 +339,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover_line"
+      "name": "landcover_line",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -358,7 +368,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "sports_grounds"
+      "name": "sports_grounds",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -441,14 +452,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "water-areas-overlay",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "water-areas-overlay",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water-areas-overlay"
+      "name": "water-areas-overlay",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -469,14 +484,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "glaciers-text",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "glaciers-text",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "glaciers-text"
+      "name": "glaciers-text",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -569,10 +588,11 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "dam"
+      "name": "dam",
+      "status": "off"
     },
     {
-      "geometry": "unknown",
+      "geometry": "polygon",
       "extent": [
         102.11519478578562,
         8.179066498869185,
@@ -590,14 +610,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "marinas-area",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "marinas-area",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "marinas-area"
+      "name": "marinas-area",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -618,14 +642,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "piers-area",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "piers-area",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "piers-area"
+      "name": "piers-area",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -646,14 +674,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "piers",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "piers",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "piers"
+      "name": "piers",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -674,14 +706,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "locks",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "locks",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "locks"
+      "name": "locks",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -712,7 +748,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "tunnels"
+      "name": "tunnels",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -743,7 +780,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "citywalls"
+      "name": "citywalls",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -793,14 +831,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "castle_walls",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "castle_walls",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "castle_walls"
+      "name": "castle_walls",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -828,7 +870,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landuse_overlay"
+      "name": "landuse_overlay",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -849,14 +892,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "turning_circle-casing",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "turning_circle-casing",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "turning_circle-casing"
+      "name": "turning_circle-casing",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -877,7 +924,10 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "footbikecycle-tunnels",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "footbikecycle-tunnels",
       "class": "",
@@ -935,14 +985,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "line-features",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "line-features",
       "class": "cliffs barriers",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "line-features"
+      "name": "line-features",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -963,14 +1017,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "polygon-barriers",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "polygon-barriers",
       "class": "barriers_area",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "polygon-barriers"
+      "name": "polygon-barriers",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -998,7 +1056,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-area-casing"
+      "name": "highway-area-casing",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1029,7 +1088,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-casing"
+      "name": "minor-roads-casing",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -1057,7 +1117,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-area-fill"
+      "name": "highway-area-fill",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -1078,14 +1139,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "buildings-lz",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "buildings-lz",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "buildings-lz"
+      "name": "buildings-lz",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -1116,7 +1181,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "buildings"
+      "name": "buildings",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1147,7 +1213,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "tracks-notunnel-nobridge"
+      "name": "tracks-notunnel-nobridge",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1178,7 +1245,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill"
+      "name": "minor-roads-fill",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1199,14 +1267,18 @@
         "host": "localhost",
         "port": "5432",
         "user": "mapapi",
-        "password": "123456"
+        "password": "123456",
+        "id": "minor-roads-fill-highway",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "minor-roads-fill-highway",
       "class": "",
-      "srs-name": "custom",
+      "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill-highway"
+      "name": "minor-roads-fill-highway",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1227,14 +1299,18 @@
         "host": "localhost",
         "port": "5432",
         "user": "mapapi",
-        "password": "123456"
+        "password": "123456",
+        "id": "minor-roads-fill-railway",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "minor-roads-fill-railway",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill-railway"
+      "name": "minor-roads-fill-railway",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -1255,14 +1331,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "turning_circle-fill",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "turning_circle-fill",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "turning_circle-fill"
+      "name": "turning_circle-fill",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1283,14 +1363,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "ferry-routes",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "ferry-routes",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "ferry-routes"
+      "name": "ferry-routes",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1311,14 +1395,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "aerialways",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "aerialways",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "aerialways"
+      "name": "aerialways",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1340,7 +1428,7 @@
         "user": "mapapi",
         "password": "123456",
         "dbname": "osm",
-        "id": "roads",
+        "id": "roads-highway",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
@@ -1349,7 +1437,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-highway"
+      "name": "roads-highway",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1377,7 +1466,8 @@
       "srs-name": "custom",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-railway"
+      "name": "roads-railway",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1398,14 +1488,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "waterway-bridges",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "waterway-bridges",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "waterway-bridges"
+      "name": "waterway-bridges",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1426,14 +1520,18 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "access-pre_bridges",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "access-pre_bridges",
       "class": "access",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "access-pre_bridges"
+      "name": "access-pre_bridges",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1461,7 +1559,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "direction_pre_bridges"
+      "name": "direction_pre_bridges",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1482,7 +1581,10 @@
         "port": "5432",
         "user": "mapapi",
         "password": "123456",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "bridges_layer0",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "bridges_layer0",
       "class": "bridges_casing bridges_casing2 bridges_fill",

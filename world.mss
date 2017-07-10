@@ -1,5 +1,5 @@
 Map {
-  background-color: #b8dee6;
+  background-color: rgb(181,208,208);
 }
 #world{
   [zoom < 10]{
@@ -306,7 +306,7 @@ Map {
     }
   }
 }
-#landcover-line{
+#landcover_line{
   [zoom>=14][zoom<16]{
     line-color: rgb(242,239,233);
     line-width: 3;
@@ -368,24 +368,24 @@ Map {
   [waterway='dock'],[waterway='mill_pond'],[waterway='canal']{
     [zoom>=9]{
       polygon-gamma: 0.75;
-      polygon-fill: rgb(255,0,255);
+      polygon-fill: rgb(181,208,208);
     }
   }
   [landuse='basin'][zoom>=7]{
     polygon-gamma: 0.75;
-    polygon-fill: rgb(255,0,255);
+    polygon-fill: rgb(181,208,208);
   }
   [natural='lake'],[natural='water'],[landuse='reservoir'],[waterway='riverbank'],[landuse='water'],[natural='bay']{
     [zoom>=6]{
       polygon-gamma: 0.75;
-      polygon-fill: rgb(255,0,255);
+      polygon-fill: rgb(181,208,208);
     }
   }
   [natural='mud'][zoom>=13]{
     polygon-pattern-file: url("symbols/mud.png");
   }
   [natural='land'][zoom>=10]{
-    polygon-fill: rgb(242,239,233);
+    polygon-fill: rgb(181,208,208);
   }
 }
 #water-areas-overlay{
@@ -782,7 +782,7 @@ Map {
   }
 }
 #dam{
-  [zoom>=13]{
+  [zoom>=1]{
     line-color: rgb(68,68,68);
     line-width: 2;
     line-join: round;
@@ -846,7 +846,7 @@ Map {
   }
 }
 #locks{
-  [waterway='lock_gate'][zoom=17]{
+  [waterway='lock_gate'][zoom>=17]{
     point-file: url("symbols/lock_gate.png");
   }
 }
@@ -1298,6 +1298,7 @@ Map {
   }
 }
 .barriers_area{
+
   [natural='hedge'],[barrier='hedge']{
     [zoom>=16]{
       polygon-fill: rgb(174,209,160);
@@ -1305,8 +1306,7 @@ Map {
   }
   [barrier!=''][barrier!='hedge']{
     [zoom>=16]{
-      line-color: rgb(68,68,68);
-      line-width: 0.4;
+      polygon-fill: rgb(174,209,160);
     }
   }
 }
@@ -1684,91 +1684,91 @@ Map {
   }
 }
 #tracks-notunnel-nobridge{
-    [zoom=13],[zoom>=14][tracktype!='grade1'][tracktype!='grade2'][tracktype!='grade3'][tracktype!='grade4'][tracktype!='grade5']{
+  [zoom=13],[zoom>=14][tracktype!='grade1'][tracktype!='grade2'][tracktype!='grade3'][tracktype!='grade4'][tracktype!='grade5']{
     ::dash{
+      line-color: rgb(153,102,0);
+      line-width: 1.5;
+      line-join: round;
+      line-cap: round;
+      line-dasharray: 3,4;
+    }
+    ::line{
       line-color: rgb(255,255,255);
       line-width: 3;
       line-opacity: 0.4;
       line-join: round;
-      line-cap: round;
+      line-cap: round;      
     }
-    ::line{
-    line-color: rgb(153,102,0);
-    line-width: 1.5;
-    line-join: round;
-    line-cap: round;
-    line-dasharray: 3,4;
-      }
   }
   [tracktype='grade1'][zoom>=14]{
     ::dash{
-      line-color: rgb(255,255,255);
-      line-width: 3.5;
-      line-opacity: 0.4;
+      line-color: rgb(179,119,0);
+      line-width: 2;
+      line-opacity: 0.7;
     }
-    line-color: rgb(179,119,0);
-    line-width: 2;
-    line-opacity: 0.7;
+    line-color: rgb(255,255,255);
+    line-width: 3.5;
+    line-opacity: 0.4;
   }
   [tracktype='grade2'][zoom>=14]{
     ::dash{     
-      line-color: rgb(255,255,255);
-      line-width: 3;
-      line-opacity: 0.4;
+      line-color: rgb(168,112,0);
+      line-width: 1.5;
+      line-opacity: 0.8;
       line-join: round;
       line-cap: round;
+      line-dasharray: 9, 4;      
     }
-    line-color: rgb(168,112,0);
-    line-width: 1.5;
-    line-opacity: 0.8;
+    line-color: rgb(255,255,255);
+    line-width: 3;
+    line-opacity: 0.4;
     line-join: round;
     line-cap: round;
-    line-dasharray: 9, 4;
   }
   [tracktype='grade3'][zoom>=14]{
-    ::dash{
-      line-color: rgb(255,255,255);
-      line-width: 3;
-      line-opacity: 0.4;
+    ::dash{    
+      line-color: rgb(153,102,0);
+      line-width: 1.5;
+      line-opacity: 0.8;
       line-join: round;
       line-cap: round;
+      line-dasharray: 3, 4;
     }
-    line-color: rgb(153,102,0);
-    line-width: 1.5;
-    line-opacity: 0.8;
+    line-color: rgb(255,255,255);
+    line-width: 3;
+    line-opacity: 0.4;
     line-join: round;
     line-cap: round;
-    line-dasharray: 3, 4;
   }
   [tracktype='grade4'][zoom>=14]{
     ::dash{     
-      line-color: rgb(255,255,255);
-      line-width: 3;
-      line-opacity: 0.4;
+      line-color: rgb(153,102,0);
+      line-width: 2;
+      line-opacity: 0.8;
       line-join: round;
       line-cap: round;
-    }
-    line-color: rgb(153,102,0);
-    line-width: 2;
-    line-opacity: 0.8;
+      line-dasharray: 4,7,1,5;
+    }  
+    line-color: rgb(255,255,255);
+    line-width: 3;
+    line-opacity: 0.4;
     line-join: round;
     line-cap: round;
-    line-dasharray: 4,7,1,5;
   }
   [tracktype='grade5'][zoom>=14]{
     ::dash{          
-      line-color: rgb(255,255,255);
-      line-width: 3;
-      line-opacity: 0.4;
+      line-color: rgb(153,102,0);
+      line-width: 2;
+      line-opacity: 0.8;
       line-join: round;
       line-cap: round;
-    }
-    line-color: rgb(153,102,0);
-    line-width: 2;
-    line-opacity: 0.8;
+      line-dasharray: 1,5;
+    }  
+    line-color: rgb(255,255,255);
+    line-width: 3;
+    line-opacity: 0.4;
     line-join: round;
-    line-cap: round;
-    line-dasharray: 1,5;
+    line-cap: round;    
   }
 }
 #minor-roads-fill{
@@ -2804,14 +2804,14 @@ Map {
 #waterway-bridges{
   [zoom>=14][zoom<17]{
     ::dash{
-      line-color: rgb(181,208,208);
-      line-width: 6;
-      line-join: round;
-      line-cap: round;
+      line-color: rgb(0,0,0);
+      line-width: 7;
+      line-join: round;    
     }
-    line-color: rgb(0,0,0);
-    line-width: 7;
-    line-join: round;    
+    line-color: rgb(181,208,208);
+    line-width: 6;
+    line-join: round;
+    line-cap: round;    
     text-face-name: @book-fonts;
     text-size: 9;
     text-halo-radius: 1;
@@ -2821,14 +2821,14 @@ Map {
   }
   [zoom>=17]{
     ::dash{
-      line-color: rgb(181,208,208);
-      line-width: 10;
+      line-color: rgb(0,0,0);
+      line-width: 11;
       line-join: round;
-      line-cap: round;
     }
-    line-color: rgb(0,0,0);
-    line-width: 11;
+    line-color: rgb(181,208,208);
+    line-width: 10;
     line-join: round;
+    line-cap: round;
     text-face-name: @book-fonts;
     text-size: 9;
     text-halo-radius: 1;
@@ -2837,99 +2837,7 @@ Map {
     text-placement: line;    
   }
 }
-.access{
-  [access='permissive'][highway='unclassified'],[access='permissive'][highway='residential'],[access='permissive'][highway='footway']{
-    [zoom=16]{
-      line-color: rgb(204,255,153);
-      line-width: 6;
-      line-opacity: 0.5;
-      line-join: round;
-      line-cap: round;
-      line-dasharray: 6, 8;
-    }
-  }
-  [access='permissive'][highway='service'][service!='INT-minor']{
-    [zoom=15]{
-      line-color: rgb(204,255,153);
-      line-width: 3;
-      line-opacity: 0.5;
-      line-join: round;
-      line-cap: round;
-      line-dasharray: 6, 8;
-    }
-  }
-  [access='permissive'][highway='unclassified'],[access='permissive'][highway='residential'],[access='permissive'][highway='footway'],[access='permissive'][highway='service']{
-    [zoom>=16]{
-      line-color: rgb(204,255,153);
-      line-width: 6;
-      line-opacity: 0.5;
-      line-join: round;
-      line-cap: round;
-      line-dasharray: 6, 8;
-    }
-  }
-  [access='destination'][highway='unclassified'],[access='destination'][highway='residential']{
-    [zoom=15]{
-      line-color: rgb(194,224,255);
-      line-width: 6;
-      line-opacity: 0.5;
-      line-join: round;
-      line-cap: round;
-      line-dasharray: 6, 8;
-    }
-  }
-  [access='destination'][highway='service'][service!='INT-minor']{
-    [zoom=15]{
-      line-color: rgb(194,224,255);
-      line-width: 3;
-      line-opacity: 0.5;
-      line-join: round;
-      line-cap: round;
-      line-dasharray: 6, 8;    
-    }
-  }
-  [access='destination'][highway='unclassified'],[access='destination'][highway='residential'],[access='destination'][highway='service']{
-    [zoom>=16]{
-      line-color: rgb(194,224,255);
-      line-width: 6;
-      line-opacity: 0.5;
-      line-join: round;
-      line-cap: round;
-      line-dasharray: 6, 8;
-    }
-  }
-  [access='private'][highway!='service'],[access='no'][highway!='service']{
-    [zoom=15]{
-      line-color: rgb(239,169,169);
-      line-width: 6;
-      line-opacity: 0.5;
-      line-join: round;
-      line-cap: round;
-      line-dasharray: 6, 8;     
-    }
-  }
-  [access='private'][highway='service'][service!='INT-minor'],[access='no'][highway='service'][service!='INT-minor']{
-    [zoom=15]{
-      line-color: rgb(239,169,169);
-      line-width: 3;
-      line-opacity: 0.5;
-      line-join: round;
-      line-cap: round;
-      line-dasharray: 6, 8; 
-    }
-  }
-  [access='private'],[access='no']{
-    [zoom>=16]{
-      line-color: rgb(239,169,169);
-      line-width: 6;
-      line-opacity: 0.5;
-      line-join: round;
-      line-cap: round;
-      line-dasharray: 6, 8;  
-    }
-  }
-}
-.access{
+.access{ 
   [access='permissive'][highway='unclassified'],[access='permissive'][highway='residential'],[access='permissive'][highway='footway']{
     [zoom=16]{
       line-color: rgb(204,255,153);
@@ -3024,6 +2932,7 @@ Map {
 .directions{
   
 }
+
 .bridges_casing{
   [highway='motorway'],[highway='motorway_link']{
     [zoom=12]{
