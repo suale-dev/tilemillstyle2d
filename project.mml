@@ -17,7 +17,8 @@
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "world.mss",
-    "main.mss"
+    "main.mss",
+    "style-partial.css"
   ],
   "Layer": [
     {
@@ -130,8 +131,7 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "nepopulated",
-      "status": "off"
+      "name": "nepopulated"
     },
     {
       "geometry": "polygon",
@@ -400,7 +400,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water-lines-casing"
+      "name": "water-lines-casing",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -431,7 +432,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water_areas"
+      "name": "water_areas",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -526,7 +528,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water-lines-low-zoom"
+      "name": "water-lines-low-zoom",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -557,7 +560,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water_lines"
+      "name": "water_lines",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2221,7 +2225,10 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "admin-other",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "admin-other",
       "class": "",
@@ -2250,10 +2257,13 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "placenames-large",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "placenames-large",
-      "class": "",
+      "class": "country state",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
@@ -2279,7 +2289,10 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "placenames-capital",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "placenames-capital",
       "class": "",
@@ -2308,10 +2321,13 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "placenames-medium",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "placenames-medium",
-      "class": "",
+      "class": "city town",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
@@ -2340,7 +2356,7 @@
         "dbname": "osm"
       },
       "id": "placenames-small",
-      "class": "",
+      "class": "suburb village hamlet",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
@@ -2366,15 +2382,17 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "amenity-stations",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "amenity-stations",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations",
-      "status": "off"
+      "name": "amenity-stations"
     },
     {
       "geometry": "unknown",
@@ -2402,8 +2420,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations-poly",
-      "status": "off"
+      "name": "amenity-stations-poly"
     },
     {
       "geometry": "point",
@@ -2431,8 +2448,94 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols",
-      "status": "off"
+      "name": "amenity-symbols"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.12105268578456,
+        8.179066498869185,
+        109.67098458473359,
+        23.429130996920463
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where aeroway in ('airport','aerodrome','helipad') or barrier in ('bollard','gate','lift_gate','block') or highway in ('mini_roundabout','gate') or man_made in ('lighthouse','power_wind','windmill','mast') or (power='generator' and (\"generator:source\"='wind' or power_source='wind')) or \"natural\" in ('peak','volcano','spring','tree','cave_entrance') or railway='level_crossing') as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11368063.5842546,913597.696143625,12208518.1587695,2683997.92924796",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "amenity-symbols-man-made",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-symbols-man-made"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.12105268578456,
+        8.179066498869185,
+        109.67098458473359,
+        23.429130996920463
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_point where aeroway in ('airport','aerodrome','helipad') or barrier in ('bollard','gate','lift_gate','block') or highway in ('mini_roundabout','gate') or man_made in ('lighthouse','power_wind','windmill','mast') or (power='generator' and (\"generator:source\"='wind' or power_source='wind')) or \"natural\" in ('peak','volcano','spring','tree','cave_entrance') or railway='level_crossing') as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11368063.5842546,913597.696143625,12208518.1587695,2683997.92924796",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "amenity-symbols-natural",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-symbols-natural"
+    },
+    {
+      "geometry": "unknown",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_polygon where aeroway in ('airport','aerodrome','helipad') or barrier in ('bollard','gate','lift_gate','block') or highway in ('mini_roundabout','gate') or man_made in ('lighthouse','power_wind','windmill','mast') or (power='generator' and (\"generator:source\"='wind' or power_source='wind')) or \"natural\" in ('peak','volcano','spring','tree') or railway='level_crossing' ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm",
+        "id": "amenity-symbols-poly",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "amenity-symbols-poly",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-symbols-poly"
     },
     {
       "geometry": "unknown",
@@ -2455,13 +2558,40 @@
         "password": "maptile",
         "dbname": "osm"
       },
-      "id": "amenity-symbols-poly",
+      "id": "amenity-symbols-poly-man-made",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly",
-      "status": "off"
+      "name": "amenity-symbols-poly-man-made"
+    },
+    {
+      "geometry": "unknown",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select * from planet_osm_polygon where aeroway in ('airport','aerodrome','helipad') or barrier in ('bollard','gate','lift_gate','block') or highway in ('mini_roundabout','gate') or man_made in ('lighthouse','power_wind','windmill','mast') or (power='generator' and (\"generator:source\"='wind' or power_source='wind')) or \"natural\" in ('peak','volcano','spring','tree') or railway='level_crossing' ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "amenity-symbols-poly-natural",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-symbols-poly-natural"
     },
     {
       "geometry": "point",
@@ -2484,13 +2614,183 @@
         "password": "maptile",
         "dbname": "osm"
       },
+      "id": "amenity-points-other",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-points-other"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.12105268578456,
+        8.179066498869185,
+        109.67098458473359,
+        23.429130996920463
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure from planet_osm_point where amenity is not null or shop is not null or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet') or highway in ('bus_stop','traffic_signals','ford') or man_made in ('mast','water_tower') or historic in ('memorial','archaeological_site') or waterway='lock' or lock='yes' or leisure in ('playground','slipway')) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11368063.5842546,913597.696143625,12208518.1587695,2683997.92924796",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "amenity-points-shop",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-points-shop"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.12105268578456,
+        8.179066498869185,
+        109.67098458473359,
+        23.429130996920463
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure from planet_osm_point where amenity is not null or shop is not null or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet') or highway in ('bus_stop','traffic_signals','ford') or man_made in ('mast','water_tower') or historic in ('memorial','archaeological_site') or waterway='lock' or lock='yes' or leisure in ('playground','slipway')) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11368063.5842546,913597.696143625,12208518.1587695,2683997.92924796",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "amenity-points-tourism",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-points-tourism"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.12105268578456,
+        8.179066498869185,
+        109.67098458473359,
+        23.429130996920463
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure from planet_osm_point where amenity is not null or shop is not null or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet') or highway in ('bus_stop','traffic_signals','ford') or man_made in ('mast','water_tower') or historic in ('memorial','archaeological_site') or waterway='lock' or lock='yes' or leisure in ('playground','slipway')) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11368063.5842546,913597.696143625,12208518.1587695,2683997.92924796",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm",
+        "id": "amenity-points",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
       "id": "amenity-points",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points",
-      "status": "off"
+      "name": "amenity-points"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure from planet_osm_polygon where amenity is not null or shop is not null or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet') or highway in ('bus_stop','traffic_signals') or man_made in ('mast','water_tower') or historic in ('memorial','archaeological_site') or leisure='playground') as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "amenity-points-poly-other",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-points-poly-other"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure from planet_osm_polygon where amenity is not null or shop is not null or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet') or highway in ('bus_stop','traffic_signals') or man_made in ('mast','water_tower') or historic in ('memorial','archaeological_site') or leisure='playground') as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "amenity-points-poly-shop",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-points-poly-shop"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure from planet_osm_polygon where amenity is not null or shop is not null or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet') or highway in ('bus_stop','traffic_signals') or man_made in ('mast','water_tower') or historic in ('memorial','archaeological_site') or leisure='playground') as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "amenity-points-poly-tourism",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-points-poly-tourism"
     },
     {
       "geometry": "polygon",
@@ -2518,8 +2818,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly",
-      "status": "off"
+      "name": "amenity-points-poly"
     },
     {
       "geometry": "linestring",
@@ -2540,15 +2839,17 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "power_line",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "power_line",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_line",
-      "status": "off"
+      "name": "power_line"
     },
     {
       "geometry": "linestring",
@@ -2579,8 +2880,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_minorline",
-      "status": "off"
+      "name": "power_minorline"
     },
     {
       "geometry": "point",
@@ -2611,8 +2911,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_towers",
-      "status": "off"
+      "name": "power_towers"
     },
     {
       "geometry": "point",
@@ -2643,8 +2942,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_poles",
-      "status": "off"
+      "name": "power_poles"
     },
     {
       "geometry": "linestring",
@@ -2675,8 +2973,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-ref-low-zoom",
-      "status": "off"
+      "name": "roads-text-ref-low-zoom"
     },
     {
       "geometry": "point",
@@ -2697,15 +2994,17 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm"
+        "dbname": "osm",
+        "id": "highway-junctions",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "highway-junctions",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-junctions",
-      "status": "off"
+      "name": "highway-junctions"
     },
     {
       "geometry": "linestring",
@@ -2736,8 +3035,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-ref",
-      "status": "off"
+      "name": "roads-text-ref"
     },
     {
       "geometry": "linestring",
@@ -2768,8 +3066,125 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-name",
-      "status": "off"
+      "name": "roads-text-name"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.12105268578456,
+        8.179066498869185,
+        109.67098458473359,
+        23.429130996920463
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,access,leisure,landuse,man_made,\"natural\",place,tourism,ele,name,ref,military,aeroway,waterway,historic,'yes'::text as point from planet_osm_point where amenity is not null or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store','butcher','car','car_repair','bicycle','florist') or leisure is not null or landuse is not null or tourism is not null or \"natural\" is not null or man_made in ('lighthouse','windmill') or place='island' or military='danger_area' or aeroway='gate' or waterway='lock' or historic in ('memorial','archaeological_site') ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11368063.5842546,913597.696143625,12208518.1587695,2683997.92924796",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "text-other",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-other"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.12105268578456,
+        8.179066498869185,
+        109.67098458473359,
+        23.429130996920463
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,access,leisure,landuse,man_made,\"natural\",place,tourism,ele,name,ref,military,aeroway,waterway,historic,'yes'::text as point from planet_osm_point where amenity is not null or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store','butcher','car','car_repair','bicycle','florist') or leisure is not null or landuse is not null or tourism is not null or \"natural\" is not null or man_made in ('lighthouse','windmill') or place='island' or military='danger_area' or aeroway='gate' or waterway='lock' or historic in ('memorial','archaeological_site') ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11368063.5842546,913597.696143625,12208518.1587695,2683997.92924796",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm",
+        "id": "text-tourism",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "text-tourism",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-tourism"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.12105268578456,
+        8.179066498869185,
+        109.67098458473359,
+        23.429130996920463
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,access,leisure,landuse,man_made,\"natural\",place,tourism,ele,name,ref,military,aeroway,waterway,historic,'yes'::text as point from planet_osm_point where amenity is not null or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store','butcher','car','car_repair','bicycle','florist') or leisure is not null or landuse is not null or tourism is not null or \"natural\" is not null or man_made in ('lighthouse','windmill') or place='island' or military='danger_area' or aeroway='gate' or waterway='lock' or historic in ('memorial','archaeological_site') ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11368063.5842546,913597.696143625,12208518.1587695,2683997.92924796",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm",
+        "id": "text-natural",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "text-natural",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-natural"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,amenity,shop,access,leisure,landuse,man_made,\"natural\",place,tourism,ele,name,ref,military,aeroway,waterway,historic,'yes'::text as point from planet_osm_point where amenity is not null or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store','butcher','car','car_repair','bicycle','florist') or leisure is not null or landuse is not null or tourism is not null or \"natural\" is not null or man_made in ('lighthouse','windmill') or place='island' or military='danger_area' or aeroway='gate' or waterway='lock' or historic in ('memorial','archaeological_site') ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "text-shop",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-shop"
     },
     {
       "geometry": "point",
@@ -2800,8 +3215,122 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text",
-      "status": "off"
+      "name": "text"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,shop,access,amenity,leisure,landuse,man_made,\"natural\",place,tourism,NULL as ele,name,ref,military,waterway,historic,'no'::text as point from planet_osm_polygon where amenity is not null or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store', 'butcher','car','car_repair','bicycle') or leisure is not null or landuse is not null or tourism is not null or \"natural\" is not null or man_made in ('lighthouse','windmill') or place='island' or military='danger_area' or historic in ('memorial','archaeological_site')) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "text-poly-other",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-poly-other"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,shop,access,amenity,leisure,landuse,man_made,\"natural\",place,tourism,NULL as ele,name,ref,military,waterway,historic,'no'::text as point from planet_osm_polygon where amenity is not null or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store', 'butcher','car','car_repair','bicycle') or leisure is not null or landuse is not null or tourism is not null or \"natural\" is not null or man_made in ('lighthouse','windmill') or place='island' or military='danger_area' or historic in ('memorial','archaeological_site')) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "text-poly-tourism",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-poly-tourism"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,shop,access,amenity,leisure,landuse,man_made,\"natural\",place,tourism,NULL as ele,name,ref,military,waterway,historic,'no'::text as point from planet_osm_polygon where amenity is not null or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store', 'butcher','car','car_repair','bicycle') or leisure is not null or landuse is not null or tourism is not null or \"natural\" is not null or man_made in ('lighthouse','windmill') or place='island' or military='danger_area' or historic in ('memorial','archaeological_site')) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm",
+        "id": "text-poly-natural",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "text-poly-natural",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-poly-natural"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,shop,access,amenity,leisure,landuse,man_made,\"natural\",place,tourism,NULL as ele,name,ref,military,waterway,historic,'no'::text as point from planet_osm_polygon where amenity is not null or shop in ('supermarket','bakery','clothes','fashion','convenience','doityourself','hairdresser','department_store', 'butcher','car','car_repair','bicycle') or leisure is not null or landuse is not null or tourism is not null or \"natural\" is not null or man_made in ('lighthouse','windmill') or place='island' or military='danger_area' or historic in ('memorial','archaeological_site')) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "52.187.70.222",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "dbname": "osm"
+      },
+      "id": "text-poly-shop",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-poly-shop"
     },
     {
       "geometry": "polygon",
@@ -2832,8 +3361,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly",
-      "status": "off"
+      "name": "text-poly"
     },
     {
       "geometry": "polygon",
@@ -2864,8 +3392,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "area-text",
-      "status": "off"
+      "name": "area-text"
     },
     {
       "geometry": "linestring",
@@ -2896,8 +3423,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "interpolation_lines",
-      "status": "off"
+      "name": "interpolation_lines"
     },
     {
       "geometry": "point",
@@ -2928,8 +3454,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "housenumbers",
-      "status": "off"
+      "name": "housenumbers"
     },
     {
       "geometry": "point",
@@ -2960,8 +3485,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "housenames",
-      "status": "off"
+      "name": "housenames"
     },
     {
       "geometry": "unknown",
@@ -2992,11 +3516,10 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "misc_boundaries",
-      "status": "off"
+      "name": "misc_boundaries"
     },
     {
-      "geometry": "unknown",
+      "geometry": "polygon",
       "extent": [
         -179.99999692067183,
         -84.96651228427098,
@@ -3024,8 +3547,7 @@
       "srs-name": "custom",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over",
       "advanced": {},
-      "name": "theme_park",
-      "status": "off"
+      "name": "theme_park"
     }
   ],
   "scale": 1,
