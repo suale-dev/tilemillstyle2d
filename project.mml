@@ -85,8 +85,7 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "builtup",
-      "status": "off"
+      "name": "builtup"
     },
     {
       "geometry": "linestring",
@@ -108,8 +107,7 @@
       "srs-name": "custom",
       "srs": "+init=epsg:4326",
       "advanced": {},
-      "name": "necountries",
-      "status": "off"
+      "name": "necountries"
     },
     {
       "geometry": "point",
@@ -159,8 +157,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover",
-      "status": "off"
+      "name": "landcover"
     },
     {
       "geometry": "polygon",
@@ -191,8 +188,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-leisure",
-      "status": "off"
+      "name": "landcover-leisure"
     },
     {
       "geometry": "polygon",
@@ -220,8 +216,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-tourism",
-      "status": "off"
+      "name": "landcover-tourism"
     },
     {
       "geometry": "polygon",
@@ -249,8 +244,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-landuse",
-      "status": "off"
+      "name": "landcover-landuse"
     },
     {
       "geometry": "polygon",
@@ -278,8 +272,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-natural",
-      "status": "off"
+      "name": "landcover-natural"
     },
     {
       "geometry": "polygon",
@@ -307,8 +300,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-amenity",
-      "status": "off"
+      "name": "landcover-amenity"
     },
     {
       "geometry": "linestring",
@@ -339,8 +331,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover_line",
-      "status": "off"
+      "name": "landcover_line"
     },
     {
       "geometry": "unknown",
@@ -368,8 +359,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "sports_grounds",
-      "status": "off"
+      "name": "sports_grounds"
     },
     {
       "geometry": "linestring",
@@ -400,8 +390,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water-lines-casing",
-      "status": "off"
+      "name": "water-lines-casing"
     },
     {
       "geometry": "polygon",
@@ -432,8 +421,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water_areas",
-      "status": "off"
+      "name": "water_areas"
     },
     {
       "geometry": "polygon",
@@ -464,8 +452,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water-areas-overlay",
-      "status": "off"
+      "name": "water-areas-overlay"
     },
     {
       "geometry": "unknown",
@@ -496,8 +483,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "glaciers-text",
-      "status": "off"
+      "name": "glaciers-text"
     },
     {
       "geometry": "linestring",
@@ -528,8 +514,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water-lines-low-zoom",
-      "status": "off"
+      "name": "water-lines-low-zoom"
     },
     {
       "geometry": "linestring",
@@ -560,8 +545,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water_lines",
-      "status": "off"
+      "name": "water_lines"
     },
     {
       "geometry": "linestring",
@@ -592,8 +576,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "dam",
-      "status": "off"
+      "name": "dam"
     },
     {
       "geometry": "polygon",
@@ -624,8 +607,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "marinas-area",
-      "status": "off"
+      "name": "marinas-area"
     },
     {
       "geometry": "unknown",
@@ -656,8 +638,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "piers-area",
-      "status": "off"
+      "name": "piers-area"
     },
     {
       "geometry": "linestring",
@@ -688,8 +669,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "piers",
-      "status": "off"
+      "name": "piers"
     },
     {
       "geometry": "point",
@@ -720,8 +700,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "locks",
-      "status": "off"
+      "name": "locks"
     },
     {
       "geometry": "linestring",
@@ -752,8 +731,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "tunnels",
-      "status": "off"
+      "name": "tunnels"
     },
     {
       "geometry": "linestring",
@@ -784,8 +762,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "citywalls",
-      "status": "off"
+      "name": "citywalls"
     },
     {
       "geometry": "linestring",
@@ -845,8 +822,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "castle_walls",
-      "status": "off"
+      "name": "castle_walls"
     },
     {
       "geometry": "unknown",
@@ -874,8 +850,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landuse_overlay",
-      "status": "off"
+      "name": "landuse_overlay"
     },
     {
       "geometry": "point",
@@ -906,8 +881,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "turning_circle-casing",
-      "status": "off"
+      "name": "turning_circle-casing"
     },
     {
       "geometry": "linestring",
@@ -938,8 +912,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "footbikecycle-tunnels",
-      "status": "off"
+      "name": "footbikecycle-tunnels"
     },
     {
       "geometry": "linestring",
@@ -967,8 +940,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "tracks-tunnels",
-      "status": "off"
+      "name": "tracks-tunnels"
     },
     {
       "geometry": "linestring",
@@ -999,8 +971,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "line-features",
-      "status": "off"
+      "name": "line-features"
     },
     {
       "geometry": "polygon",
@@ -1031,8 +1002,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "polygon-barriers",
-      "status": "off"
+      "name": "polygon-barriers"
     },
     {
       "geometry": "unknown",
@@ -1060,8 +1030,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-area-casing",
-      "status": "off"
+      "name": "highway-area-casing"
     },
     {
       "geometry": "linestring",
@@ -1092,8 +1061,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-casing",
-      "status": "off"
+      "name": "minor-roads-casing"
     },
     {
       "geometry": "unknown",
@@ -1121,8 +1089,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-area-fill",
-      "status": "off"
+      "name": "highway-area-fill"
     },
     {
       "geometry": "unknown",
@@ -1153,8 +1120,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "buildings-lz",
-      "status": "off"
+      "name": "buildings-lz"
     },
     {
       "geometry": "polygon",
@@ -1185,8 +1151,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "buildings",
-      "status": "off"
+      "name": "buildings"
     },
     {
       "geometry": "linestring",
@@ -1217,8 +1182,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "tracks-notunnel-nobridge",
-      "status": "off"
+      "name": "tracks-notunnel-nobridge"
     },
     {
       "geometry": "linestring",
@@ -1249,8 +1213,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill",
-      "status": "off"
+      "name": "minor-roads-fill"
     },
     {
       "geometry": "linestring",
@@ -1281,8 +1244,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill-highway",
-      "status": "off"
+      "name": "minor-roads-fill-highway"
     },
     {
       "geometry": "linestring",
@@ -1313,8 +1275,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill-railway",
-      "status": "off"
+      "name": "minor-roads-fill-railway"
     },
     {
       "geometry": "point",
@@ -1345,8 +1306,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "turning_circle-fill",
-      "status": "off"
+      "name": "turning_circle-fill"
     },
     {
       "geometry": "linestring",
@@ -1377,8 +1337,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "ferry-routes",
-      "status": "off"
+      "name": "ferry-routes"
     },
     {
       "geometry": "linestring",
@@ -1409,8 +1368,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "aerialways",
-      "status": "off"
+      "name": "aerialways"
     },
     {
       "geometry": "linestring",
@@ -1441,8 +1399,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-highway",
-      "status": "off"
+      "name": "roads-highway"
     },
     {
       "geometry": "linestring",
@@ -1470,8 +1427,7 @@
       "srs-name": "custom",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-railway",
-      "status": "off"
+      "name": "roads-railway"
     },
     {
       "geometry": "linestring",
@@ -1502,8 +1458,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "waterway-bridges",
-      "status": "off"
+      "name": "waterway-bridges"
     },
     {
       "geometry": "linestring",
@@ -1534,8 +1489,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "access-pre_bridges",
-      "status": "off"
+      "name": "access-pre_bridges"
     },
     {
       "geometry": "linestring",
@@ -1563,8 +1517,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "direction_pre_bridges",
-      "status": "off"
+      "name": "direction_pre_bridges"
     },
     {
       "geometry": "linestring",
