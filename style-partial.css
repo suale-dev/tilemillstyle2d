@@ -1335,7 +1335,7 @@
             point-allow-overlap: false;
         }
     }
-    [amenity='place_of_worship'] {
+    [amenity='police'] {
         [zoom>16] {
             point-file: 'symbols/police.p.16.png';
             point-placement: 'interior';
