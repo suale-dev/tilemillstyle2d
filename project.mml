@@ -3470,6 +3470,44 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over",
       "advanced": {},
       "name": "theme_park"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -141.00554866607175,
+        -55.12092376716174,
+        140.977626994236,
+        70.0753103641985
+      ],
+      "id": "border-countries",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-boundary-lines-land.zip"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "border-countries"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -139.0471919422785,
+        -49.250740248410615,
+        178.44862226797608,
+        81.13822602001464
+      ],
+      "id": "border-city",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-1-states-provinces-lines.zip"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "border-city"
     }
   ],
   "scale": 1,
