@@ -835,7 +835,7 @@
             text-face-name: @book-fonts;
             text-size: 8;
             text-halo-radius: 1;
-            text-halo-fill: rgb(254,215,165);
+            
             text-name: '[name]';
         }
         [zoom>13][zoom<15] {
@@ -843,14 +843,14 @@
             text-face-name: @book-fonts;
             text-size: 9;
             text-halo-radius: 1;
-            text-halo-fill: rgb(254,215,165);
+            
             text-name: '[name]';
         }
             [zoom>=15] {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
-            text-halo-fill: rgb(254,215,165);
+          
             text-name: '[name]';
         }
     }
@@ -2033,15 +2033,8 @@
 
 .city {
     [place='city'], [place='metropolis'] {
-        [zoom>5][zoom<9] {
-            text-dy: 0;
-            text-wrap-width: 0;
-            text-face-name: @book-fonts;
-            text-size: 8;
-            text-halo-radius: 1;
-            text-name: '[name]';
-        }
-        [zoom>=9][zoom<11] {
+
+        [zoom>=7][zoom<11] {
             text-wrap-width: 0;
             text-face-name: @book-fonts;
             text-size: 11;
@@ -2081,7 +2074,7 @@
     }
 }
 #placenames-capital {
-    [zoom=5] {
+    [zoom=4] {
         text-dy: 0;
         text-wrap-width: 0;
         text-size: 9;
@@ -2089,7 +2082,7 @@
         text-halo-radius: 1;
         text-name: '[name]';
     }
-    [zoom>5][zoom<9] {
+    [zoom>4][zoom<9] {
         text-dy: 0;
         text-wrap-width: 0;
         text-size: 11;
@@ -2117,20 +2110,21 @@
 
 .country {
     [place='country'] {
-        [zoom=2] {
+        [zoom=3]{
             text-dy: 0;
             text-wrap-width: 20;
-            text-face-name: @book-fonts;
-            text-size: 8;
+            text-face-name:@book-fonts;
             text-halo-radius: 1;
+            text-size: 8;
             text-fill: rgb(157,108,157);
             text-name: '[name]';
         }
-        [zoom>2][zoom<7] {
+        [zoom>=4][zoom<6] {
             text-dy: 0;
             text-wrap-width: 20;
-            text-face-name: @book-fonts;
+            text-face-name:@bold-fonts;
             text-halo-radius: 1;
+            text-size: 12;
             text-fill: rgb(157,108,157);
             text-name: '[name]';
         }
@@ -2138,25 +2132,7 @@
 }
 .state {
     [place='state'] {
-        [zoom=4] {
-            text-dy: 0;
-            text-wrap-width: 0;
-            text-face-name: @oblique-fonts;
-            text-size: 9;
-            text-halo-radius: 1;
-            text-fill: rgb(157,108,157);
-            text-name: '[name]';
-        }
-        [zoom>4][zoom<=6] {
-            text-dy: 0;
-            text-wrap-width: 0;
-            text-face-name: @oblique-fonts;
-            text-halo-radius: 1;
-            text-size: 9;
-            text-fill: rgb(157,108,157);
-            text-name: '[name]';
-        }
-        [zoom>6][zoom<9] {
+        [zoom>=6][zoom<9] {
             text-dy: 0;
             text-wrap-width: 0;
             text-face-name: @oblique-fonts;
