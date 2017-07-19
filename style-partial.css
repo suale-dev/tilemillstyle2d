@@ -2052,7 +2052,7 @@
 }
 .town {
     [place='town'], [place='large_town'], [place='small_town'] {
-        [zoom>8][zoom<11] {
+        [zoom>9][zoom<11] {
             text-wrap-width: 20;
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -2119,7 +2119,7 @@
             text-fill: rgb(157,108,157);
             text-name: '[name]';
         }
-        [zoom>=4][zoom<6] {
+        [zoom>=4][zoom<7] {
             text-dy: 0;
             text-wrap-width: 20;
             text-face-name:@bold-fonts;
@@ -2132,7 +2132,7 @@
 }
 .state {
     [place='state'] {
-        [zoom>=6][zoom<9] {
+        [zoom>=7][zoom<=9] {
             text-dy: 0;
             text-wrap-width: 0;
             text-face-name: @oblique-fonts;
