@@ -7,5 +7,5 @@
 @roadCase: rgb(197, 197, 197);
 @road: rgb(255, 255, 255);
 @direaction: rgb(0,0,0);
-@border-country: #333333;
-@border-city: #444444;
+@border-country: rgb(128,128,128);
+@border-city: #848484;

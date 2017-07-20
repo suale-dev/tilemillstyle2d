@@ -24,25 +24,29 @@ Map {
     line-width: 0.5;
   }
 }
-#nepopulated[SCALERANK = 1][zoom>=3][zoom<5]{
+#nepopulated[SCALERANK=2][zoom>=2][zoom<=6]{
     text-face-name: @book-fonts;
     text-name:[NAMEASCII];
     text-fill: @necountriescolor; 
     text-size:8;
-    text-halo-fill:rgba(255,255,255,0.8);
+    text-halo-fill: rgba(255,255,255,0.8);
     text-halo-radius:1;
     text-dy: 2;
 }
 #border-countries{
-  [zoom>=4]{
+  [zoom>=4][zoom<7]{
     line-color: @border-country;
+    line-width: 0.7;
+  }
+   [zoom>=7]{
+    line-opacity: 0.6;
     line-width: 1;
   }
 }
 #border-city{
   [zoom>=7]{
     line-color: @border-city;
-    line-width: 1;
+    line-width: 0.8;
     line-dasharray: 4, 2;
   }
 }
