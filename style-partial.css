@@ -10,12 +10,20 @@
         line-color :  rgb(115,74,8);
         line-dasharray: 9,3;
     }
-    [zoom >= 15] {
+    [zoom >= 15][zoom<17] {
         line-opacity : 0.6;
         line-width: 2.5;
         line-color : rgb(115,74,8);
         line-dasharray: 9,3;
     }
+    /*3d style*/
+    [zoom>=17] {
+        line-opacity : 0.6;
+        line-width: 2.5;
+        line-color : rgb(115,74,8);
+        line-dasharray: 9,3;
+    }
+  
 }
 
 @boundary-color: rgb(0,128,0);
@@ -63,7 +71,7 @@
 
 @housenames-color: rgb(68,68,68);
 #housenames {
-    [zoom > 16][zoom < 19] {
+    [zoom > 16][zoom < 17] {
         text-fill: @housenames-color;
         text-wrap-width: 20;
         text-face-name: @book-fonts;
@@ -72,7 +80,8 @@
         text-dy: 0;
         text-name: '[addr:housename]';
     }
-    [zoom >= 19] {
+    /*3d style*/
+    [zoom >= 17] {
         text-fill: @housenames-color;
         text-wrap-width: 20;
         text-face-name: @book-fonts;
@@ -84,7 +93,18 @@
 }
 
 #housenumbers {
-    [zoom > 16] {
+    [zoom = 16] {
+        text-fill: @housenames-color;
+        text-wrap-width: 0;
+        text-face-name: @bold-fonts;
+        text-size: 9;
+        text-placement: 'interior';
+        text-min-padding: 1;
+        text-dy: 0;
+        text-name: '[addr:housenumber]';
+    }
+   /*3d style*/
+      [zoom > 16] {
         text-fill: @housenames-color;
         text-wrap-width: 0;
         text-face-name: @bold-fonts;
@@ -98,6 +118,12 @@
 
 
 #interpolation_lines {
+    [zoom = 16] {
+        line-width: 1;
+        line-dasharray: 2,4;
+        line-color: rgb(136,136,136);
+    }
+   /* 3d style*/
     [zoom > 16] {
         line-width: 1;
         line-dasharray: 2,4;
@@ -109,14 +135,29 @@
 
 #area-text {
     [way_area>=150000] {
-        [zoom > 13] {
+        [zoom > 13][zoom<17] {
+            text-placement: 'interior';
+            text-name: '[name]';
+            text-face-name: @book-fonts;
+        }
+    /*3d style*/
+         [zoom >=17] {
             text-placement: 'interior';
             text-name: '[name]';
             text-face-name: @book-fonts;
         }
     }
     [way_area >= 80000][way_area < 150000] {
-        [zoom > 14] {
+        [zoom > 14][zoom < 17] {
+            text-placement: 'interior';
+            text-wrap-width: 20;
+            text-halo-radius: 1;
+            text-fill: rgb(0,0,51);
+            text-name: '[name]';
+            text-face-name: @book-fonts;
+        }
+    /*3d style*/
+        [zoom >= 14] {
             text-placement: 'interior';
             text-wrap-width: 20;
             text-halo-radius: 1;
@@ -126,7 +167,16 @@
         }
     }
     [way_area >= 20000][way_area < 80000] {
-        [zoom > 15] {
+        [zoom > 15][zoom < 17] {
+            text-placement: 'interior';
+            text-wrap-width: 20;
+            text-halo-radius: 1;
+            text-fill: rgb(0,0,51);
+            text-name: '[name]';
+            text-face-name: @book-fonts;
+        }
+        /*3d style*/
+            [zoom >= 17] {
             text-placement: 'interior';
             text-wrap-width: 20;
             text-halo-radius: 1;
@@ -136,6 +186,7 @@
         }
     }
     [way_area < 20000] {
+        /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-wrap-width: 20;
@@ -148,7 +199,17 @@
 }
 #text-poly,#text {
     [place = 'island'] {
-        [zoom>11] {
+        [zoom>11] [zoom < 17] {
+            text-placement: 'interior';
+            text-dy: 0;
+            text-wrap-width: 0;
+            text-face-name: @oblique-fonts;
+            text-size: 9;
+            text-halo-radius: 1;
+            text-name: '[name]';
+        }
+            /*3d style*/
+            [zoom>=17]{
             text-placement: 'interior';
             text-dy: 0;
             text-wrap-width: 0;
@@ -163,6 +224,7 @@
     [amenity='cafe'],
     [amenity='fast_food'],
     [amenity='biergarten'] {
+                /*3d style*/
         [zoom>16] {
             text-dy: 9;
             text-wrap-width: 34;
@@ -174,6 +236,7 @@
         }
     }
     [amenity='bar'] {
+                /*3d style*/
         [zoom>16] {
             text-dy: 11;
             text-wrap-width: 0;
@@ -188,6 +251,7 @@
     [amenity='library'],
     [amenity='theatre'],
     [amenity='courthouse'] {
+                /*3d style*/
         [zoom>16] {
             text-dy: 12;
             text-wrap-width: 0;
@@ -199,6 +263,7 @@
         }
     }
     [amenity='cinema'] {
+                /*3d style*/
         [zoom>16] {
             text-dy: 14;
             text-wrap-width: 0;
@@ -211,6 +276,7 @@
     }
     [amenity='parking'][access = 'public'],
     [access=''] {
+                /*3d style*/
         [zoom > 16] {
             text-dy: 9;
             text-placement: 'interior';
@@ -225,6 +291,7 @@
     }
     [amenity='parking'][access !='public'],
     [access !=''] {
+                /*3d style*/
         [zoom > 16] {
             text-dy: 9;
             text-placement: 'interior';
@@ -237,6 +304,7 @@
         }
     }
     [amenity='police'] {
+                /*3d style*/
         [zoom > 16] {
             text-dy: 10;
             text-placement: 'interior';
@@ -249,6 +317,7 @@
         }
     }
     [amenity='fire_station'] {
+                /*3d style*/
         [zoom > 16] {
             text-dy: 9;
             text-placement: 'interior';
@@ -261,6 +330,7 @@
         }
     }
     [amenity='place_of_worship'] {
+                /*3d style*/
         [zoom > 16] {
             text-dy: 11;
             text-placement: 'interior';
@@ -273,6 +343,7 @@
         }
     }
     [amenity='embassy'] {
+                /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -285,6 +356,7 @@
         }
     }
     [amenity='shelter'] {
+                /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -294,6 +366,7 @@
             text-name: '[name]';
             text-fill: rgb(102, 153, 204);
         }
+                /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @oblique-fonts;
@@ -305,6 +378,7 @@
         }
     }
     [amenity='bank'] {
+                /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -318,6 +392,7 @@
     }
     [amenity='fuel'],
     [amenity='bus_station'] {
+                /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -331,7 +406,17 @@
     }
     [amenity='school'],
     [amenity='college'] {
-        [zoom>14] {
+        [zoom>14][zoom < 17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-wrap-width: 14;
+            text-name: '[name]';
+            text-fill: rgb(0, 0, 51);
+        }
+                /*3d style*/
+            [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -342,7 +427,16 @@
         }
     }
     [amenity='kindergarten'] {
-        [zoom>15] {
+        [zoom>15] [zoom < 17]{
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 8;
+            text-wrap-width: 14;
+            text-name: '[name]';
+            text-fill: rgb(0, 0, 51);
+        }
+         [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -353,7 +447,18 @@
         }
     }
     [amenity='hospital'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 2;
+            text-size: 9;
+            text-dy: 10;
+            text-wrap-width: 24;
+            text-name: '[name]';
+            text-fill: rgb(218, 0, 146);
+        }
+    /*3d style*/
+            [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 2;
@@ -365,6 +470,7 @@
         }
     }
     [amenity='pharmacy'] {
+        /*3d style*/
         [zoom>16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -380,7 +486,17 @@
 
 #text-natural,#text-poly-natural{
     [natural='wood'] {
-        [zoom > 14] {
+        [zoom > 14] [zoom < 17]{
+            text-placement: 'interior';
+            text-wrap-width: 10;
+            text-face-name: @book-fonts;
+            text-halo-radius: 2;
+            text-size: 9;
+            text-name: '[name]';
+            text-fill: rgb(165, 42, 42);
+        }
+        /*3d style*/
+            [zoom >= 17] {
             text-placement: 'interior';
             text-wrap-width: 10;
             text-face-name: @book-fonts;
@@ -391,7 +507,16 @@
         }
     }
     [natural='peak'] {
-        [zoom > 12] {
+        [zoom > 12][zoom<17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 2;
+            text-size: 9;
+            text-name: '[name]';
+            text-fill: rgb(165, 42, 42);
+        }
+            /*3d style*/
+        [zoom >= 17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 2;
@@ -401,7 +526,17 @@
         }
     }
     [natural='peak'][name=''] {
-        [zoom > 13] {
+        [zoom > 13][zoom < 17]  {
+            text-placement: 'interior';
+            text-dy: 6;
+            text-face-name: @oblique-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-name: '[ele]';
+            text-fill: rgb(165, 42, 42);
+        }
+                /*3d style*/
+            [zoom >= 17] {
             text-placement: 'interior';
             text-dy: 6;
             text-face-name: @oblique-fonts;
@@ -412,7 +547,17 @@
         }
     }
     [natural='peak'][name !=''] {
-        [zoom > 13] {
+        [zoom > 13] [zoom<17]{
+            text-placement: 'interior';
+            text-dy: 18;
+            text-face-name: @oblique-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-name: '[ele]';
+            text-fill: rgb(165, 42, 42);
+        }
+    /*3d style*/
+         [zoom >= 17] {
             text-placement: 'interior';
             text-dy: 18;
             text-face-name: @oblique-fonts;
@@ -423,7 +568,17 @@
         }
     }
     [natural='volcano'] {
-        [zoom > 12] {
+        [zoom > 12][zoom< 17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-dy: 5;
+            text-name: '[name]';
+            text-fill: rgb(165, 42, 42);
+        }
+        /*3d style*/
+        [zoom >= 17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -434,7 +589,17 @@
         }
     }
     [natural='volcano'][name=''] {
-        [zoom > 13] {
+        [zoom > 13][zoom < 17] {
+            text-placement: 'interior';
+            text-dy: 6;
+            text-face-name: @oblique-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-name: '[ele]';
+            text-fill: rgb(165, 42, 42);
+          }
+         /*3d style*/
+         [zoom >= 17] {
             text-placement: 'interior';
             text-dy: 6;
             text-face-name: @oblique-fonts;
@@ -445,7 +610,17 @@
         }
     }
     [natural='volcano'][name !=''] {
-        [zoom > 13] {
+        [zoom > 13][zoom < 17] {
+            text-placement: 'interior';
+            text-dy: 16;
+            text-face-name: @oblique-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-name: '[ele]';
+            text-fill: rgb(165, 42, 42);
+          }
+         /*3d style*/
+         [zoom >= 17] {
             text-placement: 'interior';
             text-dy: 16;
             text-face-name: @oblique-fonts;
@@ -456,7 +631,18 @@
         }
     }
     [natural='cave_entrance'] {
-        [zoom > 14] {
+        [zoom > 14][zoom<17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-dy: 9;
+            text-wrap-width: 20;
+            text-name: '[name]';
+            text-fill: rgb(165, 42, 42);
+        }
+        /*3d style*/
+        [zoom >= 17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -470,7 +656,7 @@
     [natural='water'],
     [natural='lake'][landuse='reservoir'],
     [landuse='basin'] {
-        [zoom > 14] {
+        [zoom > 14][zoom<17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -479,9 +665,29 @@
             text-name: '[name]';
             text-fill: rgb(102, 153, 204);
         }
+        /*3d style*/
+        [zoom >= 17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-wrap-width: 20;
+            text-name: '[name]';
+            text-fill: rgb(102, 153, 204);
+        }    
     }
     [natural='bay'] {
-        [zoom > 13] {
+        [zoom > 13][zoom<17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-wrap-width: 20;
+            text-name: '[name]';
+            text-fill: rgb(102, 153, 204);
+        }
+        /*3d style*/
+        [zoom >= 17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -492,7 +698,18 @@
         }
     }
     [natural='spring'] {
-        [zoom > 15] {
+        [zoom > 15][zoom < 17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 8;
+            text-dy: 10;
+            text-wrap-width: 20;
+            text-name: '[name]';
+            text-fill: rgb(102, 153, 204);
+        }
+        /*3d style*/
+        [zoom >= 15] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -506,7 +723,7 @@
 }
 #text-tourism,#text-poly-tourism{
     [tourism='alpine_hut'] {
-        [zoom > 14] {
+        [zoom = 15] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -516,7 +733,18 @@
             text-name: '[name]';
             text-fill: rgb(102, 153, 204);
         }
-        [zoom > 15] {
+        [zoom = 16] {
+            text-placement: 'interior';
+            text-face-name: @oblique-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-dy: 22;
+            text-wrap-width: 20;
+            text-name: '[ele]';
+            text-fill: rgb(102, 153, 204);
+        }
+            /*3d style*/
+        [zoom >= 17] {
             text-placement: 'interior';
             text-face-name: @oblique-fonts;
             text-halo-radius: 1;
@@ -530,6 +758,7 @@
     [tourism='hotel'],
     [tourism='hostel'],
     [tourism='chalet'] {
+            /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -542,6 +771,7 @@
         }
     }
     [tourism='guest_house'] {
+            /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -554,6 +784,7 @@
         }
     }
     [tourism='bed_and_breakfast'] {
+            /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -566,6 +797,7 @@
         }
     }
     [tourism='camp_site'] {
+            /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -578,6 +810,7 @@
         }
     }
     [tourism='caravan_site'] {
+            /*3d style*/
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -592,6 +825,7 @@
    
 
     [tourism='museum'] {
+        /*3d style*/
         [zoom>16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -603,6 +837,7 @@
         }
     }
     [tourism='prison'] {
+        /*3d style*/
         [zoom>16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -622,9 +857,28 @@
             text-name: '[name]';
             text-fill: rgb(102, 0, 51);
         }
+        /*3d style*/
+        [zoom>=17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-wrap-width: 10;
+            text-name: '[name]';
+            text-fill: rgb(102, 0, 51);
+        }
     }
     [tourism='university'] {
-        [zoom>14] {
+        [zoom>14] [zoom<17]{
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-wrap-width: 16;
+            text-name: '[name]';
+            text-fill: rgb(0, 0, 51);
+        }
+        /*3d style*/
+        [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -644,6 +898,7 @@
             text-name: '[name]';
             text-fill: rgb(115, 74, 8);
         }
+        /*3d style*/
         [zoom>=16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -667,6 +922,7 @@
     [shop='car_repair'],
     [shop='bicycle'],
     [shop='florist'] {
+        /*3d style*/
         [zoom>16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -680,7 +936,18 @@
     }
     [shop='supermarket'],
     [shop='department_store'] {
-        [zoom>15] {
+        [zoom=16] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 8;
+            text-dy: 9;
+            text-wrap-width: 20;
+            text-name: '[name]';
+            text-fill: rgb(153, 51, 153);
+        }
+        /*3d style*/
+        [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -696,7 +963,18 @@
 #text-other, #text-poly-other
 {
  [man_made='lighthouse'] {
-        [zoom>14] {
+        [zoom>14] [zoom<17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 2;
+            text-size: 8;
+            text-dy: 16;
+            text-wrap-width: 12;
+            text-name: '[name]';
+            text-fill: rgb(0, 0, 51);
+        }
+        /*3d style*/
+        [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 2;
@@ -708,6 +986,7 @@
         }
     }
     [man_made='windmill'] {
+        /*3d style*/
         [zoom>16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -721,7 +1000,18 @@
     }
    
     [military='danger_area'] {
-        [zoom>11] {
+        [zoom>11] [zoom<17]{
+            text-placement: 'interior';
+            text-face-name: @bold-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-dy: 9;
+            text-wrap-width: 10;
+            text-name: '[name]';
+            text-fill: rgb(153, 51, 153);
+        }
+        /*3d style*/
+        [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @bold-fonts;
             text-halo-radius: 1;
@@ -733,6 +1023,7 @@
         }
     }
     [aeroway='gate'] {
+        /*3d style*/
         [zoom>16] {
             text-placement: 'interior';
             text-face-name: @bold-fonts;
@@ -749,7 +1040,17 @@
     [leisure !=''],
     [landuse ! ''] {
         [point = 'yes'] {
-            [zoom > 14] {
+            [zoom > 14] [zoom <17]{
+                text-placement: 'interior';
+                text-face-name: @book-fonts;
+                text-halo-radius: 2;
+                text-size: 9;
+                text-wrap-width: 20;
+                text-name: '[name]';
+                text-fill: rgb(102, 153, 204);
+            }
+             /*3d style*/
+             [zoom >= 17] {
                 text-placement: 'interior';
                 text-face-name: @book-fonts;
                 text-halo-radius: 2;
@@ -781,7 +1082,18 @@
     }
     [historic='memorial'],
     [historic='archaeological_site'] {
-        [zoom > 14] {
+        [zoom > 14][zoom < 17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-size: 9;
+            text-dy: 12;
+            text-wrap-width: 20;
+            text-name: '[name]';
+            text-fill: rgb(165, 42, 42);
+        }
+         /*3d style*/
+        [zoom >= 17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -793,7 +1105,7 @@
         }
     }
      [waterway='lock'] {
-        [zoom > 14] {
+        [zoom > 14] [zoom<17]{
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -803,6 +1115,17 @@
             text-name: '[name]';
             text-fill: rgb(0, 102, 255);
         }
+        /*3d style*/
+        [zoom >= 17] {
+            text-placement: 'interior';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
+            text-wrap-width: 70;
+            text-size: 9;
+            text-dy: 10;
+            text-name: '[name]';
+            text-fill: rgb(0, 102, 255);
+        }    
     }
 }
 /*verified*/
@@ -822,7 +1145,12 @@
             text-size: 9;
             text-name: '[name]';
         }
-            [zoom>=15] {
+        [zoom>=15][zoom<17] {
+            text-placement: 'line';
+            text-face-name: @book-fonts;
+            text-name: '[name]';
+        }
+        [zoom>=17]  {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-name: '[name]';
@@ -846,11 +1174,16 @@
             
             text-name: '[name]';
         }
-            [zoom>=15] {
+        [zoom>=15][zoom<17]  {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
-          
+            text-name: '[name]';
+        }
+        [zoom>=17] {
+            text-placement: 'line';
+            text-face-name: @book-fonts;
+            text-halo-radius: 1;
             text-name: '[name]';
         }
     }
@@ -877,7 +1210,8 @@
             text-size: 9;
             text-name: '[name]';
         }
-            [zoom>=17] {
+        /*3d style*/
+        [zoom>=17] {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-size: 11;
@@ -903,6 +1237,7 @@
             text-halo-radius: 1;
             text-name: '[name]';
         }
+        /*3d style*/
         [zoom>16] {
             text-placement: 'line';
             text-face-name: @book-fonts;
@@ -926,7 +1261,16 @@
 /*verified*/
 #roads-text-ref {
     [highway='motorway'][length<=6] {
-        [zoom>12] {
+        [zoom>12][zoom<17] {
+            shield-file: 'symbols/mot_shield[length].png';
+            shield-placement: 'line';
+            shield-min-padding: 30;
+            shield-name: '[ref]';
+            shield-face-name: @bold-fonts;
+            shield-spacing: 750;
+        }
+        /*3d style*/
+        [zoom>=17] {
             shield-file: 'symbols/mot_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -936,7 +1280,17 @@
         }
     }
     [highway='motorway'][length =7] {
-        [zoom>12] {
+        [zoom>12][zoom<12] {
+            shield-file: 'symbols/mot_shield6.png';
+            shield-placement: 'line';
+            shield-min-padding: 30;
+            shield-name: '[ref]';
+            shield-face-name: @bold-fonts;
+            shield-spacing: 750;
+            shield-fill: rgb(255,255,255);
+        }
+        /*3d style*/
+        [zoom>=17] {
             shield-file: 'symbols/mot_shield6.png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -947,7 +1301,17 @@
         }
     }
  [highway='motorway'][length =8] {
-        [zoom>12] {
+        [zoom>12] [zoom<17] {
+            shield-file: 'symbols/mot_shield7.png';
+            shield-placement: 'line';
+            shield-min-padding: 30;
+            shield-name: '[ref]';
+            shield-face-name: @bold-fonts;
+            shield-spacing: 750;
+            shield-fill:rgb(255,255,255);
+        }
+        /*3d style*/
+        [zoom>=17] {
             shield-file: 'symbols/mot_shield7.png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -958,7 +1322,17 @@
         }
     }
     [highway='trunk'] {
-        [zoom>12] {
+        [zoom>12]  [zoom<17]{
+            shield-file: 'symbols/tru_shield[length].png';
+            shield-placement: 'line';
+            shield-min-padding: 30;
+            shield-name: '[ref]';
+            shield-face-name: @bold-fonts;
+            shield-spacing: 750;
+            shield-fill:rgb(255,255,255);
+        }
+       /*3d style*/
+        [zoom>=17] {
             shield-file: 'symbols/tru_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -969,7 +1343,17 @@
         }
     }
     [highway='primary'] {
-        [zoom>12] {
+        [zoom>12] [zoom<17]  {
+            shield-file: 'symbols/pri_shield[length].png';
+            shield-placement: 'line';
+            shield-min-padding: 30;
+            shield-name: '[ref]';
+            shield-face-name: @bold-fonts;
+            shield-spacing: 750;
+            shield-fill:rgb(255,255,255);
+        }
+        /*3d style*/
+        [zoom>=17] {
             shield-file: 'symbols/pri_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -980,7 +1364,17 @@
         }
     }
     [highway='secondary'][bridge !='yes'] {
-        [zoom>12] {
+        [zoom>12][zoom<17]  {
+            shield-file: 'symbols/sec_shield[length].png';
+            shield-placement: 'line';
+            shield-min-padding: 30;
+            shield-name: '[ref]';
+            shield-face-name: @bold-fonts;
+            shield-spacing: 750;
+            shield-fill:rgb(255,255,255);
+        }
+         /*3d style*/
+         [zoom>=17] {
             shield-file: 'symbols/sec_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -991,7 +1385,16 @@
         }
     }
     [highway='tertiary'][bridge !='yes'] {
-        [zoom>12] {
+        [zoom>12] [zoom<17]{
+            shield-file: 'symbols/ter_shield[length].png';
+            shield-placement: 'line';
+            shield-min-padding: 30;
+            shield-name: '[ref]';
+            shield-face-name: @bold-fonts;
+            shield-spacing: 750;
+            shield-fill:rgb(255,255,255);
+        }
+         [zoom>=17] {
             shield-file: 'symbols/ter_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -1003,7 +1406,17 @@
     }
     [highway='unclassified'], [highway ='residential'] {
         [bridge !='yes'] {
-            [zoom>14] {
+            [zoom>14] [zoom<17]{
+                text-placement: 'line';
+                text-min-distance: 18;
+                text-name: '[ref]';
+                text-face-name: @bold-fonts;
+                text-spacing: 750;
+                text-fill:rgb(51,51,51);
+                text-halo-radius: 1;
+            }
+           /*3d style*/
+           [zoom>14] {
                 text-placement: 'line';
                 text-min-distance: 18;
                 text-name: '[ref]';
@@ -1016,7 +1429,17 @@
     }
     [aeroway='runway'], [aeroway ='taxiway'] {
         [bridge !='yes'] {
-            [zoom>14] {
+            [zoom>14] [zoom<17]{
+                text-placement: 'line';
+                text-min-distance: 18;
+                text-name: '[ref]';
+                text-face-name: @bold-fonts;
+                text-spacing: 750;
+                text-fill:rgb(51,51,51);
+                text-halo-radius: 1;
+            }
+           /*3d style*/
+           [zoom>=17] {
                 text-placement: 'line';
                 text-min-distance: 18;
                 text-name: '[ref]';
@@ -1051,7 +1474,18 @@
             text-wrap-width: 2;
         }
     
-    [zoom>14] {
+    [zoom>14][zoom<17] {
+            text-min-distance: 2;
+            text-name: '[name]';
+            text-face-name: @oblique-fonts;
+            text-size: 11;
+            text-dy: -10;
+            text-fill:rgb(102,102,255);
+            text-halo-radius: 1;
+            text-wrap-width: 12;  
+    }
+       /*3d style*/
+      [zoom>=17] {
             text-min-distance: 2;
             text-name: '[name]';
             text-face-name: @oblique-fonts;
@@ -1130,7 +1564,12 @@
 }
 
 #power_poles {
-    [zoom>15] {
+     [zoom>15][zoom<17] {
+        point-allow-overlap: false;
+        point-file: 'symbols/power_pole.png';
+      }
+       /*3d style*/
+     [zoom>=17] {
         point-allow-overlap: false;
         point-file: 'symbols/power_pole.png';
     }
@@ -1149,6 +1588,7 @@
         point-file: 'symbols/power_tower_5x5.png';
         point-allow-overlap: false;
     }
+    /*3d style*/
     [zoom>16] {
         point-file: 'symbols/power_tower.png';
         point-allow-overlap: false;
@@ -1160,7 +1600,12 @@
         line-width: 1;
         line-color: rgb(119,119,119);
     }
-    [zoom>=16] {
+    [zoom=16] {
+        line-width: 1.5;
+        line-color: rgb(119,119,119);
+    }
+    /*3d style*/
+    [zoom>=17] {
         line-width: 1.5;
         line-color: rgb(119,119,119);
     }
@@ -1211,7 +1656,13 @@
         }
     }
     [amenity='bus_station'] {
-        [zoom>15] {
+        [zoom=16] {
+            point-file: 'symbols/bus_station.n.16.png';
+            point-placement: 'interior';
+            point-allow-overlap: false;
+        }
+         /*3d style*/
+        [zoom>=17] {
             point-file: 'symbols/bus_station.n.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -1227,7 +1678,13 @@
 
 
     [amenity='car_sharing'] {
-        [zoom>15] {
+        [zoom=16] {
+            point-file: 'symbols/car_share.p.16.png';
+            point-placement: 'interior';
+            point-allow-overlap: false;
+        }
+         /*3d style*/
+        [zoom>=17] {
             point-file: 'symbols/car_share.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -1235,13 +1692,23 @@
     }
 
     [amenity='cinema'] {
-        [zoom>15] {
+        [zoom>15] [zoom<17]{
+            point-file: 'symbols/cinema.p.24.png';
+            point-placement: 'interior';
+        }
+        /*3d style*/
+        [zoom>=17] {
             point-file: 'symbols/cinema.p.24.png';
             point-placement: 'interior';
         }
     }
     [amenity='fire_station'] {
-        [zoom>15] {
+         [zoom>15] [zoom<17]{
+            point-file: 'symbols/firestation.p.16.png';
+            point-placement: 'interior';
+         }
+         /*3d style*/
+         [zoom>=17] {
             point-file: 'symbols/firestation.p.16.png';
             point-placement: 'interior';
         }
@@ -1251,28 +1718,41 @@
             point-file: 'symbols/fuel.p.16.png';
             point-placement: 'interior';
         }
+         /*3d style*/
+        [zoom>=17] {
+            point-file: 'symbols/fuel.p.16.png';
+            point-placement: 'interior';
+        }
     }
 
     [amenity='hospital'] {
-        [zoom>14] {
+        [zoom>14][zoom<17] {
+            point-file: 'symbols/hospital.p.16.png';
+            point-placement: 'interior';
+        }
+         /*3d style*/
+        [zoom>=14] {
             point-file: 'symbols/hospital.p.16.png';
             point-placement: 'interior';
         }
     }
 
     [amenity='embassy'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/embassy.png';
             point-placement: 'interior';
         }
     }
     [amenity='library'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/library.p.20.png';
             point-placement: 'interior';
         }
     }
     [amenity='courthouse'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/amenity_court.p.20.png';
             point-placement: 'interior';
@@ -1281,55 +1761,97 @@
 
 
     [amenity='parking'][access='public'], [access=''], [access='yes'] {
-        [zoom>14] {
+        [zoom>14][zoom<17] {
+            point-file: 'symbols/parking.p.16.png';
+            point-placement: 'interior';
+            point-allow-overlap: false;
+        }
+         /*3d style*/
+         [zoom>=17] {
             point-file: 'symbols/parking.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='parking'][access!=''][access!='public'][access!='yes'] {
-        [zoom>14] {
+        [zoom>14][zoom<17] {
+            point-file: 'symbols/parking_private.p.16.png';
+            point-placement: 'interior';
+            point-allow-overlap: false;
+        }
+         /*3d style*/
+        [zoom>=17]{
             point-file: 'symbols/parking_private.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='pharmacy'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/pharmacy.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='place_of_worship'][religion='christian'] {
-        [zoom>15] {
+        [zoom=16] {
+            point-file: 'symbols/christian3.p.14.png';
+            point-placement: 'interior';
+            point-allow-overlap: false;
+        }
+         [zoom>=17] {
             point-file: 'symbols/christian3.p.14.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='place_of_worship'][religion='muslim'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
+            point-file: 'symbols/islamic3.p.16.png';
+            point-placement: 'interior';
+            point-allow-overlap: false;
+        }
+         /*3d style*/
+        [zoom>=17] {
             point-file: 'symbols/islamic3.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='place_of_worship'][religion='sikh3'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
+            point-file: 'symbols/sikh3.p.16.png';
+            point-placement: 'interior';
+            point-allow-overlap: false;
+        }
+         /*3d style*/
+         [zoom>=17] {
             point-file: 'symbols/sikh3.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='place_of_worship'][religion='jewish'] {
-        [zoom>15] {
+        [zoom=16] {
+            point-file: 'symbols/jewish3.p.16.png';
+            point-placement: 'interior';
+            point-allow-overlap: false;
+        }
+         /*3d style*/
+         [zoom>=17] {
             point-file: 'symbols/jewish3.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='place_of_worship'] {
-        [zoom>15] {
+        [zoom=16] {
+            point-file: 'symbols/place_of_worship3.p.16.png';
+            point-placement: 'interior';
+            point-allow-overlap: false;
+        }
+         /*3d style*/
+        [zoom>=17] {
             point-file: 'symbols/place_of_worship3.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -1348,25 +1870,37 @@
         }
     }
     [amenity='post_office'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/post_office.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='pub'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/pub.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='biergarten'] {
-        [zoom>15] {
+        [zoom>15] [zoom<17]{
+            point-file: 'symbols/biergarten.p.16.png';
+            point-placement: 'interior';
+        }
+         /*3d style*/
+        [zoom>=15] {
             point-file: 'symbols/biergarten.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='recycling'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
+            point-file: 'symbols/recycling.p.16.png';
+            point-placement: 'interior';
+        }
+         /*3d style*/
+        [zoom>17] {
             point-file: 'symbols/recycling.p.16.png';
             point-placement: 'interior';
         }
@@ -1378,72 +1912,96 @@
         }
     }
     [amenity='fast_food'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/fast_food.png';
             point-placement: 'interior';
         }
     }
     [amenity='telephone'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/telephone.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='emergency_phone'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/sosphone.png';
             point-placement: 'interior';
         }
     }
     [amenity='theatre'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/theatre.p.20.png';
             point-placement: 'interior';
         }
     }
     [amenity='toilets'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/toilets.p.20.png';
             point-placement: 'interior';
         }
     }
     [amenity='drinking_water'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/food_drinkingtap.p.20.png';
             point-placement: 'interior';
         }
     }
     [amenity='prison'] {
-        [zoom>15] {
+        [zoom>15] [zoom<17]{
+            point-file: 'symbols/amenity_prison.p.20.png';
+            point-placement: 'interior';
+        }
+         /*3d style*/
+         [zoom>=15] {
             point-file: 'symbols/amenity_prison.p.20.png';
             point-placement: 'interior';
         }
     }
     [amenity='viewpoint'] {
-        [zoom>15] {
+        [zoom>15] [zoom<17]{
+            point-file: 'symbols/view_point.p.16.png';
+            point-placement: 'interior';
+        }     
+        /*3d style*/
+        [zoom>=17] {
             point-file: 'symbols/view_point.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='veterinary'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
+            point-file: 'symbols/amenity_veterinary.p.16.png';
+            point-placement: 'interior';
+        }
+         /*3d style*/
+        [zoom>=17] {
             point-file: 'symbols/amenity_veterinary.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='bench'] {
+         /*3d style*/
         [zoom>17] {
             point-file: 'symbols/amenity_bench.p.8.png';
             point-placement: 'interior';
         }
     }
     [amenity='waste_basket'] {
+         /*3d style*/
         [zoom>17] {
             point-file: 'symbols/amenity_waste_basket.p.8.png';
             point-placement: 'interior';
         }
     }
     [amenity='picnic_site'] {
+         /*3d style*/
         [zoom>16] {
             point-file: 'symbols/picnic.p.16.png';
             point-placement: 'interior';
