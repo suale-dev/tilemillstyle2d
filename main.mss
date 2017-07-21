@@ -9,5 +9,8 @@
 @direaction: rgb(0,0,0);
 @border-country: rgb(128,128,128);
 @border-city: #848484;
+ 
 /*3d style*/
 @3droad:#878793;
+@water: #a3ccff;
+ 
