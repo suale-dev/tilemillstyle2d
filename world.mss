@@ -5,7 +5,7 @@ Map {
   [zoom < 10]{
     polygon-fill: rgb(242,239,233);
   }
-} 
+}
 #coast-poly{
   [zoom >= 10]{
     polygon-fill: rgb(242,239,233);

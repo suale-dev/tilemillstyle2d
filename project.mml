@@ -3482,7 +3482,7 @@
       "id": "border-countries",
       "class": "",
       "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-boundary-lines-land.zip"
+        "file": "world_boundaries/10m-admin-0-boundary-lines-land.zip"
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -3501,7 +3501,7 @@
       "id": "border-city",
       "class": "",
       "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-1-states-provinces-lines.zip"
+        "file": "world_boundaries/10m-admin-1-states-provinces-lines.zip"
       },
       "layer": null,
       "srs-name": "autodetect",
