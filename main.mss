@@ -9,3 +9,4 @@
 @direaction: rgb(0,0,0);
 @border-country: #333333;
 @border-city: #444444;
+@water: #a3ccff;

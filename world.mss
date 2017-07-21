@@ -1,5 +1,5 @@
 Map {
-  background-color: rgb(181,208,208);
+  background-color: @water
 }
 #world{
   [zoom < 10]{
@@ -36,7 +36,7 @@ Map {
 #border-countries{
   [zoom>=4]{
     line-color: @border-country;
-    line-width: 1;
+    line-width: 0.5;
   }
 }
 #border-city{
@@ -46,13 +46,12 @@ Map {
     line-dasharray: 4, 2;
   }
 }
-@landcover-swimmingpoll-fill: rgb(181,208,208);
 @landcover-swimmingpoll-line: rgb(0,0,255);
 @landcover-playground-fill: rgb(204,255,241);
 @landcover-playground-line: rgb(102,102,102);
 #landcover-leisure{
   [leisure='swimming_pool'][zoom >=14]{
-    polygon-fill: rgb(181,208,208);
+    polygon-fill: @water;
     line-color: rgb(0,0,255);
     line-width: 0.5;
   }
@@ -381,24 +380,24 @@ Map {
   [waterway='dock'],[waterway='mill_pond'],[waterway='canal']{
     [zoom>=9]{
       polygon-gamma: 0.75;
-      polygon-fill: rgb(181,208,208);
+      polygon-fill: @water;
     }
   }
   [landuse='basin'][zoom>=7]{
     polygon-gamma: 0.75;
-    polygon-fill: rgb(181,208,208);
+    polygon-fill: @water;
   }
   [natural='lake'],[natural='water'],[landuse='reservoir'],[waterway='riverbank'],[landuse='water'],[natural='bay']{
     [zoom>=6]{
       polygon-gamma: 0.75;
-      polygon-fill: rgb(181,208,208);
+      polygon-fill: @water;
     }
   }
   [natural='mud'][zoom>=13]{
     polygon-pattern-file: url("symbols/mud.png");
   }
   [natural='land'][zoom>=10]{
-    polygon-fill: rgb(181,208,208);
+    polygon-fill: @water;
   }
 }
 #water-areas-overlay{
@@ -437,15 +436,15 @@ Map {
 #water-lines-low-zoom{
   [waterway='river']{
     [zoom=8]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 0.7;
     }
     [zoom=9]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 1.2;
     }
     [zoom>=10][zoom<12]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 1.6;
     }
   }
@@ -459,14 +458,14 @@ Map {
   }
   [waterway='wadi']{
     [zoom>=13][zoom<16]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 1;
       line-join: round;
       line-cap: round;
       line-dasharray: 4, 4;
     }
     [zoom>=16]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 2;
       line-join: round;
       line-cap: round;
@@ -475,13 +474,13 @@ Map {
   }
   [waterway='river']{
     [zoom=12]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 2;
       line-join: round;
       line-cap: round;
     }
     [zoom=13]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 3;
       line-join: round;
       line-cap: round;
@@ -494,7 +493,7 @@ Map {
       text-name: "[name]";
     }
     [zoom=14]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 5;
       line-join: round;
       line-cap: round;
@@ -506,7 +505,7 @@ Map {
       text-name: "[name]";      
     }
     [zoom>=15][zoom<17]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 6;
       line-join: round;
       line-cap: round;
@@ -518,7 +517,7 @@ Map {
       text-name: "[name]"; 
     }
     [zoom=17]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 10;
       line-join: round;
       line-cap: round;
@@ -530,7 +529,7 @@ Map {
       text-name: "[name]"; 
     }
     [zoom>=18]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 12;
       line-join: round;
       line-cap: round;
@@ -544,13 +543,13 @@ Map {
   }
   [waterway='canal'][disused!='yes']{
     [zoom=12]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 3;
       line-join: round;
       line-cap: round;
     }
     [zoom=13]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 4;
       line-join: round;
       line-cap: round;
@@ -564,14 +563,14 @@ Map {
   }
   [waterway='stream'],[waterway='ditch'],[waterway='drain']{
     [zoom>=13][zoom<15]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 1;
     }
   }
   [waterway='river'][tunnel='yes']{
     [zoom=14]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 6;
         line-dasharray: 4, 2;
       }
@@ -588,7 +587,7 @@ Map {
     }
     [zoom>=15][zoom<17]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 7;
         line-dasharray: 4, 2;
       }
@@ -605,7 +604,7 @@ Map {
     }
     [zoom=17]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 11;
         line-dasharray: 4, 2;
       }
@@ -622,7 +621,7 @@ Map {
     }
     [zoom>=18]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 13;
         line-dasharray: 4, 2;
       }
@@ -641,7 +640,7 @@ Map {
   [waterway='canal'][tunnel='yes']{
     [zoom>=14][zoom<17]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 7;
         line-dasharray: 4, 2;
       }
@@ -658,7 +657,7 @@ Map {
     }
     [zoom>=17]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 11;
         line-dasharray: 4, 2;
       }
@@ -676,7 +675,7 @@ Map {
   }
   [waterway='canal'][tunnel!='yes'][disused!='yes']{
     [zoom>=14][zoom<17]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 7;
       line-join: round;
       line-cap: round;
@@ -690,7 +689,7 @@ Map {
   }
   [waterway='canal'][tunnel!='yes'][disused!='yes'][lock!='yes']{
     [zoom>=17]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 7;
       line-join: round;
       line-cap: round;
@@ -744,7 +743,7 @@ Map {
   [waterway='stream'][tunnel='yes']{
     [zoom>=15]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 2.4;
         line-dasharray: 4, 2;
       }
@@ -756,7 +755,7 @@ Map {
   }
   [waterway='stream'][tunnel!='yes']{
     [zoom>=15]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 2;
       text-placement: line;
       text-spacing: 600;
@@ -770,7 +769,7 @@ Map {
   [waterway='drain'][tunnel='yes'],[waterway='ditch'][tunnel='yes']{
     [zoom>=15]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 2;
         line-dasharray: 4, 2;
       }
@@ -782,7 +781,7 @@ Map {
   }
   [waterway='drain'][tunnel!='yes'],[waterway='ditch'][tunnel!='yes']{
     [zoom>=15]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 1;
       text-placement: line;
       text-spacing: 600;
@@ -2553,7 +2552,7 @@ Map {
       line-width: 7;
       line-join: round;    
     }
-    line-color: rgb(181,208,208);
+    line-color: @water;
     line-width: 6;
     line-join: round;
     line-cap: round;    
@@ -2570,7 +2569,7 @@ Map {
       line-width: 11;
       line-join: round;
     }
-    line-color: rgb(181,208,208);
+    line-color: @water;
     line-width: 10;
     line-join: round;
     line-cap: round;
