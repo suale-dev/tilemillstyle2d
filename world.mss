@@ -4899,7 +4899,20 @@ Map {
         line-join: round;
       }
     }
-    [zoom>=14]{
+    [zoom>=14][zoom<17]{
+      ::dash{
+        line-color: rgb(255,255,255);
+        line-width: 1;
+        line-join: round;
+        line-dasharray: 0, 11, 8, 1;
+      }
+      ::fill{
+        line-color: rgb(153,153,153);
+        line-width: 3;
+        line-join: round;
+      }
+    }
+    [zoom>=17]{
       ::dash{
         line-color: rgb(255,255,255);
         line-width: 1;
@@ -4914,7 +4927,20 @@ Map {
     }
   }
   [railway='INT-spur-siding-yard']{
-    [zoom>=13]{
+    [zoom>=13][zoom<17]{
+      ::dash{
+        line-color: rgb(255,255,255);
+        line-width: 0.8;
+        line-join: round;
+        line-dasharray: 0, 11, 8, 1;
+      }
+      ::fill{
+        line-color: rgb(153,153,153);
+        line-width: 2;
+        line-join: round;
+      }
+    }
+    [zoom>=17]{
       ::dash{
         line-color: rgb(255,255,255);
         line-width: 0.8;
@@ -4929,7 +4955,15 @@ Map {
     }
   }
   [railway='disused'][highway=''],[railway='abandoned'][highway=''],[railway='construction'][highway='']{
-    [zoom>=13]{
+    [zoom>=13][zoom<17]{
+      ::fill{
+        line-color: rgb(128,128,128);
+        line-width: 2;
+        line-join: round;
+        line-dasharray: 2, 4;
+      }
+    }
+    [zoom>=17]{
       ::fill{
         line-color: rgb(128,128,128);
         line-width: 2;
@@ -4939,16 +4973,23 @@ Map {
     }
   }
   [highway='track'][tracktype='grade1']{
-    [zoom>=14]{
+    [zoom>=14][zoom<17]{
       ::fill{
         line-color: rgb(179,119,0);
         line-width: 2;
         line-opacity: 0.7
       }
     }    
+    [zoom>=17]{
+      ::fill{
+        line-color: rgb(179,119,0);
+        line-width: 2;
+        line-opacity: 0.7
+      }
+    } 
   }
   [highway='track'][tracktype='grade2']{
-    [zoom>=14]{
+    [zoom>=14][zoom<17]{
       ::fill{
         line-color: rgb(168,112,0);
         line-width: 1.5;
@@ -4957,10 +4998,20 @@ Map {
         line-cap: round;
         line-dasharray: 3, 4;
       }
-    }    
+    }
+    [zoom>=17]{
+      ::fill{
+        line-color: rgb(168,112,0);
+        line-width: 1.5;
+        line-opacity: 0.8;
+        line-join: round;
+        line-cap: round;
+        line-dasharray: 3, 4;
+      }
+    }     
   }
   [highway='track'][tracktype='grade3']{
-    [zoom>=14]{
+    [zoom>=14][zoom<17]{
       ::fill{
         line-color: rgb(153,102,0);
         line-width: 2;
@@ -4968,10 +5019,19 @@ Map {
         line-join: round;
         line-cap: round;
       }
-    }    
+    } 
+    [zoom>=17]{
+      ::fill{
+        line-color: rgb(153,102,0);
+        line-width: 2;
+        line-opacity: 0.7;
+        line-join: round;
+        line-cap: round;
+      }
+    }  
   }
   [highway='track'][tracktype='grade4']{
-    [zoom>=14]{
+    [zoom>=14][zoom<17]{
       ::fill{
         line-color: rgb(153,102,0);
         line-width: 2;
@@ -4980,9 +5040,29 @@ Map {
         line-cap: round;
         line-dasharray: 4, 7, 1, 5;
       }
-    }    
+    }
+     [zoom>=17]{
+      ::fill{
+        line-color: rgb(153,102,0);
+        line-width: 2;
+        line-opacity: 0.8;
+        line-join: round;
+        line-cap: round;
+        line-dasharray: 4, 7, 1, 5;
+      }
+    }       
   }
   [highway='track'][tracktype='grade5']{
+    [zoom>=14][zoom<17]{
+      ::fill{
+        line-color: rgb(153,102,0);
+        line-width: 2;
+        line-opacity: 0.8;
+        line-join: round;
+        line-cap: round;
+        line-dasharray: 1, 5;
+      }
+    }
     [zoom>=14]{
       ::fill{
         line-color: rgb(153,102,0);
@@ -4995,7 +5075,7 @@ Map {
     }    
   }
   [highway='track'][tracktype='']{
-    [zoom>=14]{
+    [zoom>=14][zoom<17]{
       ::fill{
         line-color: rgb(153,102,0);
         line-width: 1.5;
@@ -5003,6 +5083,15 @@ Map {
         line-cap: round;
         line-dasharray: 3, 4;
       }
-    }    
+    }
+    [zoom>=17]{
+      ::fill{
+        line-color: rgb(153,102,0);
+        line-width: 1.5;
+        line-join: round;
+        line-cap: round;
+        line-dasharray: 3, 4;
+      }
+    }     
   }
 }
