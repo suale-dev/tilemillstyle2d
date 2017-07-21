@@ -1435,7 +1435,7 @@ Map {
     [highway='tertiary'],[highway='tertiary_link'],[highway='residential'],[highway='unclassified'],[highway='road']{
        /*3d style*/
       [zoom>=17]{
-        line-color: @roadCase;
+        line-color: @3droad;
         line-width: 16;
         line-dasharray: 4, 2;
       }
@@ -1463,7 +1463,7 @@ Map {
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @road;
+        line-color: @3droad;
         line-width: 11;
         line-join: round;
         line-cap: round;
@@ -1490,7 +1490,7 @@ Map {
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @primaryroad;
+        line-color: @3droad;
         line-width: 11;
         line-join: round;
         line-cap: round;
@@ -1517,7 +1517,7 @@ Map {
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @road;
+        line-color:@3droad;
         line-width: 12;
         line-join: round;
         line-cap: round;
@@ -1544,7 +1544,7 @@ Map {
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @road;
+        line-color:@3droad;
         line-width: 14;
         line-join: round;
         line-cap: round;
@@ -1571,7 +1571,7 @@ Map {
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @road;
+        line-color: @3droad;
         line-width: 13;
         line-join: round;
         line-cap: round;
@@ -1604,7 +1604,7 @@ Map {
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @road;
+        line-color: @3droad;
         line-width: 13;
         line-join: round;
         line-cap: round;        
