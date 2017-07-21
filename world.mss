@@ -663,7 +663,7 @@ Map {
   [waterway='dock'],[waterway='mill_pond'],[waterway='canal']{
     [zoom>=9][zoom<17]{
       polygon-gamma: 0.75;
-      polygon-fill: rgb(181,208,208);
+      polygon-fill: @water;
     }
     [zoom>=17]{
       polygon-gamma: 0.75;
@@ -673,7 +673,7 @@ Map {
   
   [landuse='basin'][zoom>=7][zoom<17]{
     polygon-gamma: 0.75;
-    polygon-fill: rgb(181,208,208);
+    polygon-fill: @water;
   }
   /*3d style*/
   [landuse='basin'][zoom>=17]{
@@ -684,7 +684,7 @@ Map {
   [natural='lake'],[natural='water'],[landuse='reservoir'],[waterway='riverbank'],[landuse='water'],[natural='bay']{
     [zoom>=6][zoom<17]{
       polygon-gamma: 0.75;
-      polygon-fill: rgb(181,208,208);
+      polygon-fill: @water;
     }
      /*3d style*/
     [zoom>=17]{
@@ -703,7 +703,7 @@ Map {
   }
   /*3d style*/
   [natural='land'][zoom>=17]{
-    polygon-fill: rgb(181,208,208);
+    polygon-fill: @water;
   }
 }
 #water-areas-overlay{
@@ -820,7 +820,7 @@ Map {
     }
     /*3d style*/
     [zoom>=17]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 2;
       line-join: round;
       line-cap: round;
@@ -1114,7 +1114,7 @@ Map {
     }
     [zoom>=17]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 2.4;
         line-dasharray: 4, 2;
       }
@@ -1126,7 +1126,7 @@ Map {
   }
   [waterway='stream'][tunnel!='yes']{
     [zoom>=15][zoom<17]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 2;
       text-placement: line;
       text-spacing: 600;
@@ -1138,7 +1138,7 @@ Map {
     }
     /*3d style*/
     [zoom>=17]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 2;
       text-placement: line;
       text-spacing: 600;
@@ -1152,7 +1152,7 @@ Map {
   [waterway='drain'][tunnel='yes'],[waterway='ditch'][tunnel='yes']{
     [zoom>=15][zoom<17]{
       ::dash{
-        line-color: rgb(181,208,208);
+        line-color: @water;
         line-width: 2;
         line-dasharray: 4, 2;
       }
@@ -1188,7 +1188,7 @@ Map {
     }
     /*3d style*/
     [zoom>=17]{
-      line-color: rgb(181,208,208);
+      line-color: @water;
       line-width: 1;
       text-placement: line;
       text-spacing: 600;
