@@ -98,7 +98,7 @@
       "id": "necountries",
       "class": "",
       "Datasource": {
-        "file": "world_boundaries/ne_110m_admin_0_boundary_lines_land.zip",
+        "file": "world_boundaries/ne_110m_admin_0_boundary_lines_land.shp",
         "id": "necountries",
         "project": "tilemillstyle2d",
         "srs": "+init=epsg:4326"
