@@ -22,22 +22,15 @@
     line-opacity: 0.6;
     line-width: 1;
   }
-   [zoom>=17]{
+  [zoom>=17]{
     line-opacity: 0.6;
     line-width: 1;
   }
 }
 #border-city{
-  [zoom>=7][zoom<17]{
+  [zoom>=7][zoom<16]{
     line-color: @border-city;
-    line-width: 0.8;
-    line-dasharray: 4, 2;
-  }
-    /*3d style*/
-   [zoom>=17]{
-    line-color: @border-city;
-    line-width: 0.8;
-    line-dasharray: 4, 2;
+    line-width: 0.5;
   }
 }
 #interpolation_lines {

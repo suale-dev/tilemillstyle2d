@@ -1988,19 +1988,19 @@
     }
     [zoom>=13][zoom<15]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6.5;
       }
    }
     [zoom>=15][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 10; 
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 12;
       }
     }
@@ -2014,19 +2014,19 @@
     }
     [zoom>=13][zoom<15]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 7.5;
       }
     }
     [zoom>=15][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 11.5; 
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 16; 
       }
     }
@@ -2040,19 +2040,19 @@
     }
     [zoom>=13][zoom<15]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 7;       
       }
    }
     [zoom>=15][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 10;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 16; 
       }
     }
@@ -2060,19 +2060,19 @@
   [highway='secondary'],[highway='secondary_link']{
     [zoom>=13][zoom<15]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 7;
       }
     }
     [zoom>=15][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 10;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 16; 
       }
     }
@@ -2080,19 +2080,19 @@
   [highway='tertiary'],[highway='tertiary_link']{
     [zoom=14]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 7.5;
       }
     }
     [zoom>=15][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 10;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 16; 
       }
     }
@@ -2100,25 +2100,25 @@
   [highway='residential'],[highway='unclassified'],[highway='road']{
     [zoom=14]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 3;
       }
     }
     [zoom=15]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5;      
       }
     }
     [zoom=16]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 10;
       }
     }
@@ -2126,19 +2126,19 @@
   [highway='service']{
     [zoom=15]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 2.5;
       }
     }
     [zoom=16]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5;
       }
     }
@@ -2146,19 +2146,19 @@
   [highway='pedestrian']{
     [zoom>=14][zoom<16]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 2;
       }
     }
     [zoom=16]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6;      
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6;      
       }
     }
@@ -2166,13 +2166,13 @@
   [aeroway='runway']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 19;  
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 19;  
       }
     }
@@ -2180,19 +2180,19 @@
   [aeroway='taxiway']{
     [zoom=14]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5;
       }
     }
     [zoom>=15][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 7;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 7;
       }
     }
@@ -2200,13 +2200,13 @@
   [railway='subway']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;
       }
     }
@@ -2228,19 +2228,19 @@
   [highway='unsurfaced']{
     [zoom=13]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5;
       }
     }
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6.5;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6.5;
       }
     }
@@ -2248,13 +2248,13 @@
   [highway='bridleway'],[highway='path'][horse='designated']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;
       }
     }
      [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;
       }
     }
@@ -2262,13 +2262,13 @@
   [highway='footway'],[highway='path'][foot='designated']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6;
       }
     }
@@ -2276,14 +2276,14 @@
   [highway='path'][bicycle!='designated'][foot!='designated'][horse!='designated']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4; 
       }
     }
     /*3d style*/
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4; 
       }
     }
@@ -2291,13 +2291,13 @@
   [highway='cycleway'],[highway='path'][bicycle='designated']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;
       }
     }
@@ -2305,13 +2305,13 @@
   [highway='byway']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;      
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;      
       }
     }
@@ -2319,14 +2319,14 @@
   [railway='rail']{
     [zoom>=13][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;   
         line-join: round;   
       }
     }
    [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.5;   
         line-join: round;   
       }
@@ -2335,14 +2335,14 @@
   [railway='INT-spur-siding-yard']{
     [zoom>=13][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.7;
         line-join: round;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5.7;
         line-join: round;
       }
@@ -2351,13 +2351,13 @@
   [railway='disused'][highway=''],[railway='abandoned'][highway=''],[railway='construction'][highway='']{
     [zoom>=13][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6;
       }
     }
      [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 6;
       }
     }
@@ -2365,13 +2365,13 @@
   [highway='track'][tracktype='grade1']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5;
       }
     }
      [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 5;
       }
     }
@@ -2379,13 +2379,13 @@
   [highway='track'][tracktype='grade2']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }
      [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }
@@ -2393,13 +2393,13 @@
   [highway='track'][tracktype='grade3']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }
@@ -2407,13 +2407,13 @@
   [highway='track'][tracktype='grade4']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }
      [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }
@@ -2421,13 +2421,13 @@
   [highway='track'][tracktype='grade5']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }
@@ -2435,13 +2435,13 @@
   [highway='track'][tracktype='']{
     [zoom>=14][zoom<17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }
     [zoom>=17]{
       ::case{
-        line-color: rgb(0,0,0);
+        line-color: @brigdeCase;
         line-width: 4.5;
       }
     }

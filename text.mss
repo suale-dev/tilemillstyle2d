@@ -1590,19 +1590,21 @@
     [place='suburb'] {
         [zoom>11][zoom<14] {
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
-            text-size: 13;
-            text-halo-radius: 1;
+            text-face-name: @bold-fonts;
+            text-size: @village-name-sizeS;
+            text-halo-radius: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
+            text-transform: uppercase;
         }
         [zoom>=14] {
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
-            text-size: 13;
-            text-halo-radius: 1;
+            text-face-name: @bold-fonts;
+            text-size: @village-name-sizeM;
+            text-halo-radius: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
+            text-transform: uppercase;
         }
     }
 }
@@ -1610,152 +1612,195 @@
     [place='village'], [place='village'] {
         [zoom>11][zoom<15] {
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
-            text-size: 9;
+            text-face-name: @bold-fonts;
+            text-size: @village-name-sizeS;
             text-halo-radius: 1;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
+            text-transform: uppercase;
         }
         [zoom>=15] {
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
-            text-size: 12;
-            text-halo-radius: 1;
+            text-face-name: @bold-fonts;
+            text-size: @village-name-sizeM;
+            text-halo-radius: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
+            text-transform: uppercase;
         }
     }
 }
 .hamlet {
     [place='suburb'], [place='locality'], [place='isolated_dwelling'], [place='farm'] {
-        [zoom>13][zoom<16] {
+        [zoom>11][zoom<15] {
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
-            text-size: 8;
-            text-halo-radius: 1;
+            text-face-name: @bold-fonts;
+            text-size: @village-name-sizeS;
+            text-halo-radius: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
+            text-transform: uppercase;
         }
-        [zoom>=16] {
+        [zoom>=15] {
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
-            text-size: 11;
-            text-halo-radius: 1;
+            text-face-name: @bold-fonts;
+            text-size: @village-name-sizeM;
+            text-halo-radius: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
+            text-transform: uppercase;
         }
     }
 }
 
 .city {
     [place='city'], [place='metropolis'] {
-
-        [zoom>=7][zoom<11] {
+        [zoom=7]{
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
-            text-size: 11;
+            text-face-name: @bold-fonts;
+            text-fill: rgb(35,35,35);
+            text-size: @city-names-sizeS;
             text-halo-radius: 1;
+            text-halo-fill: rgb(255,255,255);
+            text-name: '[name]';
+            text-opacity: 0.8
+        }
+        [zoom>=8][zoom<11] {
+            text-wrap-width: 0;
+            text-face-name: @bold-fonts;
+            text-fill: rgb(35,35,35);
+            text-size: @city-names-sizeM;
+            text-halo-radius: 1;
+            text-halo-fill: rgb(255,255,255);
             text-name: '[name]';
         }
         [zoom>=11][zoom<15] {
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
-            text-size: 14;
-            text-halo-radius: 1;
+            text-face-name: @bold-fonts;
+            text-size: @city-names-sizeL;
+            text-halo-radius: 2.5;
+            text-halo-fill: rgb(255,255,255);
             text-name: '[name]';
+            text-transform: uppercase;
         }
     }
 }
 .town {
-    [place='town'], [place='large_town'], [place='small_town'] {
-        [zoom>9][zoom<11] {
-            text-wrap-width: 20;
-            text-face-name: @book-fonts;
-            text-halo-radius: 1;
+    [place='town'], [place='large_town']{
+        [zoom>=9][zoom<12]{
+            text-face-name: @bold-fonts;
+            text-halo-radius: 2;
+            text-size: @town-name-sizeS;
+            text-fill: rgb(76,76,76);
             text-name: '[name]';
+            text-allow-overlap: false;
         }
-        [zoom>=11][zoom<14] {
-            text-wrap-width: 20;
-            text-face-name: @book-fonts;
-            text-halo-radius: 1;
+    }
+    [place='town'], [place='large_town'], [place='small_town'] {
+        [zoom>=12][zoom<14] {
+            text-face-name: @bold-fonts;
+            text-halo-radius: 2;
+            text-fill: rgb(36,36,36);
+            text-size: @town-name-sizeM;
             text-name: '[name]';
+            text-transform: uppercase;
         }
         [zoom>=14] {
-            text-wrap-width: 20;
-            text-face-name: @book-fonts;
-            text-size: 14;
-            text-halo-radius: 1;
+            text-face-name: @bold-fonts;
+            text-fill: rgb(36,36,36);
+            text-halo-radius: 2;
+            text-size: @town-name-sizeL;
             text-name: '[name]';
+            text-transform: uppercase;
         }
     }
 }
 #placenames-capital {
-    [zoom=4] {
+    [zoom=5] {
         text-dy: 0;
         text-wrap-width: 0;
         text-size: 9;
-        text-face-name: @book-fonts;
-        text-halo-radius: 1;
+        text-face-name: @bold-fonts;
+        text-halo-radius: 2;
         text-name: '[name]';
     }
-    [zoom>4][zoom<9] {
+    [zoom>=6][zoom<9] {
         text-dy: 0;
         text-wrap-width: 0;
-        text-size: 11;
-        text-face-name: @book-fonts;
-        text-halo-radius: 1;
+        text-size: 12;
+        text-face-name: @bold-fonts;
+        text-halo-radius: 2;
         text-name: '[name]';
     }
     [zoom>=9][zoom<11] {
         text-dy: 0;
         text-wrap-width: 0;
-        text-size: 11;
-        text-face-name: @book-fonts;
-        text-halo-radius: 1;
+        text-size: 14;
+        text-face-name: @bold-fonts;
+        text-halo-radius: 2;
         text-name: '[name]';
     }
     [zoom>=11][zoom<15] {
         text-dy: 0;
         text-wrap-width: 0;
-        text-size: 14;
-        text-face-name: @book-fonts;
-        text-halo-radius: 1;
+        text-size: 16;
+        text-face-name: @bold-fonts;
+        text-halo-radius: 3;
         text-name: '[name]';
     }
 }
-
 .country {
     [place='country'] {
         [zoom=3]{
             text-dy: 0;
-            text-wrap-width: 20;
             text-face-name:@book-fonts;
-            text-halo-radius: 1;
+            text-halo-radius: 2;
             text-size: 8;
-            text-fill: rgb(157,108,157);
+            text-fill: rgb(0,0,0);
             text-name: '[name]';
+            text-transform: uppercase;
         }
-        [zoom>=4][zoom<7] {
+        [zoom=4]{
             text-dy: 0;
-            text-wrap-width: 20;
             text-face-name:@bold-fonts;
-            text-halo-radius: 1;
-            text-size: 12;
-            text-fill: rgb(157,108,157);
+            text-halo-radius: 2;
+            text-size: 9;
+            text-fill: rgb(0,0,0);
             text-name: '[name]';
+            text-transform: uppercase;
+        }
+        [zoom>=5][zoom<8] {
+            text-dy: 0;
+            text-face-name:@bold-fonts;
+            text-halo-radius: 2;
+            text-size: 12;
+            text-fill: rgb(0,0,0);
+            text-name: '[name]';
+            text-transform: uppercase;
         }
     }
 }
 .state {
-    [place='state'] {
-        [zoom>=7][zoom<=9] {
+    [place='state']{
+        [zoom=6][name!='Hưng Yên'][name!='Bắc Ninh'][name!='Hải Dương']{
             text-dy: 0;
             text-wrap-width: 0;
-            text-face-name: @oblique-fonts;
-            text-halo-radius: 1;
-            text-size: 11;
-            text-fill: rgb(157,108,157);
+            text-face-name: @bold-fonts;
+            text-halo-radius: 2.5;
+            text-size: 8;
+            text-fill: rgb(76,76,76);
             text-name: '[name]';
+            text-transform: uppercase;
+        }
+        [zoom>=7][zoom<8] {
+            text-dy: 0;
+            text-wrap-width: 0;
+            text-face-name: @bold-fonts;
+            text-halo-radius: 2.5;
+            text-size: 10;
+            text-fill: rgb(36,36,36);
+            text-name: '[name]';
+            text-transform: uppercase;
         }
     }
 }

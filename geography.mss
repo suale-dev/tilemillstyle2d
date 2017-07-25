@@ -3,16 +3,16 @@ Map {
 }
 #world{
   [zoom < 10]{
-    polygon-fill: rgb(242,239,233);
+    polygon-fill: @defaultland;
   }
 }
 #coast-poly{
   [zoom >= 10][zoom<17]{
-    polygon-fill: rgb(242,239,233);
+    polygon-fill: @defaultland;
   }
   /*3d style*/
   [zoom >= 17]{
-    polygon-fill: rgb(242,239,233);
+    polygon-fill: @defaultland;
   }
 }
 

@@ -183,7 +183,7 @@
 }
 #buildings-lz{
   [railway='station'],[building='station']{
-    [zoom>=10][zoom<17]{
+    [zoom>=13][zoom<17]{
       polygon-fill: rgb(212,170,170);
     }
     [zoom>=17]{
@@ -191,7 +191,7 @@
     }
   }
   
-  [building='supermarket'][zoom>=10][zoom<17]{
+  [building='supermarket'][zoom>=13][zoom<17]{
     polygon-fill: rgb(212,170,170);    
     polygon-opacity: 0.5;
   }
@@ -201,7 +201,7 @@
   }
   
   [amenity='place_of_worship']{
-    [zoom>=10][zoom<15]{
+    [zoom>=13][zoom<15]{
       polygon-fill: rgb(119,119,119);    
       polygon-opacity: 0.5;    
     }
@@ -221,7 +221,7 @@
 }
   
 #buildings{
-  [building='INT-light'][zoom>=12][zoom<17]{
+  [building='INT-light'][zoom>=13][zoom<17]{
     polygon-fill: rgb(188,169,169);
     polygon-opacity: 0.7;
   }
@@ -230,7 +230,7 @@
     polygon-opacity: 0.7;
   }
   
-  [building!='INT-light'][building!=''][zoom>=12][zoom<17]{
+  [building!='INT-light'][building!=''][zoom>=13][zoom<17]{
     polygon-fill: rgb(188,169,169);
     polygon-opacity:  0.9;
   }
@@ -248,7 +248,7 @@
     polygon-opacity:  0.2;
   }
   
-  [aeroway='terminal'][zoom>=12][zoom<17]{
+  [aeroway='terminal'][zoom>=13][zoom<17]{
     polygon-fill: rgb(204,153,255);
   }
   [aeroway='terminal'][zoom>=17]{
