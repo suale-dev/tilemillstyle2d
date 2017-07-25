@@ -999,9 +999,7 @@
             text-name: '[name]';
             text-fill: rgb(170, 102, 204);
         }
-    }
-    
-  
+    } 
     [leisure !=''],
     [landuse ! ''] {
         [point = 'yes'] {
@@ -1470,7 +1468,7 @@
             shield-min-padding: 30;
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
-            shield-spacing: 750;
+            shield-min-distance : 50;
         }
     }
     [highway='motorway'][length=7] {
@@ -1480,7 +1478,7 @@
             shield-min-padding: 30;
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
-            shield-spacing: 750;
+            shield-min-distance : 50;
         }
     }
     [highway='motorway'][length=8] {
@@ -1490,28 +1488,37 @@
             shield-min-padding: 30;
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
-            shield-spacing: 750;
+            shield-min-distance : 50;
         }
     }
     [highway='trunk'] {
-        [zoom>10][zoom<13] {
+        [zoom=10]{
             shield-file: 'symbols/tru_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
-            shield-spacing: 750;
+            shield-min-distance : 20;
+            shield-fill:rgb(255,255,255);
+        }
+        [zoom>=11][zoom<13] {
+            shield-file: 'symbols/tru_shield[length].png';
+            shield-placement: 'line';
+            shield-min-padding: 30;
+            shield-name: '[ref]';
+            shield-face-name: @bold-fonts;
+            shield-min-distance : 50;
             shield-fill:rgb(255,255,255);
         }
     }
     [highway='primary'] {
-        [zoom>10][zoom<13] {
+        [zoom>9][zoom<13] {
             shield-file: 'symbols/pri_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
-            shield-spacing: 750;
+            shield-min-distance : 50;
             shield-fill:rgb(255,255,255);
         }
     }
@@ -1522,7 +1529,7 @@
             shield-min-padding: 40;
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
-            shield-spacing: 750;
+            shield-min-distance : 50;
             shield-fill:rgb(255,255,255);
         }
     }
