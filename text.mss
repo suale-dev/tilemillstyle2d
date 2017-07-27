@@ -3,27 +3,27 @@
   [way_area>=10000000][zoom>=10][zoom<17]{
     text-wrap-width: 20;
     text-face-name: @book-fonts;
-    text-size: 9;
+    text-size: @area-name-size;
     text-halo-radius: 1;
-    text-fill: rgb(153,153,255);
+    text-fill: @area-name-color;
     text-name: "[name]";
   }
   /*3d style*/
   [way_area>=10000000][zoom>=17]{
     text-wrap-width: 20;
     text-face-name: @book-fonts;
-    text-size: 9;
+    text-size: @area-name-size;
     text-halo-radius: 1;
-    text-fill: rgb(153,153,255);
+    text-fill: @area-name-color;
     text-name: "[name]";
   }
   
   [way_area>=5000000][way_area<10000000][zoom>=11][zoom<17]{
     text-wrap-width: 20;
     text-face-name: @book-fonts;
-    text-size: 9;
+    text-size: @area-name-size;
     text-halo-radius: 1;
-    text-fill: rgb(153,153,255);
+    text-fill: @area-name-color;
     text-name: "[name]";
   }
   /*3d style*/
@@ -39,9 +39,9 @@
   [way_area<5000000][zoom>=12][zoom<17]{
     text-wrap-width: 20;
     text-face-name: @book-fonts;
-    text-size: 9;
+    text-size: @area-name-size;
     text-halo-radius: 1;
-    text-fill: rgb(153,153,255);
+    text-fill: @area-name-color;
     text-name: "[name]";
   }
   /*3d style*/
@@ -55,7 +55,7 @@
   }
 }
 #housenames {
-    [zoom > 16][zoom < 17] {
+    [zoom >= 16][zoom < 17] {
         text-fill: @housenames-color;
         text-wrap-width: 20;
         text-face-name: @book-fonts;
@@ -102,11 +102,16 @@
     [way_area>=150000] {
         [zoom > 13][zoom<17] {
             text-placement: 'interior';
+            text-wrap-width: 50;
             text-name: '[name]';
             text-face-name: @book-fonts;
+            text-halo-radius: 2;
+            text-halo-fill: rgb(255,255,255);
+            text-fill: rgb(76,76,76);
+            text-size: 12;
         }
     /*3d style*/
-         [zoom >=17] {
+        [zoom >=17] {
             text-placement: 'interior';
             text-name: '[name]';
             text-face-name: @book-fonts;
@@ -116,13 +121,15 @@
         [zoom > 14][zoom < 17] {
             text-placement: 'interior';
             text-wrap-width: 20;
-            text-halo-radius: 1;
-            text-fill: rgb(0,0,51);
+            text-halo-radius: 2;
+            text-halo-fill: rgb(255,255,255);
+            text-fill: rgb(76,76,76);
+            text-size: 12;
             text-name: '[name]';
             text-face-name: @book-fonts;
         }
     /*3d style*/
-        [zoom >= 14] {
+        [zoom >= 17] {
             text-placement: 'interior';
             text-wrap-width: 20;
             text-halo-radius: 1;
@@ -135,8 +142,10 @@
         [zoom > 15][zoom < 17] {
             text-placement: 'interior';
             text-wrap-width: 20;
-            text-halo-radius: 1;
-            text-fill: rgb(0,0,51);
+            text-halo-radius: 2;
+            text-halo-fill: rgb(255,255,255);
+            text-fill: rgb(76,76,76);
+            text-size: 12;
             text-name: '[name]';
             text-face-name: @book-fonts;
         }
@@ -169,12 +178,13 @@
             text-dy: 0;
             text-wrap-width: 0;
             text-face-name: @oblique-fonts;
-            text-size: 9;
-            text-halo-radius: 1;
+            text-size: @area-name-size;
+            text-fill: @area-name-color;
+            text-halo-radius: 2;
             text-name: '[name]';
         }
             /*3d style*/
-            [zoom>=17]{
+        [zoom>=17]{
             text-placement: 'interior';
             text-dy: 0;
             text-wrap-width: 0;
@@ -197,7 +207,8 @@
             text-size: 9;
             text-halo-radius: 1;
             text-name: '[name]';
-            text-fill: rgb(115, 74, 8);
+            text-size: @area-name-size;
+            text-fill: @area-name-color;
         }
     }
     [amenity='bar'] {
@@ -331,16 +342,6 @@
             text-name: '[name]';
             text-fill: rgb(102, 153, 204);
         }
-                /*3d style*/
-        [zoom > 16] {
-            text-placement: 'interior';
-            text-face-name: @oblique-fonts;
-            text-halo-radius: 1;
-            text-size: 9;
-            text-dy: 22;
-            text-name: '[ele]';
-            text-fill: rgb(102, 153, 204);
-        }
     }
     [amenity='bank'] {
                 /*3d style*/
@@ -374,14 +375,14 @@
         [zoom>14][zoom < 17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
-            text-halo-radius: 1;
-            text-size: 9;
+            text-halo-radius: 2;
+            text-size: @area-name-size;
             text-wrap-width: 14;
             text-name: '[name]';
-            text-fill: rgb(0, 0, 51);
+            text-fill: @area-name-color;
         }
                 /*3d style*/
-            [zoom>=17] {
+        [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -392,14 +393,14 @@
         }
     }
     [amenity='kindergarten'] {
-        [zoom>15] [zoom < 17]{
+        [zoom>=15] [zoom < 17]{
             text-placement: 'interior';
             text-face-name: @book-fonts;
-            text-halo-radius: 1;
-            text-size: 8;
+            text-halo-radius: 2;
+            text-size: @area-name-size;
             text-wrap-width: 14;
             text-name: '[name]';
-            text-fill: rgb(0, 0, 51);
+            text-fill: @area-name-color;
         }
          [zoom>=17] {
             text-placement: 'interior';
@@ -412,15 +413,15 @@
         }
     }
     [amenity='hospital'] {
-        [zoom>15][zoom<17] {
+        [zoom>=15][zoom<17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 2;
-            text-size: 9;
+            text-size: @area-name-size;
             text-dy: 10;
             text-wrap-width: 24;
             text-name: '[name]';
-            text-fill: rgb(218, 0, 146);
+            text-fill: @area-name-color;
         }
     /*3d style*/
             [zoom>=17] {
@@ -692,32 +693,32 @@
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
-            text-size: 9;
+            text-size: @area-name-size;
             text-dy: 10;
             text-wrap-width: 20;
             text-name: '[name]';
-            text-fill: rgb(102, 153, 204);
+            text-fill: @area-name-color;
         }
         [zoom = 16] {
             text-placement: 'interior';
             text-face-name: @oblique-fonts;
             text-halo-radius: 1;
-            text-size: 9;
+            text-size: @area-name-size;
             text-dy: 22;
             text-wrap-width: 20;
             text-name: '[ele]';
-            text-fill: rgb(102, 153, 204);
+            text-fill: @area-name-color;
         }
             /*3d style*/
         [zoom >= 17] {
             text-placement: 'interior';
             text-face-name: @oblique-fonts;
             text-halo-radius: 1;
-            text-size: 9;
+            text-size: @area-name-size;
             text-dy: 22;
             text-wrap-width: 20;
             text-name: '[ele]';
-            text-fill: rgb(102, 153, 204);
+            text-fill: @area-name-color;
         }
     }
     [tourism='hotel'],
@@ -837,10 +838,10 @@
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
-            text-size: 9;
+            text-size: @area-name-size;
             text-wrap-width: 16;
             text-name: '[name]';
-            text-fill: rgb(0, 0, 51);
+            text-fill: @area-name-color;
         }
         /*3d style*/
         [zoom>=17] {
@@ -855,16 +856,17 @@
     }
   
      [tourism='theme_park'] {
-        [zoom>13][zoom<16] {
+        [zoom>13][zoom<17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
-            text-halo-radius: 1;
+            text-halo-radius: 2;
             text-wrap-width: 30;
             text-name: '[name]';
-            text-fill: rgb(115, 74, 8);
+            text-size: @area-name-size;
+            text-fill: @area-name-color;
         }
         /*3d style*/
-        [zoom>=16] {
+        [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -905,11 +907,11 @@
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
-            text-size: 8;
+            text-size: @area-name-size;
             text-dy: 9;
             text-wrap-width: 20;
             text-name: '[name]';
-            text-fill: rgb(153, 51, 153);
+            text-fill: @area-name-color;
         }
         /*3d style*/
         [zoom>=17] {
@@ -932,11 +934,11 @@
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 2;
-            text-size: 8;
+            text-size: @area-name-size;
             text-dy: 16;
             text-wrap-width: 12;
             text-name: '[name]';
-            text-fill: rgb(0, 0, 51);
+            text-fill: @area-name-color;
         }
         /*3d style*/
         [zoom>=17] {
@@ -969,11 +971,11 @@
             text-placement: 'interior';
             text-face-name: @bold-fonts;
             text-halo-radius: 1;
-            text-size: 9;
+            text-size: @area-name-size;
             text-dy: 9;
             text-wrap-width: 10;
             text-name: '[name]';
-            text-fill: rgb(153, 51, 153);
+            text-fill: @area-name-color;
         }
         /*3d style*/
         [zoom>=17] {
@@ -1007,10 +1009,10 @@
                 text-placement: 'interior';
                 text-face-name: @book-fonts;
                 text-halo-radius: 2;
-                text-size: 9;
+                text-size: @area-name-size;
                 text-wrap-width: 20;
                 text-name: '[name]';
-                text-fill: rgb(102, 153, 204);
+                text-fill: @area-name-color;
             }
              /*3d style*/
              [zoom >= 17] {
@@ -1030,9 +1032,9 @@
             text-face-name: @book-fonts;
             text-halo-radius: 1;
             text-wrap-width: 30;
-            text-size: 8;
+            text-size: @area-name-size;
             text-name: '[name]';
-            text-fill: rgb(0, 0, 255);
+            text-fill: @area-name-color
         }
         [zoom>=17] {
             text-placement: 'interior';
@@ -1049,11 +1051,11 @@
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
-            text-size: 9;
+            text-size: @area-name-size;
             text-dy: 12;
             text-wrap-width: 20;
             text-name: '[name]';
-            text-fill: rgb(165, 42, 42);
+            text-fill: @area-name-color;
         }
          /*3d style*/
         [zoom >= 17] {
@@ -1073,10 +1075,10 @@
             text-face-name: @book-fonts;
             text-halo-radius: 1;
             text-wrap-width: 70;
-            text-size: 9;
+            text-size: @area-name-size;
             text-dy: 10;
             text-name: '[name]';
-            text-fill: rgb(0, 102, 255);
+            text-fill: @area-name-color;
         }
         /*3d style*/
         [zoom >= 17] {
@@ -1094,24 +1096,35 @@
 /*verified*/
 
 #roads-text-name {
-
+    [zoom>14][zoom<17][highway!=''] {
+        text-placement: 'line';
+        text-face-name: @book-fonts;
+        text-spacing: 400;
+        text-size: @road-name-sizeM;
+        text-fill: @road-name-color;
+        text-halo-radius: 2;
+        text-halo-fill: rgb(255,255,255);
+        text-name: '[name]';
+    }
     [highway='trunk'], [highway='primary'] {
-            [zoom>12][zoom<14] {
+        [zoom=13]{
             text-placement: 'line';
             text-face-name: @book-fonts;
-            text-size: 8;
+            text-size: @road-name-sizeS;
             text-name: '[name]';
+            text-fill: @road-name-color;
+            text-halo-fill: rgb(255,255,255);
+            text-halo-radius: 1;
+            text-repeat-distance: 10;
         }
-        [zoom>13][zoom<15] {
-            text-placement: 'line';
-            text-face-name: @book-fonts;
-            text-size: 9;
-            text-name: '[name]';
-        }
-        [zoom>=15][zoom<17] {
+        [zoom>=14][zoom<17] {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-name: '[name]';
+            text-fill: @primary-road-name-color;
+            text-size: @road-name-sizeM;
+            text-halo-fill: rgb(255,255,255);
+            text-halo-radius: 2;
         }
         [zoom>=17]  {
             text-placement: 'line';
@@ -1119,29 +1132,25 @@
             text-name: '[name]';
         }
     }
-
     [highway='secondary'] {
-        [zoom>12][zoom<14] {
+        [zoom=13]{
             text-placement: 'line';
             text-face-name: @book-fonts;
-            text-size: 8;
-            text-halo-radius: 1;
-            
+            text-size: @road-name-sizeS;
             text-name: '[name]';
+            text-halo-fill: rgb(255,255,255);
+            text-halo-radius: 1;
+            text-fill: @road-name-color;
+            text-repeat-distance: 10;
         }
-        [zoom>13][zoom<15] {
+        [zoom>=14][zoom<17]  {
             text-placement: 'line';
             text-face-name: @book-fonts;
-            text-size: 9;
-            text-halo-radius: 1;
-            
             text-name: '[name]';
-        }
-        [zoom>=15][zoom<17]  {
-            text-placement: 'line';
-            text-face-name: @book-fonts;
-            text-halo-radius: 1;
-            text-name: '[name]';
+            text-size: @road-name-sizeM;
+            text-fill: @road-name-color;
+            text-halo-fill: rgb(255,255,255);
+            text-halo-radius: 2;      
         }
         [zoom>=17] {
             text-placement: 'line';
@@ -1150,27 +1159,31 @@
             text-name: '[name]';
         }
     }
-
     [highway='tertiary'] {
-        [zoom>14][zoom<17] {
+        [zoom>=14][zoom<17] {
             text-placement: 'line';
             text-face-name: @book-fonts;
-            text-size: 9;
+            text-size: @road-name-sizeM;
+            text-fill: @road-name-color;
             text-name: '[name]';
+            text-halo-fill: rgb(255,255,255);
+            text-halo-radius: 2
         }
-            [zoom>=17] {
+        [zoom>=17] {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-size: 11;
             text-name: '[name]';
         }
     }
-
     [highway='proposed'], [highway='construction'] {
-        [zoom<17][zoom>12] {
+        [zoom=16] {
             text-placement: 'line';
             text-face-name: @book-fonts;
-            text-size: 9;
+            text-size: @road-name-sizeM;
+            text-fill: @road-name-color;
+            text-halo-radius: 2;
+            text-halo-fill: rgb(255,255,255);
             text-name: '[name]';
         }
         /*3d style*/
@@ -1181,18 +1194,18 @@
             text-name: '[name]';
         }
     }
-
- 
     [highway='unclassified'], [highway='residential'] {
         [zoom=15] {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-spacing: 300;
-            text-size: 8;
+            text-size: @road-name-sizeM;
+            text-fill: @road-name-color;
+            text-halo-fill:rgb(255,255,255);
             text-halo-radius: 1;
             text-name: '[name]';
         }    
-   		 [zoom = 16] {
+   		 [zoom=16] {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-spacing: 300;
@@ -1210,15 +1223,6 @@
             text-name: '[name]';
         }
     }
-
-    [zoom>14][zoom<17] {
-        text-placement: 'line';
-        text-face-name: @book-fonts;
-        text-spacing: 400;
-        text-size: 9;
-        text-halo-radius: 1;
-        text-name: '[name]';
-    }
 }
 
 /*verified*/
@@ -1230,40 +1234,24 @@
             shield-min-padding: 30;
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
+            shield-fill:rgb(0,0,0);
             shield-spacing: 750;
-        }
-        /*3d style*/
-        [zoom>=17] {
-            shield-file: 'symbols/mot_shield[length].png';
-            shield-placement: 'line';
-            shield-min-padding: 30;
-            shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
-            shield-spacing: 750;
+            shield-min-distance: 100;
         }
     }
     [highway='motorway'][length =7] {
-        [zoom>12][zoom<12] {
+        [zoom>12][zoom<17] {
             shield-file: 'symbols/mot_shield6.png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
             shield-spacing: 750;
-            shield-fill: rgb(255,255,255);
-        }
-        /*3d style*/
-        [zoom>=17] {
-            shield-file: 'symbols/mot_shield6.png';
-            shield-placement: 'line';
-            shield-min-padding: 30;
-            shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
-            shield-spacing: 750;
-            shield-fill: rgb(255,255,255);
+            shield-fill: rgb(0,0,0);
+            shield-min-distance: 100;
         }
     }
- [highway='motorway'][length =8] {
+   [highway='motorway'][length =8] {
         [zoom>12] [zoom<17] {
             shield-file: 'symbols/mot_shield7.png';
             shield-placement: 'line';
@@ -1271,21 +1259,12 @@
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
             shield-spacing: 750;
-            shield-fill:rgb(255,255,255);
-        }
-        /*3d style*/
-        [zoom>=17] {
-            shield-file: 'symbols/mot_shield7.png';
-            shield-placement: 'line';
-            shield-min-padding: 30;
-            shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
-            shield-spacing: 750;
-            shield-fill:rgb(255,255,255);
+            shield-fill:rgb(0,0,0);
+            shield-min-distance: 100;
         }
     }
     [highway='trunk'] {
-        [zoom>12]  [zoom<17]{
+        [zoom>12][zoom<15]{
             shield-file: 'symbols/tru_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -1293,9 +1272,9 @@
             shield-face-name: @bold-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
+            shield-min-distance: 100;
         }
-       /*3d style*/
-        [zoom>=17] {
+        [zoom>=15][zoom<17]{
             shield-file: 'symbols/tru_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -1303,10 +1282,11 @@
             shield-face-name: @bold-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
+            shield-min-distance: 500;
         }
     }
     [highway='primary'] {
-        [zoom>12] [zoom<17]  {
+        [zoom>12][zoom<15]  {
             shield-file: 'symbols/pri_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -1314,9 +1294,10 @@
             shield-face-name: @bold-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
+            shield-min-distance: 100;
         }
         /*3d style*/
-        [zoom>=17] {
+        [zoom>=15][zoom<17]{
             shield-file: 'symbols/pri_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
@@ -1324,6 +1305,7 @@
             shield-face-name: @bold-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
+            shield-min-distance: 500;
         }
     }
     [highway='secondary'][bridge !='yes'] {
@@ -1334,37 +1316,20 @@
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
             shield-spacing: 750;
-            shield-fill:rgb(255,255,255);
-        }
-         /*3d style*/
-         [zoom>=17] {
-            shield-file: 'symbols/sec_shield[length].png';
-            shield-placement: 'line';
-            shield-min-padding: 30;
-            shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
-            shield-spacing: 750;
-            shield-fill:rgb(255,255,255);
+            shield-fill:rgb(0,0,0);
+            shield-min-distance: 100;
         }
     }
     [highway='tertiary'][bridge !='yes'] {
-        [zoom>12] [zoom<17]{
+        [zoom>12][zoom<17]{
             shield-file: 'symbols/ter_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
             shield-spacing: 750;
-            shield-fill:rgb(255,255,255);
-        }
-         [zoom>=17] {
-            shield-file: 'symbols/ter_shield[length].png';
-            shield-placement: 'line';
-            shield-min-padding: 30;
-            shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
-            shield-spacing: 750;
-            shield-fill:rgb(255,255,255);
+            shield-fill:rgb(0,0,0);
+            shield-min-distance: 100;
         }
     }
     [highway='unclassified'], [highway ='residential'] {
@@ -1467,6 +1432,7 @@
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
+            shield-fill: rgb(0,0,0);
             shield-face-name: @bold-fonts;
             shield-min-distance : 50;
         }
@@ -1477,6 +1443,7 @@
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
+            shield-fill: rgb(0,0,0);
             shield-face-name: @bold-fonts;
             shield-min-distance : 50;
         }
@@ -1487,6 +1454,7 @@
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
+            shield-fill: rgb(0,0,0);
             shield-face-name: @bold-fonts;
             shield-min-distance : 50;
         }
@@ -1530,7 +1498,7 @@
             shield-name: '[ref]';
             shield-face-name: @bold-fonts;
             shield-min-distance : 50;
-            shield-fill:rgb(255,255,255);
+            shield-fill:rgb(0,0,0);
         }
     }
 }

@@ -538,10 +538,7 @@
 }
 #landuse_overlay{
   [landuse='military'][zoom>=13]{
-    polygon-pattern-file: url("symbols/military_red_hz2.png");
-    line-color: rgb(255,85,85);
-    line-width: 3;
-    line-opacity: 0.33;
+    polygon-fill: rgb(253,243,203);
   }
   [landuse='nature_reserve']{
     [zoom>=13][zoom<14]{

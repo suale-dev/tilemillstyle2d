@@ -14,6 +14,16 @@
 @village-name-sizeS: 10;
 @village-name-sizeM: 12;
 
+@road-name-sizeS: 10;
+@road-name-sizeM: 11;
+@road-name-sizeL: 12;
+
+@road-name-color: rgb(76,76,76);
+@primary-road-name-color: rgb(0,0,0);
+
+@area-name-size: 11;
+@area-name-color: rgb(0,0,0);
+
 //setting roads
 @railway: rgb(153,153,153); //color of railway
 @primaryroadCase: #efd195; //color of border primary road
