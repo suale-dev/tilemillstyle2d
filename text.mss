@@ -1104,6 +1104,9 @@
         text-fill: @road-name-color;
         text-halo-radius: 2;
         text-halo-fill: rgb(255,255,255);
+        text-allow-overlap: false;
+    text-avoid-edges: true;
+    text-clip: false;
         text-name: '[name]';
     }
     [highway='trunk'], [highway='primary'] {
@@ -1115,6 +1118,9 @@
             text-fill: @road-name-color;
             text-halo-fill: rgb(255,255,255);
             text-halo-radius: 1;
+      text-allow-overlap: false;
+      text-avoid-edges: true;
+    text-clip: false;
             text-repeat-distance: 10;
         }
         [zoom>=14][zoom<17] {
@@ -1124,6 +1130,9 @@
             text-fill: @primary-road-name-color;
             text-size: @road-name-sizeM;
             text-halo-fill: rgb(255,255,255);
+      text-allow-overlap: false;
+      text-avoid-edges: true;
+    text-clip: false;
             text-halo-radius: 2;
         }
         [zoom>=17]  {
@@ -1141,6 +1150,9 @@
             text-halo-fill: rgb(255,255,255);
             text-halo-radius: 1;
             text-fill: @road-name-color;
+      text-allow-overlap: false;
+      text-avoid-edges: true;
+    text-clip: false;
             text-repeat-distance: 10;
         }
         [zoom>=14][zoom<17]  {
@@ -1150,6 +1162,9 @@
             text-size: @road-name-sizeM;
             text-fill: @road-name-color;
             text-halo-fill: rgb(255,255,255);
+      text-allow-overlap: false;
+      text-avoid-edges: true;
+    text-clip: false;
             text-halo-radius: 2;      
         }
         [zoom>=17] {
@@ -1167,6 +1182,9 @@
             text-fill: @road-name-color;
             text-name: '[name]';
             text-halo-fill: rgb(255,255,255);
+      text-avoid-edges: true;
+    text-clip: false;
+      text-allow-overlap: false;
             text-halo-radius: 2
         }
         [zoom>=17] {
@@ -1184,6 +1202,9 @@
             text-fill: @road-name-color;
             text-halo-radius: 2;
             text-halo-fill: rgb(255,255,255);
+      text-avoid-edges: true;
+    text-clip: false;
+      text-allow-overlap: false;
             text-name: '[name]';
         }
         /*3d style*/
@@ -1202,6 +1223,9 @@
             text-size: @road-name-sizeM;
             text-fill: @road-name-color;
             text-halo-fill:rgb(255,255,255);
+      text-allow-overlap: false;
+      text-avoid-edges: true;
+    text-clip: false;
             text-halo-radius: 1;
             text-name: '[name]';
         }    
@@ -1212,6 +1236,9 @@
             text-size: 9;
             text-halo-radius: 1;
             text-name: '[name]';
+      text-allow-overlap: false;
+      text-avoid-edges: true;
+    text-clip: false;
         }
         /*3d style*/
         [zoom>16] {
@@ -1725,34 +1752,32 @@
     }
 }
 .country {
-    [place='country'] {
-        [zoom=3]{
-            text-dy: 0;
-            text-face-name:@book-fonts;
-            text-halo-radius: 2;
-            text-size: 8;
-            text-fill: rgb(0,0,0);
-            text-name: '[name]';
-            text-transform: uppercase;
-        }
-        [zoom=4]{
-            text-dy: 0;
-            text-face-name:@bold-fonts;
-            text-halo-radius: 2;
-            text-size: 9;
-            text-fill: rgb(0,0,0);
-            text-name: '[name]';
-            text-transform: uppercase;
-        }
-        [zoom>=5][zoom<8] {
-            text-dy: 0;
-            text-face-name:@bold-fonts;
-            text-halo-radius: 2;
-            text-size: 12;
-            text-fill: rgb(0,0,0);
-            text-name: '[name]';
-            text-transform: uppercase;
-        }
+    [zoom=3]{
+        text-dy: 0;
+        text-face-name:@book-fonts;
+        text-halo-radius: 2;
+        text-size: 8;
+        text-fill: rgb(0,0,0);
+        text-name: '[ABBREV]';
+        text-transform: uppercase;
+    }
+    [zoom=4]{
+        text-dy: 0;
+        text-face-name:@bold-fonts;
+        text-halo-radius: 2;
+        text-size: 9;
+        text-fill: rgb(0,0,0);
+        text-name: '[NAME]';
+        text-transform: uppercase;
+    }
+    [zoom>=5][zoom<8] {
+        text-dy: 0;
+        text-face-name:@bold-fonts;
+        text-halo-radius: 2;
+        text-size: 12;
+        text-fill: rgb(0,0,0);
+        text-name: '[NAME]';
+        text-transform: uppercase;
     }
 }
 .state {
