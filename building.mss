@@ -225,41 +225,22 @@
     polygon-fill: rgb(188,169,169);
     polygon-opacity: 0.7;
   }
-  [building='INT-light'][zoom>=17]{
-    polygon-fill: rgb(188,169,169);
-    polygon-opacity: 0.7;
-  }
   
   [building!='INT-light'][building!=''][zoom>=12][zoom<17]{
     polygon-fill: rgb(188,169,169);
     polygon-opacity:  0.9;
   }
-  [building!='INT-light'][building!=''][zoom>=17]{
-    polygon-fill: rgb(188,169,169);
-    polygon-opacity:  0.9;
-  }
-  
+
   [building!='INT-light'][building!=''][zoom=16]{
     polygon-fill: rgb(51,0,102);
     polygon-opacity:  0.2;
   }
-  [building!='INT-light'][building!=''][zoom>=17]{
-    polygon-fill: rgb(51,0,102);
-    polygon-opacity:  0.2;
-  }
-  
+
   [aeroway='terminal'][zoom>=12][zoom<17]{
     polygon-fill: rgb(204,153,255);
   }
-  [aeroway='terminal'][zoom>=17]{
-    polygon-fill: rgb(204,153,255);
-  }
-  
+
   [aeroway='terminal'][zoom>=14][zoom<17]{
-    line-color: rgb(51,0,102);
-    line-width: 0.2;
-  }
-  [aeroway='terminal'][zoom>=17]{
     line-color: rgb(51,0,102);
     line-width: 0.2;
   }
@@ -576,12 +557,6 @@
             point-placement: 'interior';
             point-allow-overlap: false;
         }
-         /*3d style*/
-         [zoom>=17] {
-            point-file: 'symbols/jewish3.p.16.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
     }
     [amenity='place_of_worship'] {
         [zoom=16] {
@@ -590,34 +565,34 @@
             point-allow-overlap: false;
         }
          /*3d style*/
-        [zoom>=17] {
+        [zoom=16] {
             point-file: 'symbols/place_of_worship3.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='police'] {
-        [zoom>16] {
+        [zoom=16] {
             point-file: 'symbols/police.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='post_box'] {
-        [zoom>16] {
+        [zoom=16] {
             point-file: 'symbols/post_box.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='post_office'] {
          /*3d style*/
-        [zoom>16] {
+        [zoom=16] {
             point-file: 'symbols/post_office.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='pub'] {
          /*3d style*/
-        [zoom>16] {
+        [zoom=1] {
             point-file: 'symbols/pub.p.16.png';
             point-placement: 'interior';
         }
@@ -628,7 +603,7 @@
             point-placement: 'interior';
         }
          /*3d style*/
-        [zoom>=15] {
+        [zoom=16] {
             point-file: 'symbols/biergarten.p.16.png';
             point-placement: 'interior';
         }
@@ -639,55 +614,55 @@
             point-placement: 'interior';
         }
          /*3d style*/
-        [zoom>17] {
+        [zoom=17] {
             point-file: 'symbols/recycling.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='restaurant'] {
-        [zoom>16] {
+        [zoom=16] {
             point-file: 'symbols/restaurant.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='fast_food'] {
          /*3d style*/
-        [zoom>16] {
+        [zoom=16] {
             point-file: 'symbols/fast_food.png';
             point-placement: 'interior';
         }
     }
     [amenity='telephone'] {
          /*3d style*/
-        [zoom>16] {
+        [zoom=16] {
             point-file: 'symbols/telephone.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='emergency_phone'] {
          /*3d style*/
-        [zoom>16] {
+        [zoom=6] {
             point-file: 'symbols/sosphone.png';
             point-placement: 'interior';
         }
     }
     [amenity='theatre'] {
          /*3d style*/
-        [zoom>16] {
+        [zoom=16] {
             point-file: 'symbols/theatre.p.20.png';
             point-placement: 'interior';
         }
     }
     [amenity='toilets'] {
          /*3d style*/
-        [zoom>16] {
+        [zoom>=16] [zoom<17]{
             point-file: 'symbols/toilets.p.20.png';
             point-placement: 'interior';
         }
     }
     [amenity='drinking_water'] {
          /*3d style*/
-        [zoom>16] {
+        [zoom>=16] [zoom<17]{
             point-file: 'symbols/food_drinkingtap.p.20.png';
             point-placement: 'interior';
         }
@@ -698,7 +673,7 @@
             point-placement: 'interior';
         }
          /*3d style*/
-         [zoom>=15] {
+         [zoom>=15][zoom<17] {
             point-file: 'symbols/amenity_prison.p.20.png';
             point-placement: 'interior';
         }
@@ -709,7 +684,7 @@
             point-placement: 'interior';
         }     
         /*3d style*/
-        [zoom>=17] {
+        [zoom>=15][zoom<17] {
             point-file: 'symbols/view_point.p.16.png';
             point-placement: 'interior';
         }
@@ -720,28 +695,28 @@
             point-placement: 'interior';
         }
          /*3d style*/
-        [zoom>=17] {
+        [zoom>=16][zoom<17] {
             point-file: 'symbols/amenity_veterinary.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='bench'] {
          /*3d style*/
-        [zoom>17] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/amenity_bench.p.8.png';
             point-placement: 'interior';
         }
     }
     [amenity='waste_basket'] {
          /*3d style*/
-        [zoom>17] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/amenity_waste_basket.p.8.png';
             point-placement: 'interior';
         }
     }
     [amenity='picnic_site'] {
          /*3d style*/
-        [zoom>16] {
+        [zoom>=16][zoom<17] {
             point-file: 'symbols/picnic.p.16.png';
             point-placement: 'interior';
         }
@@ -750,58 +725,58 @@
 }
 #amenity-points-other, #amenity-points-poly-other{
     [man_made='water_tower'] {
-        [zoom>16] {
+        [zoom>=16][zoom<17] {
             point-file: 'symbols/tower_water.p.20.png';
             point-placement: 'interior';
         }
     }
     [historic='memorial'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/tourist_memorial.p.20.png';
             point-placement: 'interior';
         }
     }
     [historic='archaeological_site'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/tourist_archaeological2.glow.16.png';
             point-placement: 'interior';
         }
     }
     
     [leisure='playground'] {
-        [zoom>16] {
+        [zoom>=16][zoom<17] {
             point-file: 'symbols/playground.p.20.png';
             point-placement: 'interior';
         }
     }
 
     [leisure='slipway'] {
-        [zoom>16] {
+        [zoom>=16][zoom<17] {
             point-file: 'symbols/transport_slipway.p.20.png';
             point-placement: 'interior';
         }
     }
     [highway='traffic_signals'] {
-        [zoom>16] {
+        [zoom>=16][zoom<17] {
             point-file: 'symbols/traffic_light.png';
             point-placement: 'interior';
         }
     }
   
      [highway='ford'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/transport_ford.p.16.png';
             point-placement: 'interior';
         }
     }
     [waterway = 'lock'], [lock = 'yes'] {
-        [zoom > 14] {
+        [zoom > 14][zoom<17] {
             point-file: 'symbols/lock_gate.png';
             point-placement: 'interior';
         }
     }
     [man_made='mast'] {
-        [zoom>16] {
+        [zoom>16] [zoom<17]{
             point-file: 'symbols/communications.p.20.png';
             point-placement: 'interior';
         }
@@ -810,127 +785,127 @@
 #amenity-points-shop, #amenity-points-poly-shop{
   
     [shop='supermarket'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/shop_supermarket.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='bakery'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_bakery.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='bicycle'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shopping_bicycle.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='books'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_books.p_16.png';
             point-placement: 'interior';
         }
     }
     [shop='butcher'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_butcher.png';
             point-placement: 'interior';
         }
     }
     [shop='car'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shopping_car.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='car_repair'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shopping_car_repair.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='clothes'], [shop='fashion'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_clothes.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='computer'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_computer.p_16.png';
             point-placement: 'interior';
         }
     }
     [shop='convenience'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_convenience.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='department_store'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/department_store.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='doityourself'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_diy.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='dry_cleaning'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_dry_cleaning.p_16.png';
             point-placement: 'interior';
         }
     }
     [shop='florist'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/florist.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='gift'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_gift.p_16.png';
             point-placement: 'interior';
         }
     }
     [shop='greengrocer'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_greengrocer.p_16.png';
             point-placement: 'interior';
         }
     }
     [shop='hairdresser'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_hairdresser.p.16.png';
             point-placement: 'interior';
         }
     }
     [shop='jewelry'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_jewelry.p_16.png';
             point-placement: 'interior';
         }
     }
     [shop='mobile_phone'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_mobile_phone.p_16.png';
             point-placement: 'interior';
         }
     }
     [shop='optician'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_optician.p_16.png';
             point-placement: 'interior';
         }
     }
     [shop='pet'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/shop_pet.p_16.png';
             point-placement: 'interior';
         }
@@ -939,67 +914,67 @@
 
 #amenity-points-tourism, #amenity-points-poly-tourism  {
     [tourism='caravan_site'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/caravan_park.p.24.png';
             point-placement: 'interior';
         }
     }
     [tourism='camp_site'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/camping.n.16.png';
             point-placement: 'interior';
         }
     }
     [tourism='chalet'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/chalet.p.16.png';
             point-placement: 'interior';
         }
     }
     [tourism='guest_house'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/guest_house.p.16.png';
             point-placement: 'interior';
         }
     }
     [tourism='bed_and_breakfast'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/bandb.p.20.png';
             point-placement: 'interior';
         }
     }
     [tourism='museum'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/museum.p.16.png';
             point-placement: 'interior';
         }
     }
     [tourism='alpine_hut'] {
-        [zoom>12] {
+        [zoom>12][zoom<17] {
             point-file: 'symbols/alpinehut.p.16.png';
             point-placement: 'interior';
         }
     } 
     [tourism='hostel'] {
-        [zoom>14] {
+        [zoom>14][zoom<17] {
             point-file: 'symbols/hostel.p.20.png';
             point-placement: 'interior';
         }
     }
     [tourism='hotel'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/hotel2.p.20.png';
             point-placement: 'interior';
         }
     }
     [tourism='motel'] {
-        [zoom>16] {
+        [zoom>16][zoom<17] {
             point-file: 'symbols/motel.p.20.png';
             point-placement: 'interior';
         }
     }
     [tourism='information'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             point-file: 'symbols/information.p.16.png';
             point-placement: 'interior';
         }
@@ -1008,53 +983,53 @@
 #amenity-symbols-poly-man-made, #amenity-symbols-man-made
 {
     [power='generator']['generator:source' ='wind'], [power ='generator'][power_source ='wind'], [power ='generator'][man_made ='power_wind']  {
-        [zoom = 14] {
+        [zoom = 14][zoom<17] {
             point-file: 'symbols/power_wind.png';
             point-placement: 'interior';
         }
     }
     [man_made ='windmill'] {
-        [zoom > 15] {
+        [zoom > 15][zoom<17] {
             point-file: 'symbols/windmill.png';
             point-placement: 'interior';
         }
     }
     [man_made ='mast'] {
-        [zoom > 16] {
+        [zoom > 16][zoom<17] {
             point-file: 'symbols/communications.p.20.png';
             point-placement: 'interior';
         }
     }
    
     [man_made ='lighthouse'] {
-        [zoom > 14] {
+        [zoom > 14][zoom<17] {
             point-file: 'symbols/lighthouse.p.20.png';
             point-placement: 'interior';
         }
     }
     [highway ='mini_roundabout'] {
-        [zoom > 14] {
+        [zoom > 14][zoom<17] {
             point-file: 'symbols/mini_round.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [highway ='gate'][barrier ='gate'] {
-        [zoom > 14] {
+        [zoom > 14][zoom<17] {
             point-file: 'symbols/gate2.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [barrier ='lift_gate'] {
-        [zoom > 15] {
+        [zoom > 15][zoom<17] {
             point-file: 'symbols/liftgate.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [barrier ='bollard'], [barrier ='block'] {
-        [zoom > 15] {
+        [zoom > 15][zoom<17] {
             point-file: 'symbols/bollard.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -1065,7 +1040,7 @@
             point-file: 'symbols/level_crossing.png';
             point-placement: 'interior';
         }
-        [zoom >15] {
+        [zoom >15][zoom<17] {
             point-file: 'symbols/level_crossing2.png';
             point-placement: 'interior';
         }
@@ -1073,7 +1048,7 @@
 }
 #amenity-stations-poly, #amenity-stations {
     [railway ='subway_entrance'] {
-        [zoom > 17] {
+        [zoom > 17][zoom<17] {
             point-file: 'symbols/walking.n.12.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -1090,14 +1065,14 @@
             point-placement: 'interior';
             point-allow-overlap: false;
         }
-        [zoom > 14] {
+        [zoom > 14][zoom<17] {
             point-file: 'symbols/station.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [railway ='station'][disused ='yes'] {
-        [zoom > 12] {
+        [zoom > 12][zoom<17] {
             point-file: 'symbols/station_disused.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -1148,7 +1123,7 @@
         }
     }
     [railway ='station'][disused ='yes'] {
-        [zoom>14] {
+        [zoom>14] [zoom<17]{
             text-placement: 'interior';
             text-dy: -9;
             text-wrap-width: 0;

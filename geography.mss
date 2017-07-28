@@ -3,16 +3,12 @@ Map {
 }
 #world{
   [zoom < 10]{
-    polygon-fill: rgb(242,239,233);
+    polygon-fill:@2d-background;
   }
 }
 #coast-poly{
-  [zoom >= 10][zoom<17]{
-    polygon-fill: rgb(242,239,233);
-  }
-  /*3d style*/
-  [zoom >= 17]{
-    polygon-fill: rgb(242,239,233);
+  [zoom >= 10]{
+    polygon-fill: @3d-background;
   }
 }
 
@@ -88,9 +84,6 @@ Map {
 #water-areas-overlay{
   [natural='marsh'],[natural='wetland']{
     [zoom>=13][zoom<17]{
-      polygon-pattern-file: url("symbols/marsh.png");
-    }
-    [zoom>=17]{
       polygon-pattern-file: url("symbols/marsh.png");
     }
   }
@@ -621,10 +614,6 @@ Map {
     [natural ='tree'] {
         [zoom = 16] {
             point-file: 'symbols/tree.png';
-            point-placement: 'interior';
-        }
-        [zoom > 16] {
-            point-file: 'symbols/tree2.png';
             point-placement: 'interior';
         }
     }

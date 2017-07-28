@@ -15,11 +15,6 @@
     line-color: rgb(102,102,102);
     line-width: 0.3;
   }
-  [leisure='playground'][zoom >= 11]{
-    polygon-fill: rgb(204,255,241) ;
-    line-color: rgb(102,102,102);
-    line-width: 0.3;
-  }
 }
 
 #landcover-tourism{
@@ -99,10 +94,10 @@
   [landuse='residential'][zoom>=10][zoom<17]{
     polygon-fill: rgb(221,221,221);
   }
-  /*3d style*/
+  /*3d style
   [landuse='residential'][zoom>=17]{
     polygon-fill: rgb(221,221,221);
-  }
+  }*/
   
   
   [landuse='garages'][zoom>=12][zoom<17]{
@@ -151,11 +146,11 @@
       polygon-fill: rgb(182,253,182);
       polygon-opacity: 0.6;
     }
-    /*3d style*/
+    /*3d style
     [zoom>=17]{
       polygon-fill: rgb(182,253,182);
       polygon-opacity: 0.6;
-    }
+    }*/
   }
   
   [leisure='common'][zoom>=10][zoom<17]{
@@ -260,57 +255,57 @@
     [zoom>=10][zoom<17]{
       polygon-fill: rgb(223,209,214);
     }
-    /*3d style*/
+    /*3d style
     [zoom>=17]{
       polygon-fill: rgb(223,209,214);
-    }
+    }*/
   }
   
   [landuse='commercial'][zoom>=10][zoom<17]{
     polygon-fill: rgb(239,200,200);
   }
-   /*3d style*/
+   /*3d style
   [landuse='commercial'][zoom>=17]{
     polygon-fill: rgb(239,200,200);
-  }
+  }*/
   
   [landuse='brownfield'],[landuse='landfill'],[landuse='greenfield'],[landuse='construction']{
     [zoom>=10][zoom<17]{
       polygon-fill: rgb(157,157,108);
       polygon-opacity: 0.7;
     }
-    /*3d style*/
+    /*3d style
     [zoom>=17]{
       polygon-fill: rgb(157,157,108);
       polygon-opacity: 0.7;
-    }
+    }*/
   }
   [landuse='cemetery'][religion='jewish'],[landuse='grave_yard'][religion='jewish']{
     [zoom>=14][zoom<17]{
       polygon-pattern-file: url("symbols/cemetery_jewish.18.png");
     }
-    /*3d style*/
+    /*3d style
     [zoom>=17]{
       polygon-pattern-file: url("symbols/cemetery_jewish.18.png");
-    }
+    }*/
   }
   [landuse='cemetery'][religion='christian'],[landuse='grave_yard'][religion='christian']{
     [zoom>=14][zoom<17]{
       polygon-pattern-file: url("symbols/grave_yard.png");
     }
-    /*3d style*/
+    /*3d style
     [zoom>=17]{
       polygon-pattern-file: url("symbols/grave_yard.png");
-    }
+    }*/
   }
   [landuse='cemetery'][religion='INT-generic'],[landuse='grave_yard'][religion='INT-generic']{
     [zoom>=14][zoom<17]{
       polygon-pattern-file: url("symbols/grave_yard_generic.png");
     }
-    /*3d style*/
+    /*3d style
     [zoom>=17]{
       polygon-pattern-file: url("symbols/grave_yard_generic.png");
-    }
+    }*/
   }
 }
 #landcover-natural{
@@ -369,18 +364,18 @@
 }
 #landcover-amenity{
   [amenity='university'],[amenity='college'],[amenity='school'],[amenity='hospital'],[amenity='kindergarten']{
-    [zoom>=10]{
+    [zoom>=10][zoom<17]{
       polygon-fill: rgb(240,240,216);
     }
     [zoom>=12][zoom<17]{
       line-color: rgb(165,42,42);
       line-width: 0.3;
     }
-    /*3d style*/
+    /*3d style
     [zoom>=17]{
       line-color: rgb(165,42,42);
       line-width: 0.3;
-    }
+    }*/
   }
   [amenity='parking']{
     [zoom>=10]{
@@ -447,8 +442,8 @@
       polygon-pattern-file: url("symbols/danger.png");
     }
     /*3d style*/
-    [zoom>=11]{
-      polygon-pattern-file: url("symbols/danger.png");
+    [zoom>=17]{
+    
     }
   }
 
@@ -484,7 +479,7 @@
   }
   /*3d style*/
   [aeroway='apron'][zoom>=17]{
-    polygon-fill: rgb(233,209,255);
+    polygon-fill: #b4b4b4;
   }
   
   [aeroway='aerodrome'][zoom>=12][zoom<17]{
@@ -506,7 +501,7 @@
       polygon-fill: rgb(239,200,200);
     }
     [zoom>=17]{
-      polygon-fill: rgb(239,200,200);
+      polygon-fill: @3droad;
     }
   }
 }
@@ -526,12 +521,14 @@
   }
 }
 #sports_grounds{
-  [leisure='sports_centre'],[leisure='stadium']{
+  [leisure='sports_centre']{
     [zoom>=10][zoom<17]{
-      polygon-fill: rgb(51,204,153);
     }
-    [zoom>=17]{
-      polygon-fill: rgb(51,204,153);
+  }
+  [leisure='stadium']{
+    [zoom>=10][zoom<17]{
+      polygon-fill: #d4cbb5;
+ 
     }
   }
   [leisure='track'][zoom>=10][zoom<17]{
@@ -551,14 +548,9 @@
     line-color: rgb(136,136,136);
     line-width: 0.5;
   }
-  [leisure='pitch'][zoom>=17]{
-    polygon-fill: rgb(138,211,175);
-    line-color: rgb(136,136,136);
-    line-width: 0.5;
-  }
 }
 #landuse_overlay{
-  [landuse='military'][zoom>=10]{
+  [landuse='military'][zoom>=10][zoom<17]{
     polygon-pattern-file: url("symbols/military_red_hz2.png");
     line-color: rgb(255,85,85);
     line-width: 3;

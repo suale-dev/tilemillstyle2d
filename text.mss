@@ -64,7 +64,7 @@
         text-dy: 0;
         text-name: '[addr:housename]';
     }
-    /*3d style*/
+    /*3d style
     [zoom >= 17] {
         text-fill: @housenames-color;
         text-wrap-width: 20;
@@ -73,7 +73,7 @@
         text-placement: 'interior';
         text-dy: 0;
         text-name: '[addr:housename]';
-    }
+    }*/
 }
 #housenumbers {
     [zoom = 16] {
@@ -86,7 +86,7 @@
         text-dy: 0;
         text-name: '[addr:housenumber]';
     }
-   /*3d style*/
+   /*3d style
       [zoom > 16] {
         text-fill: @housenames-color;
         text-wrap-width: 0;
@@ -96,7 +96,7 @@
         text-min-padding: 1;
         text-dy: 0;
         text-name: '[addr:housenumber]';
-    }
+    }*/
 }
 #area-text {
     [way_area>=150000] {
@@ -104,43 +104,47 @@
             text-placement: 'interior';
             text-name: '[name]';
             text-face-name: @book-fonts;
+            text-halo-fill:#ffffff;
+            text-fill: rgb(0,0,0);
         }
-    /*3d style*/
+    /*3d style
          [zoom >=17] {
             text-placement: 'interior';
             text-name: '[name]';
             text-face-name: @book-fonts;
-        }
+        }*/
     }
     [way_area >= 80000][way_area < 150000] {
         [zoom > 14][zoom < 17] {
             text-placement: 'interior';
             text-wrap-width: 20;
             text-halo-radius: 1;
-            text-fill: rgb(0,0,51);
+            text-halo-fill:#ffffff;
+            text-fill: rgb(0,0,0);
             text-name: '[name]';
             text-face-name: @book-fonts;
         }
-    /*3d style*/
-        [zoom >= 14] {
+    /*3d style
+        [zoom >= 17] {
             text-placement: 'interior';
             text-wrap-width: 20;
             text-halo-radius: 1;
             text-fill: rgb(0,0,51);
             text-name: '[name]';
             text-face-name: @book-fonts;
-        }
+        }*/
     }
     [way_area >= 20000][way_area < 80000] {
         [zoom > 15][zoom < 17] {
             text-placement: 'interior';
             text-wrap-width: 20;
             text-halo-radius: 1;
-            text-fill: rgb(0,0,51);
+            text-halo-fill:#ffffff;
+            text-fill: rgb(0,0,0);
             text-name: '[name]';
             text-face-name: @book-fonts;
         }
-        /*3d style*/
+        /*3d style
             [zoom >= 17] {
             text-placement: 'interior';
             text-wrap-width: 20;
@@ -148,10 +152,10 @@
             text-fill: rgb(0,0,51);
             text-name: '[name]';
             text-face-name: @book-fonts;
-        }
+        }*/
     }
     [way_area < 20000] {
-        /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-placement: 'interior';
             text-wrap-width: 20;
@@ -159,7 +163,7 @@
             text-fill: rgb(0,0,51);
             text-name: '[name]';
             text-face-name: @book-fonts;
-        }
+        }*/
     }
 }
 #text-poly,#text {
@@ -189,7 +193,7 @@
     [amenity='cafe'],
     [amenity='fast_food'],
     [amenity='biergarten'] {
-                /*3d style*/
+        /*3d style
         [zoom>16] {
             text-dy: 9;
             text-wrap-width: 34;
@@ -198,10 +202,10 @@
             text-halo-radius: 1;
             text-name: '[name]';
             text-fill: rgb(115, 74, 8);
-        }
+        }*/
     }
     [amenity='bar'] {
-                /*3d style*/
+        /*3d style
         [zoom>16] {
             text-dy: 11;
             text-wrap-width: 0;
@@ -211,12 +215,12 @@
             text-name: '[name]';
             text-fill: rgb(115, 74, 8);
             text-placement: 'interior';
-        }
+        }*/
     }
     [amenity='library'],
     [amenity='theatre'],
     [amenity='courthouse'] {
-                /*3d style*/
+        /*3d style
         [zoom>16] {
             text-dy: 12;
             text-wrap-width: 0;
@@ -225,10 +229,10 @@
             text-name: '[name]';
             text-fill: rgb(115, 74, 8);
             text-placement: 'interior';
-        }
+        }*/
     }
     [amenity='cinema'] {
-                /*3d style*/
+        /*3d style
         [zoom>16] {
             text-dy: 14;
             text-wrap-width: 0;
@@ -237,11 +241,11 @@
             text-name: '[name]';
             text-fill: rgb(115, 74, 8);
             text-placement: 'interior';
-        }
+        }*/
     }
     [amenity='parking'][access = 'public'],
     [access=''] {
-                /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-dy: 9;
             text-placement: 'interior';
@@ -252,11 +256,11 @@
             text-name: '[name]';
             text-fill: rgb(0, 102, 255);
             text-placement: 'interior';
-        }
+        }*/
     }
     [amenity='parking'][access !='public'],
     [access !=''] {
-                /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-dy: 9;
             text-placement: 'interior';
@@ -266,10 +270,10 @@
             text-size: 9;
             text-name: '[name]';
             text-fill: rgb(102, 204, 175);
-        }
+        }*/
     }
     [amenity='police'] {
-                /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-dy: 10;
             text-placement: 'interior';
@@ -279,10 +283,10 @@
             text-size: 9;
             text-name: '[name]';
             text-fill: rgb(115, 74, 8);
-        }
+        }*/
     }
     [amenity='fire_station'] {
-                /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-dy: 9;
             text-placement: 'interior';
@@ -292,10 +296,10 @@
             text-size: 9;
             text-name: '[name]';
             text-fill: rgb(115, 74, 8);
-        }
+        }*/
     }
     [amenity='place_of_worship'] {
-                /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-dy: 11;
             text-placement: 'interior';
@@ -305,10 +309,10 @@
             text-size: 9;
             text-name: '[name]';
             text-fill: rgb(0, 0, 51);
-        }
+        }*/
     }
     [amenity='embassy'] {
-                /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -318,10 +322,10 @@
             text-dy: 9;
             text-name: '[name]';
             text-fill: rgb(102, 153, 204);
-        }
+        }*/
     }
     [amenity='shelter'] {
-                /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -330,8 +334,8 @@
             text-dy: 10;
             text-name: '[name]';
             text-fill: rgb(102, 153, 204);
-        }
-                /*3d style*/
+        }*/
+        /*3d style
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @oblique-fonts;
@@ -340,10 +344,10 @@
             text-dy: 22;
             text-name: '[ele]';
             text-fill: rgb(102, 153, 204);
-        }
+        }*/
     }
     [amenity='bank'] {
-                /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -353,11 +357,11 @@
             text-dy: 9;
             text-name: '[name]';
             text-fill: rgb(102, 153, 204);
-        }
+        }*/
     }
     [amenity='fuel'],
     [amenity='bus_station'] {
-                /*3d style*/
+        /*3d style
         [zoom > 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -367,7 +371,7 @@
             text-dy: 9;
             text-name: '[name]';
             text-fill: rgb(0, 102, 255);
-        }
+        }*/
     }
     [amenity='school'],
     [amenity='college'] {
@@ -379,8 +383,8 @@
             text-wrap-width: 14;
             text-name: '[name]';
             text-fill: rgb(0, 0, 51);
-        }
-                /*3d style*/
+        	}
+            /*3d style
             [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -389,7 +393,7 @@
             text-wrap-width: 14;
             text-name: '[name]';
             text-fill: rgb(0, 0, 51);
-        }
+        }*/
     }
     [amenity='kindergarten'] {
         [zoom>15] [zoom < 17]{
@@ -401,6 +405,7 @@
             text-name: '[name]';
             text-fill: rgb(0, 0, 51);
         }
+         /*3d style
          [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -409,7 +414,7 @@
             text-wrap-width: 14;
             text-name: '[name]';
             text-fill: rgb(0, 0, 51);
-        }
+        }*/
     }
     [amenity='hospital'] {
         [zoom>15][zoom<17] {
@@ -421,8 +426,8 @@
             text-wrap-width: 24;
             text-name: '[name]';
             text-fill: rgb(218, 0, 146);
-        }
-    /*3d style*/
+        	}
+    	   /*3d style
             [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -432,11 +437,11 @@
             text-wrap-width: 24;
             text-name: '[name]';
             text-fill: rgb(218, 0, 146);
-        }
+        	}*/
     }
     [amenity='pharmacy'] {
         /*3d style*/
-        [zoom>16] {
+        [zoom=16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -480,7 +485,7 @@
             text-name: '[name]';
             text-fill: rgb(165, 42, 42);
         }
-            /*3d style*/
+        /*3d style*/
         [zoom >= 17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -500,7 +505,7 @@
             text-name: '[ele]';
             text-fill: rgb(165, 42, 42);
         }
-                /*3d style*/
+            /*3d style*/
             [zoom >= 17] {
             text-placement: 'interior';
             text-dy: 6;
@@ -521,7 +526,7 @@
             text-name: '[ele]';
             text-fill: rgb(165, 42, 42);
         }
-    /*3d style*/
+         /*3d style*/
          [zoom >= 17] {
             text-placement: 'interior';
             text-dy: 18;
@@ -708,7 +713,7 @@
             text-name: '[ele]';
             text-fill: rgb(102, 153, 204);
         }
-            /*3d style*/
+        /*3d style
         [zoom >= 17] {
             text-placement: 'interior';
             text-face-name: @oblique-fonts;
@@ -718,13 +723,13 @@
             text-wrap-width: 20;
             text-name: '[ele]';
             text-fill: rgb(102, 153, 204);
-        }
+        }*/
     }
     [tourism='hotel'],
     [tourism='hostel'],
     [tourism='chalet'] {
-            /*3d style*/
-        [zoom > 16] {
+        /*3d style*/
+        [zoom = 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -736,8 +741,8 @@
         }
     }
     [tourism='guest_house'] {
-            /*3d style*/
-        [zoom > 16] {
+        /*3d style*/
+        [zoom = 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -749,8 +754,8 @@
         }
     }
     [tourism='bed_and_breakfast'] {
-            /*3d style*/
-        [zoom > 16] {
+        /*3d style*/
+        [zoom = 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -762,8 +767,8 @@
         }
     }
     [tourism='camp_site'] {
-            /*3d style*/
-        [zoom > 16] {
+        /*3d style*/
+        [zoom = 16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -775,8 +780,8 @@
         }
     }
     [tourism='caravan_site'] {
-            /*3d style*/
-        [zoom > 16] {
+        /*3d style*/
+        [zoom =16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -791,7 +796,7 @@
 
     [tourism='museum'] {
         /*3d style*/
-        [zoom>16] {
+        [zoom=16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -803,7 +808,7 @@
     }
     [tourism='prison'] {
         /*3d style*/
-        [zoom>16] {
+        [zoom=16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -814,7 +819,7 @@
         }
     }
     [tourism='attraction'] {
-        [zoom>15] {
+        [zoom>15][zoom<17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -822,7 +827,7 @@
             text-name: '[name]';
             text-fill: rgb(102, 0, 51);
         }
-        /*3d style*/
+        /*3d style
         [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -830,7 +835,7 @@
             text-wrap-width: 10;
             text-name: '[name]';
             text-fill: rgb(102, 0, 51);
-        }
+        }*/
     }
     [tourism='university'] {
         [zoom>14] [zoom<17]{
@@ -842,7 +847,7 @@
             text-name: '[name]';
             text-fill: rgb(0, 0, 51);
         }
-        /*3d style*/
+        /*3d style
         [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -851,11 +856,11 @@
             text-wrap-width: 16;
             text-name: '[name]';
             text-fill: rgb(0, 0, 51);
-        }
+        }*/
     }
   
      [tourism='theme_park'] {
-        [zoom>13][zoom<16] {
+        [zoom>13][zoom<17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -863,7 +868,7 @@
             text-name: '[name]';
             text-fill: rgb(115, 74, 8);
         }
-        /*3d style*/
+        /*3d style
         [zoom>=16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -871,7 +876,7 @@
             text-wrap-width: 30;
             text-name: '[name]';
             text-fill: rgb(115, 74, 8);
-        }
+        }*/
     }
    
 }
@@ -888,7 +893,7 @@
     [shop='bicycle'],
     [shop='florist'] {
         /*3d style*/
-        [zoom>16] {
+        [zoom=16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -911,7 +916,7 @@
             text-name: '[name]';
             text-fill: rgb(153, 51, 153);
         }
-        /*3d style*/
+        /*3d style
         [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -921,7 +926,7 @@
             text-wrap-width: 20;
             text-name: '[name]';
             text-fill: rgb(153, 51, 153);
-        }
+        }*/
     }
 }
 
@@ -938,7 +943,7 @@
             text-name: '[name]';
             text-fill: rgb(0, 0, 51);
         }
-        /*3d style*/
+        /*3d style
         [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
@@ -948,11 +953,11 @@
             text-wrap-width: 12;
             text-name: '[name]';
             text-fill: rgb(0, 0, 51);
-        }
+        }*/
     }
     [man_made='windmill'] {
         /*3d style*/
-        [zoom>16] {
+        [zoom=16] {
             text-placement: 'interior';
             text-face-name: @book-fonts;
             text-halo-radius: 1;
@@ -975,7 +980,7 @@
             text-name: '[name]';
             text-fill: rgb(153, 51, 153);
         }
-        /*3d style*/
+        /*3d style
         [zoom>=17] {
             text-placement: 'interior';
             text-face-name: @bold-fonts;
@@ -985,7 +990,7 @@
             text-wrap-width: 10;
             text-name: '[name]';
             text-fill: rgb(153, 51, 153);
-        }
+        }*/
     }
     [aeroway='gate'] {
         /*3d style*/
@@ -1014,7 +1019,7 @@
                 text-name: '[name]';
                 text-fill: rgb(102, 153, 204);
             }
-             /*3d style*/
+             /*3d style
              [zoom >= 17] {
                 text-placement: 'interior';
                 text-face-name: @book-fonts;
@@ -1023,7 +1028,7 @@
                 text-wrap-width: 20;
                 text-name: '[name]';
                 text-fill: rgb(102, 153, 204);
-            }
+            }*/
         }
     }
     [leisure='marina'] {
@@ -1033,14 +1038,6 @@
             text-halo-radius: 1;
             text-wrap-width: 30;
             text-size: 8;
-            text-name: '[name]';
-            text-fill: rgb(0, 0, 255);
-        }
-        [zoom>=17] {
-            text-placement: 'interior';
-            text-face-name: @book-fonts;
-            text-halo-radius: 1;
-            text-wrap-width: 30;
             text-name: '[name]';
             text-fill: rgb(0, 0, 255);
         }
@@ -1058,16 +1055,6 @@
             text-fill: rgb(165, 42, 42);
         }
          /*3d style*/
-        [zoom >= 17] {
-            text-placement: 'interior';
-            text-face-name: @book-fonts;
-            text-halo-radius: 1;
-            text-size: 9;
-            text-dy: 12;
-            text-wrap-width: 20;
-            text-name: '[name]';
-            text-fill: rgb(165, 42, 42);
-        }
     }
      [waterway='lock'] {
         [zoom > 14] [zoom<17]{
@@ -1081,24 +1068,13 @@
             text-fill: rgb(0, 102, 255);
         }
         /*3d style*/
-        [zoom >= 17] {
-            text-placement: 'interior';
-            text-face-name: @book-fonts;
-            text-halo-radius: 1;
-            text-wrap-width: 70;
-            text-size: 9;
-            text-dy: 10;
-            text-name: '[name]';
-            text-fill: rgb(0, 102, 255);
-        }    
     }
 }
 /*verified*/
 
 #roads-text-name {
-
     [highway='trunk'], [highway='primary'] {
-            [zoom>12][zoom<14] {
+        [zoom>12][zoom<14] {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-size: 8;
@@ -1115,10 +1091,15 @@
             text-face-name: @book-fonts;
             text-name: '[name]';
         }
+        /*3d style*/
         [zoom>=17]  {
             text-placement: 'line';
-            text-face-name: @book-fonts;
+            text-face-name: @bold-fonts;
             text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 14;
         }
     }
 
@@ -1128,15 +1109,14 @@
             text-face-name: @book-fonts;
             text-size: 8;
             text-halo-radius: 1;
-            
+            text-fill:rgb(255,255,255);
             text-name: '[name]';
         }
         [zoom>13][zoom<15] {
             text-placement: 'line';
             text-face-name: @book-fonts;
             text-size: 9;
-            text-halo-radius: 1;
-            
+            text-halo-radius: 1;         
             text-name: '[name]';
         }
         [zoom>=15][zoom<17]  {
@@ -1145,11 +1125,15 @@
             text-halo-radius: 1;
             text-name: '[name]';
         }
+        /*3d style*/
         [zoom>=17] {
             text-placement: 'line';
-            text-face-name: @book-fonts;
-            text-halo-radius: 1;
+            text-face-name: @bold-fonts;
             text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 14;
         }
     }
 
@@ -1159,12 +1143,18 @@
             text-face-name: @book-fonts;
             text-size: 9;
             text-name: '[name]';
+            
         }
-            [zoom>=17] {
+         /*3d style*/
+         [zoom>=17] {
             text-placement: 'line';
-            text-face-name: @book-fonts;
+            text-face-name: @bold-fonts;
             text-size: 11;
             text-name: '[name]';
+       		text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 12;
         }
     }
 
@@ -1181,6 +1171,10 @@
             text-face-name: @book-fonts;
             text-size: 11;
             text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 12;
         }
     }
 
@@ -1203,20 +1197,20 @@
             text-name: '[name]';
         }
         /*3d style*/
-        [zoom>16] {
+        [zoom>=17] {
             text-placement: 'line';
-            text-face-name: @book-fonts;
-            text-spacing: 400;
-            text-size: 11;
-            text-halo-radius: 1;
+            text-face-name: @bold-fonts;
             text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 12;
         }
     }
 
     [zoom>14][zoom<17] {
         text-placement: 'line';
         text-face-name: @book-fonts;
-        text-spacing: 400;
         text-size: 9;
         text-halo-radius: 1;
         text-name: '[name]';
@@ -1231,18 +1225,18 @@
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
         }
-        /*3d style*/
+        /*3d style
         [zoom>=17] {
             shield-file: 'symbols/mot_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
-        }
+        }*/
     }
     [highway='motorway'][length =7] {
         [zoom>12][zoom<12] {
@@ -1250,20 +1244,20 @@
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill: rgb(255,255,255);
         }
-        /*3d style*/
+        /*3d style
         [zoom>=17] {
             shield-file: 'symbols/mot_shield6.png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill: rgb(255,255,255);
-        }
+        }*/
     }
  [highway='motorway'][length =8] {
         [zoom>12] [zoom<17] {
@@ -1271,20 +1265,20 @@
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
         }
-        /*3d style*/
+        /*3d style
         [zoom>=17] {
             shield-file: 'symbols/mot_shield7.png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
-        }
+        }*/
     }
     [highway='trunk'] {
         [zoom>12]  [zoom<17]{
@@ -1296,16 +1290,16 @@
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
         }
-       /*3d style*/
+       /*3d style
         [zoom>=17] {
             shield-file: 'symbols/tru_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
-        }
+        }*/
     }
     [highway='primary'] {
         [zoom>12] [zoom<17]  {
@@ -1313,20 +1307,20 @@
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
         }
-        /*3d style*/
+        /*3d style
         [zoom>=17] {
             shield-file: 'symbols/pri_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
-        }
+        }*/
     }
     [highway='secondary'][bridge !='yes'] {
         [zoom>12][zoom<17]  {
@@ -1338,16 +1332,16 @@
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
         }
-         /*3d style*/
+         /*3d style
          [zoom>=17] {
             shield-file: 'symbols/sec_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
-        }
+        }*/
     }
     [highway='tertiary'][bridge !='yes'] {
         [zoom>12] [zoom<17]{
@@ -1355,16 +1349,17 @@
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
         }
-         [zoom>=17] {
+        /*3d style*/
+        [zoom>=17] {
             shield-file: 'symbols/ter_shield[length].png';
             shield-placement: 'line';
             shield-min-padding: 30;
             shield-name: '[ref]';
-            shield-face-name: @bold-fonts;
+            shield-face-name: @book-fonts;
             shield-spacing: 750;
             shield-fill:rgb(255,255,255);
         }
@@ -1375,17 +1370,17 @@
                 text-placement: 'line';
                 text-min-distance: 18;
                 text-name: '[ref]';
-                text-face-name: @bold-fonts;
+                text-face-name: @book-fonts;
                 text-spacing: 750;
                 text-fill:rgb(51,51,51);
                 text-halo-radius: 1;
             }
            /*3d style*/
-           [zoom>14] {
+           [zoom>=17] {
                 text-placement: 'line';
                 text-min-distance: 18;
                 text-name: '[ref]';
-                text-face-name: @bold-fonts;
+                text-face-name: @book-fonts;
                 text-spacing: 750;
                 text-fill:rgb(51,51,51);
                 text-halo-radius: 1;
@@ -1398,7 +1393,7 @@
                 text-placement: 'line';
                 text-min-distance: 18;
                 text-name: '[ref]';
-                text-face-name: @bold-fonts;
+                text-face-name: @book-fonts;
                 text-spacing: 750;
                 text-fill:rgb(51,51,51);
                 text-halo-radius: 1;
@@ -1408,7 +1403,7 @@
                 text-placement: 'line';
                 text-min-distance: 18;
                 text-name: '[ref]';
-                text-face-name: @bold-fonts;
+                text-face-name: @book-fonts;
                 text-spacing: 750;
                 text-fill:rgb(51,51,51);
                 text-halo-radius: 1;

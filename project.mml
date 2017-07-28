@@ -16,12 +16,12 @@
   "maxzoom": 22,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
-    "setting.mss",
     "world.mss",
+    "setting.mss",
+    "road.mss",
     "geography.mss",
     "landcover.mss",
     "building.mss",
-    "road.mss",
     "text.mss"
   ],
   "Layer": [
@@ -223,6 +223,34 @@
       "name": "landcover-tourism"
     },
     {
+      "geometry": "unknown",
+      "extent": [
+        102.11519478578562,
+        8.179066498869185,
+        109.67098458473359,
+        24.04244899684977
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,leisure, case when leisure='pitch' then 2 when leisure='track' then 1 else 0 end as prio from planet_osm_polygon where leisure in ('sports_centre','stadium','pitch','track') order by z_order,prio,way_area desc ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456",
+        "dbname": "osm_cp"
+      },
+      "id": "sports_grounds",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "sports_grounds"
+    },
+    {
       "geometry": "polygon",
       "extent": [
         -179.99999692067183,
@@ -336,34 +364,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "landcover_line"
-    },
-    {
-      "geometry": "unknown",
-      "extent": [
-        102.11519478578562,
-        8.179066498869185,
-        109.67098458473359,
-        24.04244899684977
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "(select way,leisure, case when leisure='pitch' then 2 when leisure='track' then 1 else 0 end as prio from planet_osm_polygon where leisure in ('sports_centre','stadium','pitch','track') order by z_order,prio,way_area desc ) as _subquery",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "11367411.4858096,913597.696143625,12208518.1587695,2758581.55819078",
-        "host": "localhost",
-        "port": "5432",
-        "user": "mapapi",
-        "password": "123456",
-        "dbname": "osm_cp"
-      },
-      "id": "sports_grounds",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "sports_grounds"
     },
     {
       "geometry": "linestring",
@@ -1095,8 +1095,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-area-fill",
-      "status": "off"
+      "name": "highway-area-fill"
     },
     {
       "geometry": "unknown",
@@ -2543,7 +2542,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-other"
+      "name": "amenity-points-other",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2571,7 +2571,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-shop"
+      "name": "amenity-points-shop",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2599,7 +2600,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-tourism"
+      "name": "amenity-points-tourism",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2630,7 +2632,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points"
+      "name": "amenity-points",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2658,7 +2661,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-other"
+      "name": "amenity-points-poly-other",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2686,7 +2690,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-shop"
+      "name": "amenity-points-poly-shop",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2714,7 +2719,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-tourism"
+      "name": "amenity-points-poly-tourism",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2745,7 +2751,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly"
+      "name": "amenity-points-poly",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2838,7 +2845,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_towers"
+      "name": "power_towers",
+      "status": "off"
     },
     {
       "geometry": "point",
