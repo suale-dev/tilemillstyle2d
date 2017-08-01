@@ -15,7 +15,7 @@
 @village-name-sizeM: 12;
 
 @road-name-sizeS: 10;
-@road-name-sizeM: 11;
+@road-name-sizeM: 11; 
 @road-name-sizeL: 12;
 
 @road-name-color: rgb(76,76,76);
@@ -38,6 +38,7 @@
 @border-country: rgb(128,128,128);
 @border-city: #848484;
 @boundary-color: rgb(0,128,0);
+@country-name-color: rgb(76,76,76);
 
 //geography
 @water: #a3ccff;

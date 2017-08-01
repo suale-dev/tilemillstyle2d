@@ -1595,6 +1595,7 @@
             text-face-name: @bold-fonts;
             text-size: @village-name-sizeS;
             text-halo-radius: 2;
+            text-margin: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
             text-transform: uppercase;
@@ -1604,6 +1605,7 @@
             text-face-name: @bold-fonts;
             text-size: @village-name-sizeM;
             text-halo-radius: 2;
+            text-margin: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
             text-transform: uppercase;
@@ -1617,6 +1619,7 @@
             text-face-name: @bold-fonts;
             text-size: @village-name-sizeS;
             text-halo-radius: 1;
+            text-margin: 1;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
             text-transform: uppercase;
@@ -1626,6 +1629,7 @@
             text-face-name: @bold-fonts;
             text-size: @village-name-sizeM;
             text-halo-radius: 2;
+            text-margin: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
             text-transform: uppercase;
@@ -1639,6 +1643,7 @@
             text-face-name: @bold-fonts;
             text-size: @village-name-sizeS;
             text-halo-radius: 2;
+            text-margin: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
             text-transform: uppercase;
@@ -1648,6 +1653,7 @@
             text-face-name: @bold-fonts;
             text-size: @village-name-sizeM;
             text-halo-radius: 2;
+            text-margin: 2;
             text-fill: rgb(119,119,119);
             text-name: '[name]';
             text-transform: uppercase;
@@ -1663,6 +1669,7 @@
             text-fill: rgb(35,35,35);
             text-size: @city-names-sizeS;
             text-halo-radius: 1;
+            text-margin: 1;
             text-halo-fill: rgb(255,255,255);
             text-name: '[name]';
             text-opacity: 0.8
@@ -1673,6 +1680,8 @@
             text-fill: rgb(35,35,35);
             text-size: @city-names-sizeM;
             text-halo-radius: 1;
+      text-allow-overlap: false;
+            text-margin: 1;
             text-halo-fill: rgb(255,255,255);
             text-name: '[name]';
         }
@@ -1681,6 +1690,7 @@
             text-face-name: @bold-fonts;
             text-size: @city-names-sizeL;
             text-halo-radius: 2.5;
+            text-margin: 3;
             text-halo-fill: rgb(255,255,255);
             text-name: '[name]';
             text-transform: uppercase;
@@ -1690,8 +1700,10 @@
 .town {
     [place='town'], [place='large_town']{
         [zoom>=9][zoom<12]{
+      text-allow-overlap: false;
             text-face-name: @bold-fonts;
             text-halo-radius: 2;
+            text-margin: 2;
             text-size: @town-name-sizeS;
             text-fill: rgb(76,76,76);
             text-name: '[name]';
@@ -1702,6 +1714,7 @@
         [zoom>=12][zoom<14] {
             text-face-name: @bold-fonts;
             text-halo-radius: 2;
+            text-margin: 2;
             text-fill: rgb(36,36,36);
             text-size: @town-name-sizeM;
             text-name: '[name]';
@@ -1711,6 +1724,7 @@
             text-face-name: @bold-fonts;
             text-fill: rgb(36,36,36);
             text-halo-radius: 2;
+            text-margin: 2;
             text-size: @town-name-sizeL;
             text-name: '[name]';
             text-transform: uppercase;
@@ -1756,17 +1770,19 @@
         text-dy: 0;
         text-face-name:@book-fonts;
         text-halo-radius: 2;
-        text-size: 8;
-        text-fill: rgb(0,0,0);
-        text-name: '[ABBREV]';
+        text-size: 9;
+        text-margin: 2;
+        text-fill: @country-name-color;
+        text-name: '[NAME]';
         text-transform: uppercase;
     }
     [zoom=4]{
         text-dy: 0;
         text-face-name:@bold-fonts;
         text-halo-radius: 2;
+        text-margin: 2;
         text-size: 9;
-        text-fill: rgb(0,0,0);
+        text-fill: @country-name-color;
         text-name: '[NAME]';
         text-transform: uppercase;
     }
@@ -1774,8 +1790,9 @@
         text-dy: 0;
         text-face-name:@bold-fonts;
         text-halo-radius: 2;
+        text-margin: 2;
         text-size: 12;
-        text-fill: rgb(0,0,0);
+        text-fill: @country-name-color;
         text-name: '[NAME]';
         text-transform: uppercase;
     }
@@ -1787,6 +1804,7 @@
             text-wrap-width: 0;
             text-face-name: @bold-fonts;
             text-halo-radius: 2.5;
+            text-margin: 3;
             text-size: 8;
             text-fill: rgb(76,76,76);
             text-name: '[name]';
@@ -1797,6 +1815,7 @@
             text-wrap-width: 0;
             text-face-name: @bold-fonts;
             text-halo-radius: 2.5;
+            text-margin: 3;
             text-size: 10;
             text-fill: rgb(36,36,36);
             text-name: '[name]';
