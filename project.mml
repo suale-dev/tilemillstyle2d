@@ -70,6 +70,85 @@
       "name": "coast-poly"
     },
     {
+      "geometry": "raster",
+      "extent": [
+        99.99958357546717,
+        4.999604856943355,
+        110.00017640366231,
+        25.000417126729932
+      ],
+      "id": "terrain_sh",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/srtm-3785-hs.tif"
+      },
+      "layer": null,
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "terrain_sh"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        99.99958357546717,
+        4.999604856943355,
+        110.00017640366231,
+        25.000417126729932
+      ],
+      "id": "terrain_slope",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/srtm-3785-slopeshade.tif"
+      },
+      "layer": null,
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "terrain_slope"
+    },
+    {
+      "geometry": "raster",
+      "extent": [
+        99.99958357546717,
+        4.999604856943355,
+        110.00017640366231,
+        25.000417126729932
+      ],
+      "id": "terrain_color",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/srtm-3785-color.tif"
+      },
+      "layer": null,
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "terrain_color"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99998938710382,
+        -85.051,
+        179.99999,
+        85.051
+      ],
+      "id": "ocean",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/10m-ocean.zip",
+        "id": "ocean",
+        "project": "tilemillstyle2d",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ocean"
+    },
+    {
       "geometry": "polygon",
       "extent": [
         -179.12960815429688,
@@ -133,8 +212,7 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "nepopulated",
-      "status": "off"
+      "name": "nepopulated"
     },
     {
       "geometry": "polygon",

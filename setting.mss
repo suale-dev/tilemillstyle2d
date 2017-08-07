@@ -24,21 +24,25 @@
 @area-name-size: 11;
 @area-name-color: rgb(0,0,0);
 
+@text-lowzoom: rgb(0,0,0);
+
 //setting roads
 @railway: rgb(153,153,153); //color of railway
 @primaryroadCase: #efd195; //color of border primary road
 @primaryroad: #fff1b9; //color of primary road
+@primaryroad-lowzoom: #faaa43;
 @roadCase: rgb(197, 197, 197); //color of border normal road
 @road: rgb(255, 255, 255); //color of normal road
-@direaction: rgb(0,0,0); //color of road direction
+@direaction: rgb(155,178,173); //color of road direction
 @brigdeCase: rgb(197, 197, 197);
 
 //setting boundaries
 @necountriescolor: rgb(128,128,128);
 @border-country: rgb(128,128,128);
+@border-country-lowzoom: rgb(46,46,46);
 @border-city: #848484;
 @boundary-color: rgb(0,128,0);
-@country-name-color: rgb(76,76,76);
+@country-name-color: rgb(0,0,0);
 
 //geography
 @water: #a3ccff;

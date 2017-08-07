@@ -1707,6 +1707,7 @@
             text-size: @town-name-sizeS;
             text-fill: rgb(76,76,76);
             text-name: '[name]';
+            text-avoid-edges: true;
             text-allow-overlap: false;
         }
     }
@@ -1739,6 +1740,7 @@
         text-face-name: @bold-fonts;
         text-halo-radius: 2;
         text-name: '[name]';
+        text-fill: @text-lowzoom;
     }
     [zoom>=6][zoom<9] {
         text-dy: 0;
@@ -1747,6 +1749,7 @@
         text-face-name: @bold-fonts;
         text-halo-radius: 2;
         text-name: '[name]';
+        text-fill: @text-lowzoom;
     }
     [zoom>=9][zoom<11] {
         text-dy: 0;
@@ -1806,7 +1809,7 @@
             text-halo-radius: 2.5;
             text-margin: 3;
             text-size: 8;
-            text-fill: rgb(76,76,76);
+            text-fill: @text-lowzoom;
             text-name: '[name]';
             text-transform: uppercase;
         }

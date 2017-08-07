@@ -4,10 +4,10 @@
     line-width: 0.5;
   }
 }
-#nepopulated[SCALERANK=2][zoom>=2][zoom<=6]{
+#nepopulated[SCALERANK=2][zoom>=2][zoom<5]{
     text-face-name: @book-fonts;
     text-name:[NAMEASCII];
-    text-fill: @necountriescolor; 
+    text-fill: @text-lowzoom;
     text-size:8;
     text-halo-fill: rgba(255,255,255,0.8);
     text-halo-radius:1;
@@ -15,14 +15,21 @@
 }
 #border-countries{
   [zoom>=4][zoom<7]{
-    line-color: @border-country;
+    line-color: @border-country-lowzoom;
     line-width: 0.7;
   }
-  [zoom>=7][zoom<17]{
+  [zoom>=7][zoom<9]{
+    line-color: @border-country-lowzoom;
+    line-opacity: 0.6;
+    line-width: 1;
+  }
+  [zoom>=9][zoom<17]{
+    line-color: @border-country;
     line-opacity: 0.6;
     line-width: 1;
   }
   [zoom>=17]{
+    line-color: @border-country;
     line-opacity: 0.6;
     line-width: 1;
   }

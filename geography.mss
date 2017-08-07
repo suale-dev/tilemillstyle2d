@@ -1,3 +1,29 @@
+#terrain_sh{
+  [zoom<9]{
+    raster-scaling:bilinear;
+    raster-comp-op:multiply;
+  }
+}
+#terrain_color{
+  [zoom<9]{
+    raster-scaling:bilinear;
+    raster-comp-op:multiply;
+  }
+}
+#terrain_slope{
+  [zoom<9]{
+    raster-scaling:bilinear;
+    raster-comp-op:multiply;
+  }
+}
+
+#ocean {
+  line-color:@water;
+  line-width:0.5;
+  polygon-opacity:1;
+  polygon-fill:@water;
+}
+
 Map {
   background-color: @water
 }
