@@ -18,10 +18,12 @@
 }
 
 #ocean {
+  [zoom<9]{
   line-color:@water;
   line-width:0.5;
   polygon-opacity:1;
   polygon-fill:@water;
+  }
 }
 
 Map {
@@ -662,4 +664,9 @@ Map {
         }
     }
 
+}
+
+#islands {
+  polygon-opacity:1;
+  polygon-fill:@defaultland;
 }

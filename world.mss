@@ -4,6 +4,10 @@
     line-width: 0.5;
   }
 }
+#bathymetry {
+  polygon-fill:hsl(120,15%,2%);
+  polygon-comp-op: minus;
+}
 #nepopulated[SCALERANK=2][zoom>=2][zoom<5]{
     text-face-name: @book-fonts;
     text-name:[NAMEASCII];

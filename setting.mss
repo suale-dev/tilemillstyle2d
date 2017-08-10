@@ -45,7 +45,8 @@
 @country-name-color: rgb(0,0,0);
 
 //geography
-@water: #a3ccff;
+//@water: #a3ccff;
+@water: hsl(199,35%,55%);
 @defaultland: rgb(242,239,233);
 
 /*3d style*/

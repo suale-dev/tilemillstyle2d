@@ -151,6 +151,28 @@
     {
       "geometry": "polygon",
       "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "bathymetry",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/10m-bathymetry.zip",
+        "id": "bathymetry",
+        "project": "tilemillstyle2d",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "bathymetry"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
         -179.12960815429688,
         -53.16742324828472,
         178.4432525634766,

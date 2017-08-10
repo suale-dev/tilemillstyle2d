@@ -1580,12 +1580,20 @@
 #roads-highway{
   [highway='motorway'],[highway='motorway_link']{
     [zoom>=5][zoom<7]{
+      ::case{
+      	line-color: @road;
+      	line-width: 0.5;
+      }
       ::fill{
       	line-color: @road;
       	line-width: 0.5;
       }
     }
     [zoom>=7][zoom<9]{
+      ::case{
+        line-color: @road;
+        line-width: 0.7;
+      }
       ::fill{
         line-color: @road;
         line-width: 0.7;
@@ -1624,12 +1632,20 @@
   }
   [highway='trunk'],[highway='trunk_link']{
     [zoom>=5][zoom<7]{
+      ::case{
+        line-color: @primaryroad-lowzoom;
+        line-width: 0.5;
+      }
       ::fill{
         line-color: @primaryroad-lowzoom;
         line-width: 0.5;
       }
     }
     [zoom>=7][zoom<9]{
+      ::case{
+        line-color: @primaryroad-lowzoom;
+        line-width: 0.7;
+      }
       ::fill{
         line-color: @primaryroad-lowzoom;
         line-width: 0.7;
