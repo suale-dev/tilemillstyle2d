@@ -21,9 +21,9 @@
 @2d-background: #F6F3EB;
 @3d-background:#f2efe7;
 /*3d style*/
-@3droad:#878793;
+
 @water: #a3ccff;
-@3d-minor-road-fill:#8e8e8e;
+@3d-minor-road-fill:#91919c;
 @3d-landuse:#EEEBE3FF;
 @3d-direction: #ffffff;
 @3dTextHaloFill:#252525;

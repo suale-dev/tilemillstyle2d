@@ -143,14 +143,14 @@
   }
   [leisure='park'],[leisure='recreation_ground']{
     [zoom>=10][zoom<17]{
-      polygon-fill: rgb(182,253,182);
+      polygon-fill: rgb(123,199,99);
       polygon-opacity: 0.6;
     }
-    /*3d style
+    /*3d style*/
     [zoom>=17]{
-      polygon-fill: rgb(182,253,182);
+      polygon-fill: rgb(123,199,99);
       polygon-opacity: 0.6;
-    }*/
+    }
   }
   
   [leisure='common'][zoom>=10][zoom<17]{
@@ -255,19 +255,19 @@
     [zoom>=10][zoom<17]{
       polygon-fill: rgb(223,209,214);
     }
-    /*3d style
+    /*3d style*/
     [zoom>=17]{
       polygon-fill: rgb(223,209,214);
-    }*/
+    }
   }
   
   [landuse='commercial'][zoom>=10][zoom<17]{
     polygon-fill: rgb(239,200,200);
   }
-   /*3d style
+   /*3d style*/
   [landuse='commercial'][zoom>=17]{
     polygon-fill: rgb(239,200,200);
-  }*/
+  }
   
   [landuse='brownfield'],[landuse='landfill'],[landuse='greenfield'],[landuse='construction']{
     [zoom>=10][zoom<17]{
@@ -371,11 +371,11 @@
       line-color: rgb(165,42,42);
       line-width: 0.3;
     }
-    /*3d style
+    /*3d style*/
     [zoom>=17]{
       line-color: rgb(165,42,42);
       line-width: 0.3;
-    }*/
+    }
   }
   [amenity='parking']{
     [zoom>=10]{
@@ -501,7 +501,7 @@
       polygon-fill: rgb(239,200,200);
     }
     [zoom>=17]{
-      polygon-fill: @3droad;
+      polygon-fill: @3d-minor-road-fill;
     }
   }
 }
@@ -526,7 +526,7 @@
     }
   }
   [leisure='stadium']{
-    [zoom>=10][zoom<17]{
+    [zoom>=10]{
       polygon-fill: #d4cbb5;
  
     }

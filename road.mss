@@ -161,7 +161,7 @@
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @3droad;
+        line-color: @3d-minor-road-fill;
         line-width: 11;
         line-join: round;
         line-cap: round;
@@ -188,7 +188,7 @@
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @3droad;
+        line-color: @3d-minor-road-fill;
         line-width: 11;
         line-join: round;
         line-cap: round;
@@ -215,7 +215,7 @@
       }
        /*3d style*/
       [zoom>=17]{
-        line-color:@3droad;
+        line-color:@3d-minor-road-fill;
         line-width: 12;
         line-join: round;
         line-cap: round;
@@ -242,7 +242,7 @@
       }
        /*3d style*/
       [zoom>=17]{
-        line-color:@3droad;
+        line-color:@3d-minor-road-fill;
         line-width: 14;
         line-join: round;
         line-cap: round;
@@ -269,7 +269,7 @@
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @3droad;
+        line-color: @3d-minor-road-fill;
         line-width: 13;
         line-join: round;
         line-cap: round;
@@ -302,7 +302,7 @@
       }
        /*3d style*/
       [zoom>=17]{
-        line-color: @3droad;
+        line-color: @3d-minor-road-fill;
         line-width: 13;
         line-join: round;
         line-cap: round;        
@@ -460,12 +460,12 @@
     /*3d style*/
     [zoom=17]{
       line-color: @3dRoadCase;
-      line-width: 13;
+      line-width: 16;
       line-join: round;      
     }
     [zoom>17]{
       line-color: @3dRoadCase;
-      line-width: 20;
+      line-width: 26;
       line-join: round;      
     }
   }
@@ -967,10 +967,10 @@
     [zoom=17]{
       ::case{
         line-color:#ffffff;
-        line-width:10;
+        line-width:15;
       }::fill{
         line-color:@3d-minor-road-fill;
-        line-width: 8;
+        line-width: 10;
         line-join: round; 
       }
     }
