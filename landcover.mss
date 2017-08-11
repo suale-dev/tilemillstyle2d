@@ -118,7 +118,7 @@
   }
   [landuse='meadow'],[landuse='grass']{
     [zoom>=10]{
-      polygon-fill: rgb(207,236,168);
+      polygon-fill: @grass_color;
     }
     /*3d style*/
     [zoom>=17]{
@@ -127,8 +127,8 @@
   }
   [leisure='park'],[leisure='recreation_ground']{
     [zoom>=10][zoom<17]{
-      polygon-fill: rgb(182,253,182);
-      polygon-opacity: 0.6;
+      polygon-fill: @grass_color;
+      //polygon-opacity: 0.6;
     }
     /*3d style*/
     [zoom>=17]{
@@ -414,7 +414,7 @@
   }
 }
 #landcover{
-  [military='barracks'][zoom>=10]{
+  [military='barracks'][zoom>=13]{
     polygon-fill: rgb(255,143,143);
   }
   [military='danger_area']{

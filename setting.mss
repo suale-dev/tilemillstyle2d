@@ -43,6 +43,7 @@
 @border-city: #848484;
 @boundary-color: rgb(0,128,0);
 @country-name-color: rgb(0,0,0);
+@grass_color: #7bc763;
 
 //geography
 //@water: #a3ccff;
