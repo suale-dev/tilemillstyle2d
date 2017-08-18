@@ -86,7 +86,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "terrain_sh"
+      "name": "terrain_sh",
+      "status": "off"
     },
     {
       "geometry": "raster",
@@ -105,7 +106,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "terrain_slope"
+      "name": "terrain_slope",
+      "status": "off"
     },
     {
       "geometry": "raster",
@@ -124,7 +126,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "terrain_color"
+      "name": "terrain_color",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -168,7 +171,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "bathymetry"
+      "name": "bathymetry",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2416,8 +2420,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations",
-      "status": "off"
+      "name": "amenity-stations"
     },
     {
       "geometry": "unknown",
@@ -2445,8 +2448,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations-poly",
-      "status": "off"
+      "name": "amenity-stations-poly"
     },
     {
       "geometry": "point",
@@ -2474,8 +2476,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols",
-      "status": "off"
+      "name": "amenity-symbols"
     },
     {
       "geometry": "point",
@@ -2503,8 +2504,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-man-made",
-      "status": "off"
+      "name": "amenity-symbols-man-made"
     },
     {
       "geometry": "point",
@@ -2532,8 +2532,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-natural",
-      "status": "off"
+      "name": "amenity-symbols-natural"
     },
     {
       "geometry": "unknown",
@@ -2564,8 +2563,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly",
-      "status": "off"
+      "name": "amenity-symbols-poly"
     },
     {
       "geometry": "unknown",
@@ -2593,8 +2591,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly-man-made",
-      "status": "off"
+      "name": "amenity-symbols-poly-man-made"
     },
     {
       "geometry": "unknown",
@@ -2625,8 +2622,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly-natural",
-      "status": "off"
+      "name": "amenity-symbols-poly-natural"
     },
     {
       "geometry": "point",
@@ -2654,8 +2650,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-other",
-      "status": "off"
+      "name": "amenity-points-other"
     },
     {
       "geometry": "point",
@@ -2683,8 +2678,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-shop",
-      "status": "off"
+      "name": "amenity-points-shop"
     },
     {
       "geometry": "point",
@@ -2712,8 +2706,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-tourism",
-      "status": "off"
+      "name": "amenity-points-tourism"
     },
     {
       "geometry": "point",
@@ -2744,8 +2737,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points",
-      "status": "off"
+      "name": "amenity-points"
     },
     {
       "geometry": "polygon",
@@ -2773,8 +2765,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-other",
-      "status": "off"
+      "name": "amenity-points-poly-other"
     },
     {
       "geometry": "polygon",
@@ -2802,8 +2793,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-shop",
-      "status": "off"
+      "name": "amenity-points-poly-shop"
     },
     {
       "geometry": "polygon",
@@ -2831,8 +2821,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-tourism",
-      "status": "off"
+      "name": "amenity-points-poly-tourism"
     },
     {
       "geometry": "polygon",
@@ -2863,8 +2852,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly",
-      "status": "off"
+      "name": "amenity-points-poly"
     },
     {
       "geometry": "linestring",

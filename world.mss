@@ -27,31 +27,20 @@
     line-opacity: 0.6;
     line-width: 1;
   }
-  [zoom>=9][zoom<17]{
-    line-color: @border-country;
-    line-opacity: 0.6;
-    line-width: 1;
-  }
-  [zoom>=17]{
+  [zoom>=9][zoom<=@max-zoom]{
     line-color: @border-country;
     line-opacity: 0.6;
     line-width: 1;
   }
 }
 #border-city{
-  [zoom>=7][zoom<16]{
+  [zoom>=7][zoom <= @max-zoom]{
     line-color: @border-city;
     line-width: 0.5;
   }
 }
 #interpolation_lines {
-    [zoom = 16] {
-        line-width: 1;
-        line-dasharray: 2,4;
-        line-color: rgb(136,136,136);
-    }
-   /* 3d style*/
-    [zoom > 16] {
+    [zoom>=16][zoom <= @max-zoom] {
         line-width: 1;
         line-dasharray: 2,4;
         line-color: rgb(136,136,136);

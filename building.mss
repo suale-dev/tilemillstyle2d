@@ -5,21 +5,14 @@
     line-join: round;
     line-cap: round;
   }
-  [zoom>=15][zoom<17]{
+  [zoom>=15]{
     text-face-name: @book-fonts;
     text-size: 8;
     text-halo-radius: 1;
     text-fill: rgb(34,34,34);
     text-name: "[name]";    
   }
-  /*3d style*/
-  [zoom>=17]{
-    text-face-name: @book-fonts;
-    text-size: 8;
-    text-halo-radius: 1;
-    text-fill: rgb(34,34,34);
-    text-name: "[name]";    
-  }
+
 }
 #marinas-area{
   [zoom>=14][zoom<16]{
@@ -28,14 +21,7 @@
     line-opacity: 0.5;
     line-dasharray: 6, 2;
   }
-  [zoom=16]{
-    line-color: rgb(0,0,255);
-    line-width: 2;
-    line-opacity: 0.5;
-    line-dasharray: 6, 2;
-  }
-  /*3d style*/
-  [zoom>=17]{
+  [zoom>=16]{
     line-color: rgb(0,0,255);
     line-width: 2;
     line-opacity: 0.5;
@@ -43,11 +29,7 @@
   }
 }
 #piers-area{
-  [zoom>=12][zoom<17]{
-    polygon-fill: rgb(242,239,233);
-  }
-  /*3d style*/
-  [zoom>=17]{
+  [zoom>=12]{
     polygon-fill: rgb(242,239,233);
   }
 }
@@ -61,12 +43,7 @@
       line-color: rgb(170,170,170);
       line-width: 2;
     }
-    [zoom=16]{
-      line-color: rgb(170,170,170);
-      line-width: 4;
-    }
-    /*3d style*/
-    [zoom>=17]{
+    [zoom>=16]{
       line-color: rgb(170,170,170);
       line-width: 4;
     }
@@ -80,12 +57,7 @@
       line-color: rgb(242,239,233);
       line-width: 3;
     }
-    [zoom=16]{
-      line-color: rgb(242,239,233);
-      line-width: 7;
-    }
-    /*3d style*/
-    [zoom>=17]{
+    [zoom>=16]{
       line-color: rgb(242,239,233);
       line-width: 7;
     }
@@ -109,14 +81,7 @@
     line-opacity: 0.8;
     line-join: round;    
   }
-  [zoom=16]{
-    line-color: rgb(128,128,128);
-    line-width: 9;
-    line-opacity: 0.8;
-    line-join: round;    
-  }
-   /*3d style*/
-  [zoom>=17]{
+  [zoom>=16]{
     line-color: rgb(128,128,128);
     line-width: 9;
     line-opacity: 0.8;
@@ -128,35 +93,20 @@
     line-color: rgb(153,153,153);
     line-width: 1;
   }
-  [zoom=16]{
-    line-color: rgb(153,153,153);
-    line-width: 2;    
-  }
-  /*3d style*/
-  [zoom>=17]{
+  [zoom>=16]{
     line-color: rgb(153,153,153);
     line-width: 2;    
   }
 }
 .barriers{
   [barrier='embankment']{
-    [zoom>=17]{
-      line-color: rgb(68,68,68);
-      line-width: 0.4;
-    }
-    /*3d style*/
-    [zoom>=14][zoom<17]{
+    [zoom>=14]{
       line-color: rgb(68,68,68);
       line-width: 0.4;
     }
   }
   [natural='hedge'],[barrier='hedge']{
-    [zoom=16]{
-      line-color: rgb(174,209,160);
-      line-width: 3;
-    }
-    /*3d style*/
-    [zoom>=17]{
+    [zoom>=16]{
       line-color: rgb(174,209,160);
       line-width: 3;
     }
@@ -183,19 +133,12 @@
 }
 #buildings-lz{
   [railway='station'],[building='station']{
-    [zoom>=13][zoom<17]{
-      polygon-fill: rgb(212,170,170);
-    }
-    [zoom>=17]{
+    [zoom>=13]{
       polygon-fill: rgb(212,170,170);
     }
   }
   
-  [building='supermarket'][zoom>=13][zoom<17]{
-    polygon-fill: rgb(212,170,170);    
-    polygon-opacity: 0.5;
-  }
-  [building='supermarket'][zoom>=17]{
+  [building='supermarket'][zoom>=13]{
     polygon-fill: rgb(212,170,170);    
     polygon-opacity: 0.5;
   }
@@ -205,13 +148,7 @@
       polygon-fill: rgb(119,119,119);    
       polygon-opacity: 0.5;    
     }
-    [zoom>=15][zoom<17]{
-      polygon-fill: rgb(170,170,170);    
-      polygon-opacity: 0.9;    
-      line-color: rgb(17,17,17);
-      line-width: 0.3;
-    }
-    [zoom>=17]{
+    [zoom>=15]{
       polygon-fill: rgb(170,170,170);    
       polygon-opacity: 0.9;    
       line-color: rgb(17,17,17);
@@ -221,45 +158,26 @@
 }
   
 #buildings{
-  [building='INT-light'][zoom>=13][zoom<17]{
-    polygon-fill: rgb(188,169,169);
-    polygon-opacity: 0.7;
-  }
-  [building='INT-light'][zoom>=17]{
+  [building='INT-light'][zoom>=13]{
     polygon-fill: rgb(188,169,169);
     polygon-opacity: 0.7;
   }
   
-  [building!='INT-light'][building!=''][zoom>=13][zoom<17]{
-    polygon-fill: rgb(188,169,169);
-    polygon-opacity:  0.9;
-  }
-  [building!='INT-light'][building!=''][zoom>=17]{
+  [building!='INT-light'][building!=''][zoom>=13]{
     polygon-fill: rgb(188,169,169);
     polygon-opacity:  0.9;
   }
   
-  [building!='INT-light'][building!=''][zoom=16]{
-    polygon-fill: rgb(51,0,102);
-    polygon-opacity:  0.2;
-  }
-  [building!='INT-light'][building!=''][zoom>=17]{
+  [building!='INT-light'][building!=''][zoom>=16]{
     polygon-fill: rgb(51,0,102);
     polygon-opacity:  0.2;
   }
   
-  [aeroway='terminal'][zoom>=13][zoom<17]{
-    polygon-fill: rgb(204,153,255);
-  }
-  [aeroway='terminal'][zoom>=17]{
+  [aeroway='terminal'][zoom>=13]{
     polygon-fill: rgb(204,153,255);
   }
   
-  [aeroway='terminal'][zoom>=14][zoom<17]{
-    line-color: rgb(51,0,102);
-    line-width: 0.2;
-  }
-  [aeroway='terminal'][zoom>=17]{
+  [aeroway='terminal'][zoom>=14]{
     line-color: rgb(51,0,102);
     line-width: 0.2;
   }
@@ -270,12 +188,7 @@
     line-width: 0.4;
     line-dasharray: 4, 4;
   }
-  [zoom>=11][zoom<17]{
-    line-color: rgb(102,102,255);
-    line-width: 0.8;
-    line-dasharray: 6, 6;
-  }
-  [zoom>=17]{
+  [zoom>=11]{
     line-color: rgb(102,102,255);
     line-width: 0.8;
     line-dasharray: 6, 6;
@@ -288,14 +201,7 @@
         line-color :  rgb(115,74,8);
         line-dasharray: 9,3;
     }
-    [zoom >= 15][zoom<17] {
-        line-opacity : 0.6;
-        line-width: 2.5;
-        line-color : rgb(115,74,8);
-        line-dasharray: 9,3;
-    }
-    /*3d style*/
-    [zoom>=17] {
+    [zoom >= 15]{
         line-opacity : 0.6;
         line-width: 2.5;
         line-color : rgb(115,74,8);
@@ -303,15 +209,10 @@
     }
 }
 #power_poles {
-     [zoom>15][zoom<17] {
+     [zoom>15] {
         point-allow-overlap: false;
         point-file: 'symbols/power_pole.png';
       }
-       /*3d style*/
-     [zoom>=17] {
-        point-allow-overlap: false;
-        point-file: 'symbols/power_pole.png';
-    }
 }
 
 #power_towers {
@@ -319,17 +220,12 @@
         point-file: 'symbols/power_tower_3x3.png';
         point-allow-overlap: false;
     }
-    [zoom>14][zoom<17] {
+    [zoom>14] {
         point-file: 'symbols/power_tower_5x5.png';
         point-allow-overlap: false;
     }
-    [zoom>14][zoom<17] {
+    [zoom>14] {
         point-file: 'symbols/power_tower_5x5.png';
-        point-allow-overlap: false;
-    }
-    /*3d style*/
-    [zoom>16] {
-        point-file: 'symbols/power_tower.png';
         point-allow-overlap: false;
     }
 }
@@ -339,12 +235,7 @@
         line-width: 1;
         line-color: rgb(119,119,119);
     }
-    [zoom=16] {
-        line-width: 1.5;
-        line-color: rgb(119,119,119);
-    }
-    /*3d style*/
-    [zoom>=17] {
+    [zoom>=16] {
         line-width: 1.5;
         line-color: rgb(119,119,119);
     }
@@ -395,13 +286,7 @@
         }
     }
     [amenity='bus_station'] {
-        [zoom=16] {
-            point-file: 'symbols/bus_station.n.16.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
-         /*3d style*/
-        [zoom>=17] {
+        [zoom>=16] {
             point-file: 'symbols/bus_station.n.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -417,13 +302,7 @@
 
 
     [amenity='car_sharing'] {
-        [zoom=16] {
-            point-file: 'symbols/car_share.p.16.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
-         /*3d style*/
-        [zoom>=17] {
+        [zoom>=16] {
             point-file: 'symbols/car_share.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -431,46 +310,26 @@
     }
 
     [amenity='cinema'] {
-        [zoom>15] [zoom<17]{
-            point-file: 'symbols/cinema.p.24.png';
-            point-placement: 'interior';
-        }
-        /*3d style*/
-        [zoom>=17] {
+        [zoom>15]{
             point-file: 'symbols/cinema.p.24.png';
             point-placement: 'interior';
         }
     }
     [amenity='fire_station'] {
-         [zoom>15] [zoom<17]{
+         [zoom>15]{
             point-file: 'symbols/firestation.p.16.png';
             point-placement: 'interior';
          }
-         /*3d style*/
-         [zoom>=17] {
-            point-file: 'symbols/firestation.p.16.png';
-            point-placement: 'interior';
-        }
     }
     [amenity='fuel'] {
         [zoom>15] {
             point-file: 'symbols/fuel.p.16.png';
             point-placement: 'interior';
         }
-         /*3d style*/
-        [zoom>=17] {
-            point-file: 'symbols/fuel.p.16.png';
-            point-placement: 'interior';
-        }
     }
 
     [amenity='hospital'] {
-        [zoom>14][zoom<17] {
-            point-file: 'symbols/hospital.p.16.png';
-            point-placement: 'interior';
-        }
-         /*3d style*/
-        [zoom>=14] {
+        [zoom>14]{
             point-file: 'symbols/hospital.p.16.png';
             point-placement: 'interior';
         }
@@ -498,28 +357,15 @@
         }
     }
 
-
     [amenity='parking'][access='public'], [access=''], [access='yes'] {
-        [zoom>14][zoom<17] {
-            point-file: 'symbols/parking.p.16.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
-         /*3d style*/
-         [zoom>=17] {
+        [zoom>14]{
             point-file: 'symbols/parking.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='parking'][access!=''][access!='public'][access!='yes'] {
-        [zoom>14][zoom<17] {
-            point-file: 'symbols/parking_private.p.16.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
-         /*3d style*/
-        [zoom>=17]{
+        [zoom>14]{
             point-file: 'symbols/parking_private.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -533,64 +379,35 @@
         }
     }
     [amenity='place_of_worship'][religion='christian'] {
-        [zoom=16] {
-            point-file: 'symbols/christian3.p.14.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
-         [zoom>=17] {
+        [zoom>=16] {
             point-file: 'symbols/christian3.p.14.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='place_of_worship'][religion='muslim'] {
-        [zoom>15][zoom<17] {
-            point-file: 'symbols/islamic3.p.16.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
-         /*3d style*/
-        [zoom>=17] {
+        [zoom>15]{
             point-file: 'symbols/islamic3.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='place_of_worship'][religion='sikh3'] {
-        [zoom>15][zoom<17] {
-            point-file: 'symbols/sikh3.p.16.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
-         /*3d style*/
-         [zoom>=17] {
+        [zoom>15]{
             point-file: 'symbols/sikh3.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='place_of_worship'][religion='jewish'] {
-        [zoom=16] {
-            point-file: 'symbols/jewish3.p.16.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
-         /*3d style*/
-         [zoom>=17] {
+        [zoom>=16] {
             point-file: 'symbols/jewish3.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
         }
     }
     [amenity='place_of_worship'] {
-        [zoom=16] {
-            point-file: 'symbols/place_of_worship3.p.16.png';
-            point-placement: 'interior';
-            point-allow-overlap: false;
-        }
-         /*3d style*/
-        [zoom>=17] {
+        [zoom>=16] {
             point-file: 'symbols/place_of_worship3.p.16.png';
             point-placement: 'interior';
             point-allow-overlap: false;
@@ -623,23 +440,13 @@
         }
     }
     [amenity='biergarten'] {
-        [zoom>15] [zoom<17]{
-            point-file: 'symbols/biergarten.p.16.png';
-            point-placement: 'interior';
-        }
-         /*3d style*/
-        [zoom>=15] {
+        [zoom>15]{
             point-file: 'symbols/biergarten.p.16.png';
             point-placement: 'interior';
         }
     }
     [amenity='recycling'] {
-        [zoom>15][zoom<17] {
-            point-file: 'symbols/recycling.p.16.png';
-            point-placement: 'interior';
-        }
-         /*3d style*/
-        [zoom>17] {
+        [zoom>15] {
             point-file: 'symbols/recycling.p.16.png';
             point-placement: 'interior';
         }
@@ -693,34 +500,19 @@
         }
     }
     [amenity='prison'] {
-        [zoom>15] [zoom<17]{
-            point-file: 'symbols/amenity_prison.p.20.png';
-            point-placement: 'interior';
-        }
-         /*3d style*/
-         [zoom>=15] {
+        [zoom>15] {
             point-file: 'symbols/amenity_prison.p.20.png';
             point-placement: 'interior';
         }
     }
     [amenity='viewpoint'] {
-        [zoom>15] [zoom<17]{
+        [zoom>15] {
             point-file: 'symbols/view_point.p.16.png';
             point-placement: 'interior';
         }     
-        /*3d style*/
-        [zoom>=17] {
-            point-file: 'symbols/view_point.p.16.png';
-            point-placement: 'interior';
-        }
     }
     [amenity='veterinary'] {
-        [zoom>15][zoom<17] {
-            point-file: 'symbols/amenity_veterinary.p.16.png';
-            point-placement: 'interior';
-        }
-         /*3d style*/
-        [zoom>=17] {
+        [zoom>15]{
             point-file: 'symbols/amenity_veterinary.p.16.png';
             point-placement: 'interior';
         }

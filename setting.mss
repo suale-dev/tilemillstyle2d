@@ -13,7 +13,7 @@
 
 @village-name-sizeS: 10;
 @village-name-sizeM: 12;
-
+ 
 @road-name-sizeS: 10;
 @road-name-sizeM: 11; 
 @road-name-sizeL: 12;
@@ -49,6 +49,8 @@
 //@water: #a3ccff;
 @water: hsl(199,35%,55%);
 @defaultland: rgb(242,239,233);
+
+@max-zoom: 19;
 
 /*3d style*/
 @3droad:#878793;
