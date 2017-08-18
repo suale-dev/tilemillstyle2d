@@ -182,7 +182,7 @@
   }
 }
 #buildings-lz{
-  [railway='station'],[building='station']{
+  /*[railway='station'],[building='station']{
     [zoom>=10][zoom<17]{
       polygon-fill: rgb(212,170,170);
     }
@@ -217,11 +217,11 @@
       line-color: rgb(17,17,17);
       line-width: 0.3;
     }
-  }
+  }*/
 }
   
 #buildings{
-  [building='INT-light'][zoom>=12][zoom<17]{
+  /*[building='INT-light'][zoom>=12][zoom<17]{
     polygon-fill: rgb(188,169,169);
     polygon-opacity: 0.7;
   }
@@ -243,7 +243,7 @@
   [aeroway='terminal'][zoom>=14][zoom<17]{
     line-color: rgb(51,0,102);
     line-width: 0.2;
-  }
+  }*/
 }
 #ferry-routes{
   [zoom>=7][zoom<11]{

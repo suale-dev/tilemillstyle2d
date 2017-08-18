@@ -84,7 +84,8 @@ Map {
 #water-areas-overlay{
   [natural='marsh'],[natural='wetland']{
     [zoom>=13][zoom<17]{
-      polygon-pattern-file: url("symbols/marsh.png");
+     /* polygon-pattern-file: url("symbols/marsh.png");*/
+     polygon-fill:@grassColor;
     }
   }
 }

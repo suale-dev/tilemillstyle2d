@@ -220,7 +220,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-tourism"
+      "name": "landcover-tourism",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -332,7 +333,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-amenity"
+      "name": "landcover-amenity",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1464,7 +1466,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "access-pre_bridges"
+      "name": "access-pre_bridges",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1492,7 +1495,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "direction_pre_bridges"
+      "name": "direction_pre_bridges",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1523,7 +1527,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer0"
+      "name": "bridges_layer0",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1551,7 +1556,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access0"
+      "name": "bridges_access0",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1579,7 +1585,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions0"
+      "name": "bridges_directions0",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1607,7 +1614,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer1"
+      "name": "bridges_layer1",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1638,7 +1646,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access1"
+      "name": "bridges_access1",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1666,7 +1675,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions1"
+      "name": "bridges_directions1",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1694,7 +1704,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer2"
+      "name": "bridges_layer2",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1722,7 +1733,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access2"
+      "name": "bridges_access2",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1750,7 +1762,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions2"
+      "name": "bridges_directions2",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1778,7 +1791,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer3"
+      "name": "bridges_layer3",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1806,7 +1820,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access3"
+      "name": "bridges_access3",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1834,7 +1849,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions3"
+      "name": "bridges_directions3",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1862,7 +1878,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer4"
+      "name": "bridges_layer4",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1890,7 +1907,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access4"
+      "name": "bridges_access4",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1918,7 +1936,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions4"
+      "name": "bridges_directions4",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1946,7 +1965,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer5"
+      "name": "bridges_layer5",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1977,7 +1997,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access5"
+      "name": "bridges_access5",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2005,7 +2026,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions5"
+      "name": "bridges_directions5",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2098,7 +2120,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "admin-01234"
+      "name": "admin-01234",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2129,7 +2152,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "admin-5678"
+      "name": "admin-5678",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2160,7 +2184,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "admin-other"
+      "name": "admin-other",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2312,7 +2337,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations"
+      "name": "amenity-stations",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2340,7 +2366,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations-poly"
+      "name": "amenity-stations-poly",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2368,7 +2395,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols"
+      "name": "amenity-symbols",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2396,7 +2424,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-man-made"
+      "name": "amenity-symbols-man-made",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2424,7 +2453,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-natural"
+      "name": "amenity-symbols-natural",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2455,7 +2485,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly"
+      "name": "amenity-symbols-poly",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2483,7 +2514,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly-man-made"
+      "name": "amenity-symbols-poly-man-made",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2514,7 +2546,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly-natural"
+      "name": "amenity-symbols-poly-natural",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2911,7 +2944,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-ref-low-zoom"
+      "name": "roads-text-ref-low-zoom",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2973,7 +3007,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-ref"
+      "name": "roads-text-ref",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -3032,7 +3067,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-other"
+      "name": "text-other",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -3063,7 +3099,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-tourism"
+      "name": "text-tourism",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -3094,7 +3131,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-natural"
+      "name": "text-natural",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -3122,7 +3160,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-shop"
+      "name": "text-shop",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -3153,7 +3192,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text"
+      "name": "text",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3181,7 +3221,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly-other"
+      "name": "text-poly-other",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3209,7 +3250,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly-tourism"
+      "name": "text-poly-tourism",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3240,7 +3282,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly-natural"
+      "name": "text-poly-natural",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3268,7 +3311,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly-shop"
+      "name": "text-poly-shop",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3299,7 +3343,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly"
+      "name": "text-poly",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3330,7 +3375,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "area-text"
+      "name": "area-text",
+      "status": "off"
     },
     {
       "geometry": "linestring",
