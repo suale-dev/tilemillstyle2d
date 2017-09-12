@@ -1376,7 +1376,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-highway"
+      "name": "roads-highway",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1495,8 +1496,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "direction_pre_bridges",
-      "status": "off"
+      "name": "direction_pre_bridges"
     },
     {
       "geometry": "linestring",
@@ -1585,8 +1585,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions0",
-      "status": "off"
+      "name": "bridges_directions0"
     },
     {
       "geometry": "linestring",
@@ -1675,8 +1674,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions1",
-      "status": "off"
+      "name": "bridges_directions1"
     },
     {
       "geometry": "linestring",
@@ -1762,8 +1760,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions2",
-      "status": "off"
+      "name": "bridges_directions2"
     },
     {
       "geometry": "linestring",
@@ -1849,8 +1846,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions3",
-      "status": "off"
+      "name": "bridges_directions3"
     },
     {
       "geometry": "linestring",
@@ -1936,8 +1932,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions4",
-      "status": "off"
+      "name": "bridges_directions4"
     },
     {
       "geometry": "linestring",
@@ -2026,8 +2021,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions5",
-      "status": "off"
+      "name": "bridges_directions5"
     },
     {
       "geometry": "linestring",
@@ -2306,7 +2300,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "placenames-small"
+      "name": "placenames-small",
+      "status": "off"
     },
     {
       "geometry": "point",

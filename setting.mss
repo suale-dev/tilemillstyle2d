@@ -28,7 +28,7 @@
 @3d-landuse:#EEEBE3FF;
 @3d-direction: #ffffff;
 @3dTextHaloFill:#252525;
-@2dTextHaloFill:#000000;
+@2dTextHaloFill:#575757;
 
 /*
  * Grass color is using for 

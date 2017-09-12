@@ -1097,10 +1097,20 @@
             text-face-name: @bold-fonts;
             text-name: '[name]';
             text-fill:#ffffff;
+            text-halo-radius:1;
       		text-halo-fill:@2dTextHaloFill;
         }
         /*3d style*/
-        [zoom>=17]  {
+        [zoom=17]  {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
+            text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 11;
+        }
+        [zoom=18]  {
             text-placement: 'line';
             text-face-name: @bold-fonts;
             text-name: '[name]';
@@ -1108,6 +1118,15 @@
             text-halo-radius: 1;
       		text-halo-fill:@3dTextHaloFill;
       		text-size: 14;
+        }
+        [zoom>=19]  {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
+            text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 22;
         }
     }
 
@@ -1135,13 +1154,21 @@
             text-placement: 'line';
             text-face-name: @bold-fonts;
             text-name: '[name]';
-            text-size: 9;  
             text-fill:#ffffff;
             text-halo-radius: 1;
       		text-halo-fill:@2dTextHaloFill;
         }
         /*3d style*/
-        [zoom>=17] {
+        [zoom=17]  {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
+            text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 11;
+        }
+        [zoom=18]  {
             text-placement: 'line';
             text-face-name: @bold-fonts;
             text-name: '[name]';
@@ -1150,13 +1177,22 @@
       		text-halo-fill:@3dTextHaloFill;
       		text-size: 14;
         }
+        [zoom>=19]  {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
+            text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 22;
+        }
     }
 
     [highway='tertiary'] {
         [zoom>14][zoom<17] {
             text-placement: 'line';
             text-face-name: @bold-fonts;
-            text-size: 9;
+            text-size: 8;
             text-name: '[name]';
             text-fill:#ffffff;
             text-halo-radius: 1;
@@ -1164,15 +1200,32 @@
             
         }
          /*3d style*/
-         [zoom>=17] {
+        [zoom=17]  {
             text-placement: 'line';
             text-face-name: @bold-fonts;
-            text-size: 11;
             text-name: '[name]';
-       		text-fill:#ffffff;
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 10;
+        }
+        [zoom=18]  {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
+            text-name: '[name]';
+            text-fill:#ffffff;
             text-halo-radius: 1;
       		text-halo-fill:@3dTextHaloFill;
       		text-size: 12;
+        }
+        [zoom>=19]  {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
+            text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 17;
         }
     }
 
@@ -1180,28 +1233,45 @@
         [zoom<17][zoom>12] {
             text-placement: 'line';
             text-face-name: @bold-fonts;
-            text-size: 9;
+            text-size: 6;
             text-name: '[name]';
             text-fill:#ffffff;
             text-halo-radius: 0.1;
       		text-halo-fill:@2dTextHaloFill;
         }
         /*3d style*/
-        [zoom>=17] {
+        [zoom=17]  {
             text-placement: 'line';
             text-face-name: @bold-fonts;
-            text-size: 11;
+            text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 11;
+        }
+        [zoom=18]  {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
             text-name: '[name]';
             text-fill:#ffffff;
             text-halo-radius: 1;
       		text-halo-fill:@3dTextHaloFill;
       		text-size: 12;
         }
+        [zoom>=19]  {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
+            text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 17;
+        }
     }
 
  
     [highway='unclassified'], [highway='residential'] {
-        [zoom=15] {
+       /* [zoom=15] {
             text-placement: 'line';
             text-face-name: @bold-fonts;
             text-spacing: 300;
@@ -1220,9 +1290,18 @@
             text-name: '[name]';
             text-fill:#ffffff;
       		text-halo-fill:@2dTextHaloFill;
-        }
+        }*/
         /*3d style*/
-        [zoom>=17] {
+        [zoom=17] {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
+            text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      	
+        }
+        [zoom=18]  {
             text-placement: 'line';
             text-face-name: @bold-fonts;
             text-name: '[name]';
@@ -1231,16 +1310,15 @@
       		text-halo-fill:@3dTextHaloFill;
       		text-size: 12;
         }
-    }
-
-    [zoom>14][zoom<17] {
-        text-placement: 'line';
-        text-face-name: @bold-fonts;
-        text-size: 9;
-        text-halo-radius: 1;
-        text-name: '[name]';
-        text-fill:#ffffff;
-      	text-halo-fill:@2dTextHaloFill;
+        [zoom>=19]  {
+            text-placement: 'line';
+            text-face-name: @bold-fonts;
+            text-name: '[name]';
+            text-fill:#ffffff;
+            text-halo-radius: 1;
+      		text-halo-fill:@3dTextHaloFill;
+      		text-size: 17;
+        }
     }
 }
 
@@ -1638,7 +1716,7 @@
             text-fill: rgb(119,119,119);
             text-name: '[name]';
         }
-        [zoom>=15] {
+        [zoom=15] {
             text-wrap-width: 0;
             text-face-name: @book-fonts;
             text-size: 12;
@@ -1658,7 +1736,7 @@
             text-fill: rgb(119,119,119);
             text-name: '[name]';
         }
-        [zoom>=16] {
+        [zoom=16] {
             text-wrap-width: 0;
             text-face-name: @book-fonts;
             text-size: 11;
@@ -1671,20 +1749,22 @@
 
 .city {
     [place='city'], [place='metropolis'] {
-
+        
         [zoom>=7][zoom<11] {
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
+            text-face-name: @bold-fonts;
             text-size: 11;
             text-halo-radius: 1;
             text-name: '[name]';
+            text-fill:#26211a;
         }
         [zoom>=11][zoom<15] {
             text-wrap-width: 0;
-            text-face-name: @book-fonts;
+            text-face-name: @bold-fonts;
             text-size: 14;
             text-halo-radius: 1;
             text-name: '[name]';
+            text-fill:#26211a;
         }
     }
 }
@@ -1695,19 +1775,22 @@
             text-face-name: @book-fonts;
             text-halo-radius: 1;
             text-name: '[name]';
+            text-fill:#26211a;
         }
         [zoom>=11][zoom<14] {
             text-wrap-width: 20;
             text-face-name: @book-fonts;
             text-halo-radius: 1;
             text-name: '[name]';
+            text-fill:#26211a;
         }
-        [zoom>=14] {
+        [zoom<15][zoom>=14] {
             text-wrap-width: 20;
             text-face-name: @book-fonts;
             text-size: 14;
             text-halo-radius: 1;
             text-name: '[name]';
+            text-fill:#26211a;
         }
     }
 }
