@@ -51,7 +51,7 @@
       polygon-fill: rgb(170,203,175);
     }
   }  
-  [landuse='residential'][zoom>=13]{
+  /*[landuse='residential'][zoom>=13]{
     polygon-fill: rgb(221,221,221);
   }
   [landuse='garages'][zoom>=13]{
@@ -70,7 +70,7 @@
       line-width: 0.3;
       line-opacity: 0.4;
     }
-  }
+  }*/
   [landuse='meadow'],[landuse='grass']{
     [zoom>=10]{
       polygon-fill: @grass_color;
@@ -95,6 +95,7 @@
     polygon-fill: rgb(181,227,181);
   }
   
+  /*
   [landuse='allotments']{
     [zoom>=13][zoom<14]{
       polygon-fill: rgb(229,199,171);
@@ -103,6 +104,7 @@
       polygon-pattern-file: url("symbols/allotments.png");
     }
   }
+  */
   [landuse='forest']{
     [zoom>=9][zoom<14]{
       polygon-fill: rgb(141,197,108);
@@ -129,7 +131,7 @@
   [landuse='village_green'][zoom>=13]{
     polygon-fill:rgb(207,236,168);
   }
-  
+  /*
   [landuse='retail']{
     [zoom>=13]{
       polygon-fill: rgb(241,218,218);
@@ -143,18 +145,19 @@
     [zoom>=13]{
       polygon-fill: rgb(223,209,214);
     }
-  }
+  }*/
   
   //[landuse='commercial'][zoom>=13]{
   //  polygon-fill: rgb(239,200,200);
   //}
   
+  /*
   [landuse='brownfield'],[landuse='landfill'],[landuse='greenfield'],[landuse='construction']{
     [zoom>=13]{
       polygon-fill: rgb(157,157,108);
       polygon-opacity: 0.7;
     }
-  }
+  }*/
   [landuse='cemetery'][religion='jewish'],[landuse='grave_yard'][religion='jewish']{
     [zoom>=14]{
       polygon-pattern-file: url("symbols/cemetery_jewish.18.png");

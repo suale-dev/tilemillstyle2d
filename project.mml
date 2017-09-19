@@ -194,7 +194,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "builtup"
+      "name": "builtup",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -325,7 +326,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-tourism"
+      "name": "landcover-tourism",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -409,7 +411,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-amenity"
+      "name": "landcover-amenity",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -468,7 +471,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "sports_grounds"
+      "name": "sports_grounds",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -992,7 +996,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "turning_circle-casing"
+      "name": "turning_circle-casing",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1231,7 +1236,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "buildings-lz"
+      "name": "buildings-lz",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2420,7 +2426,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations"
+      "name": "amenity-stations",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2563,7 +2570,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly"
+      "name": "amenity-symbols-poly",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2650,7 +2658,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-other"
+      "name": "amenity-points-other",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2678,7 +2687,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-shop"
+      "name": "amenity-points-shop",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2706,7 +2716,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-tourism"
+      "name": "amenity-points-tourism",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2737,7 +2748,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points"
+      "name": "amenity-points",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2765,7 +2777,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-other"
+      "name": "amenity-points-poly-other",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2793,7 +2806,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-shop"
+      "name": "amenity-points-poly-shop",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2821,7 +2835,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-tourism"
+      "name": "amenity-points-poly-tourism",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -2852,7 +2867,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly"
+      "name": "amenity-points-poly",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -3131,7 +3147,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-other"
+      "name": "text-other",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -3162,7 +3179,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-tourism"
+      "name": "text-tourism",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -3193,7 +3211,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-natural"
+      "name": "text-natural",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -3221,7 +3240,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-shop"
+      "name": "text-shop",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -3252,7 +3272,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text"
+      "name": "text",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3283,7 +3304,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly-other"
+      "name": "text-poly-other",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3314,7 +3336,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly-tourism"
+      "name": "text-poly-tourism",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3345,7 +3368,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly-natural"
+      "name": "text-poly-natural",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3373,7 +3397,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly-shop"
+      "name": "text-poly-shop",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3404,7 +3429,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-poly"
+      "name": "text-poly",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3435,7 +3461,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "area-text"
+      "name": "area-text",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -3529,7 +3556,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "housenames"
+      "name": "housenames",
+      "status": "off"
     },
     {
       "geometry": "unknown",

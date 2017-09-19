@@ -16,6 +16,15 @@
         line-width: 7;
         line-dasharray: 4, 2;
       }
+      [zoom=17]{
+        line-width: 13;
+      }
+      [zoom=18]{
+        line-width: 24;
+      }
+      [zoom=19]{
+        line-width: 36;
+      }
     }
     [highway='trunk'],[highway='trunk_link']{
       [zoom=12]{
@@ -32,6 +41,15 @@
         line-color: @primaryroadCase;
         line-width: 8;
         line-dasharray: 4, 2;
+      }
+      [zoom=17]{
+        line-width: 14;
+      }
+      [zoom=18]{
+        line-width: 26;
+      }
+      [zoom=19]{
+        line-width: 40;
       }
     }
     [highway='primary'],[highway='primary_link']{
@@ -50,6 +68,15 @@
         line-width: 8;
         line-dasharray: 4, 2;
       }
+      [zoom=17]{
+        line-width: 14;
+      }
+      [zoom=18]{
+        line-width: 26;
+      }
+      [zoom=19]{
+        line-width: 40;
+      }
     }
     [highway='secondary'],[highway='secondary_link']{
       [zoom=12]{
@@ -66,6 +93,15 @@
         line-color: @roadCase;
         line-width: 7;
         line-dasharray: 4, 2;
+      }
+      [zoom=17]{
+        line-width: 13;
+      }
+      [zoom=18]{
+        line-width: 24;
+      }
+      [zoom=19]{
+        line-width: 38;
       }
     }
     [highway='tertiary'],[highway='tertiary_link']{
@@ -84,6 +120,15 @@
         line-width: 6;
         line-dasharray: 4, 2;       
       }
+      [zoom=17]{
+        line-width: 11;
+      }
+      [zoom=18]{
+        line-width: 22;
+      }
+      [zoom=19]{
+        line-width: 36;
+      }
     }
     [highway='residential'],[highway='unclassified'],[highway='road']{
       [zoom=13]{
@@ -100,6 +145,15 @@
         line-color: @roadCase;
         line-width: 5.5;
         line-dasharray: 4, 2;
+      }
+      [zoom=17]{
+        line-width: 10;
+      }
+      [zoom=18]{
+        line-width: 21;
+      }
+      [zoom=19]{
+        line-width: 35;
       }
     }
   }
@@ -123,6 +177,15 @@
         line-join: round;
         line-cap: round;
       }
+      [zoom=17]{
+        line-width: 11;
+      }
+      [zoom=18]{
+        line-width: 22;
+      }
+      [zoom=19]{
+        line-width: 36;
+      }
     }
     [highway='trunk'],[highway='trunk_link']{
       [zoom=12]{
@@ -143,6 +206,15 @@
         line-join: round;
         line-cap: round;
       }   
+      [zoom=17]{
+        line-width: 12;
+      }
+      [zoom=18]{
+        line-width: 24;
+      }
+      [zoom=19]{
+        line-width: 38;
+      }
     }
     [highway='primary'],[highway='primary_link']{
       [zoom=12]{
@@ -162,7 +234,16 @@
         line-width: 6;
         line-join: round;
         line-cap: round;
-      }   
+      }  
+      [zoom=17]{
+        line-width: 12;
+      }
+      [zoom=18]{
+        line-width: 24;
+      }
+      [zoom=19]{
+        line-width: 38;
+      } 
     }
     [highway='secondary'],[highway='secondary_link']{
       [zoom=12]{
@@ -183,6 +264,15 @@
         line-join: round;
         line-cap: round;
       }  
+      [zoom=17]{
+        line-width: 11;
+      }
+      [zoom=18]{
+        line-width: 22;
+      }
+      [zoom=19]{
+        line-width: 36;
+      }
     }
     [highway='tertiary'],[highway='tertiary_link']{
       [zoom=13]{
@@ -203,6 +293,15 @@
         line-join: round;
         line-cap: round;
       }
+      [zoom=17]{
+        line-width: 9;
+      }
+      [zoom=18]{
+        line-width: 20;
+      }
+      [zoom=19]{
+        line-width: 34;
+      }
     }
    [highway='residential'],[highway='unclassified'],[highway='road']{
       [zoom>=14][zoom<16]{
@@ -216,6 +315,15 @@
         line-width: 4;
         line-join: round;
         line-cap: round;        
+      }
+      [zoom=17]{
+        line-width: 8;
+      }
+      [zoom=18]{
+        line-width: 19;
+      }
+      [zoom=19]{
+        line-width: 33;
       }
     }
   }
@@ -304,6 +412,15 @@
       line-width: 7;
       line-join: round;      
     }
+    [zoom=17]{
+      line-width: 13;
+    }
+    [zoom=18]{
+      line-width: 24;
+    }
+    [zoom=19]{
+      line-width: 38;
+    }
   }
   [highway='trunk'][tunnel!='yes']{
     [zoom=12]{
@@ -321,6 +438,15 @@
       line-width: 8;
       line-join: round;  
     }
+    [zoom=17]{
+      line-width: 14;
+    }
+    [zoom=18]{
+      line-width: 26;
+    }
+    [zoom=19]{
+      line-width: 40;
+    }
   }
   [highway='primary'][tunnel!='yes']{
     [zoom=12]{
@@ -337,6 +463,15 @@
       line-color: @roadCase;
       line-width: 8;
       line-join: round;      
+    }
+    [zoom=17]{
+      line-width: 14;
+    }
+    [zoom=18]{
+      line-width: 26;
+    }
+    [zoom=19]{
+      line-width: 40;
     }
   }
   [highway='secondary'][tunnel!='yes']{
@@ -358,6 +493,15 @@
       line-join: round;  
       line-cap: round; 
     }
+    [zoom=17]{
+      line-width: 13;
+    }
+    [zoom=18]{
+      line-width: 24;
+    }
+    [zoom=19]{
+      line-width: 38;
+    }
   }
   [highway='tertiary'][tunnel!='yes']{
     [zoom=13]{      
@@ -377,6 +521,15 @@
       line-width: 6;
       line-join: round;  
       line-cap: round; 
+    }
+    [zoom=17]{
+      line-width: 11;
+    }
+    [zoom=18]{
+      line-width: 22;
+    }
+    [zoom=19]{
+      line-width: 36;
     }
   }
   [tunnel!='yes']{
@@ -399,6 +552,15 @@
         line-join: round;
         line-cap: round;         
       }
+      [zoom=17]{
+        line-width: 10;
+      }
+      [zoom=18]{
+        line-width: 21;
+      }
+      [zoom=19]{
+        line-width: 35;
+      }
     }
   }
   [highway='service'][tunnel!='yes']{
@@ -414,6 +576,15 @@
       line-join: round;
       line-cap: round;         
     }
+    [zoom=17]{
+      line-width: 10;
+    }
+    [zoom=18]{
+      line-width: 21;
+    }
+    [zoom=19]{
+      line-width: 35;
+    }
   }
   [highway='service'][tunnel='yes']{
     [zoom=15]{
@@ -425,6 +596,15 @@
       line-color: @roadCase;
       line-color: 5;
       line-dasharray: 4, 2;
+    }
+    [zoom=17]{
+      line-width: 10;
+    }
+    [zoom=18]{
+      line-width: 21;
+    }
+    [zoom=19]{
+      line-width: 35;
     }
   }
   [highway='pedestrian'][tunnel!='yes']{
@@ -440,6 +620,15 @@
       line-join: round;
       line-cap: round;        
     }
+    [zoom=17]{
+      line-width: 10;
+    }
+    [zoom=18]{
+      line-width: 21;
+    }
+    [zoom=19]{
+      line-width: 35;
+    }
   }
   [highway='pedestrian'][tunnel='yes']{
     [zoom=14][zoom<16]{
@@ -451,6 +640,15 @@
       line-color: @roadCase;
       line-width: 5;
       line-dasharray: 4, 2;
+    }
+    [zoom=17]{
+      line-width: 10;
+    }
+    [zoom=18]{
+      line-width: 21;
+    }
+    [zoom=19]{
+      line-width: 35;
     }
   }
   [highway='living_street']{
@@ -465,6 +663,15 @@
       line-width: 5;
       line-join: round;
       line-cap: round;
+    }
+    [zoom=17]{
+      line-width: 10;
+    }
+    [zoom=18]{
+      line-width: 21;
+    }
+    [zoom=19]{
+      line-width: 35;
     }
   }  
 }
@@ -487,6 +694,15 @@
         line-width: 5;
         line-join: round;      
       }
+      [zoom=17]{
+        line-width: 11;
+      }
+      [zoom=18]{
+        line-width: 22;
+      }
+      [zoom=19]{
+        line-width: 36;
+      }
     }
     [highway='trunk_link'][tunnel!='yes']{
       [zoom=12]{
@@ -506,6 +722,15 @@
         line-width: 6;
         line-join: round;
         line-cap: round; 
+      }
+      [zoom=17]{
+        line-width: 12;
+      }
+      [zoom=18]{
+        line-width: 24;
+      }
+      [zoom=19]{
+        line-width: 38;
       }
     }
     [highway='primary_link'][tunnel!='yes']{
@@ -527,6 +752,15 @@
         line-join: round; 
         line-cap: round;
       }
+      [zoom=17]{
+        line-width: 12;
+      }
+      [zoom=18]{
+        line-width: 24;
+      }
+      [zoom=19]{
+        line-width: 38;
+      }
     }
     [highway='secondary_link'][tunnel!='yes']{
       [zoom=12]{
@@ -547,6 +781,15 @@
         line-join: round;  
         line-cap: round; 
       }
+      [zoom=17]{
+        line-width: 11;
+      }
+      [zoom=18]{
+        line-width: 22;
+      }
+      [zoom=19]{
+        line-width: 36;
+      }
     }
     [highway='tertiary_link'][tunnel!='yes']{
       [zoom=13]{
@@ -566,6 +809,15 @@
         line-width: 5;
         line-join: round;  
         line-cap: round; 
+      }
+      [zoom=17]{
+        line-width: 9;
+      }
+      [zoom=18]{
+        line-width: 20;
+      }
+      [zoom=19]{
+        line-width: 34;
       }
     }
   }
@@ -598,6 +850,15 @@
       line-width: 5;
       line-join: round;      
     }
+    [zoom=17]{
+      line-width: 11;
+    }
+    [zoom=18]{
+      line-width: 22;
+    }
+    [zoom=19]{
+      line-width: 36;
+    }
   }
   [highway='trunk'][tunnel!='yes']{
     [zoom=12]{
@@ -617,6 +878,15 @@
       line-width: 6;
       line-join: round;
       line-cap: round;
+    }
+    [zoom=17]{
+      line-width: 12;
+    }
+    [zoom=18]{
+      line-width: 24;
+    }
+    [zoom=19]{
+      line-width: 38;
     }
   }
   [highway='primary'][tunnel!='yes']{
@@ -638,6 +908,15 @@
       line-join: round; 
       line-cap: round;
     }
+    [zoom=17]{
+      line-width: 12;
+    }
+    [zoom=18]{
+      line-width: 24;
+    }
+    [zoom=19]{
+      line-width: 38;
+    }
   }
   [highway='secondary'][tunnel!='yes']{
     [zoom=12]{
@@ -657,6 +936,15 @@
       line-width: 5;
       line-join: round;  
       line-cap: round; 
+    }
+    [zoom=17]{
+      line-width: 11;
+    }
+    [zoom=18]{
+      line-width: 22;
+    }
+    [zoom=19]{
+      line-width: 36;
     }
   }
   [highway='tertiary'][tunnel!='yes']{
@@ -678,6 +966,15 @@
       line-join: round;  
       line-cap: round; 
     }
+    [zoom=17]{
+      line-width: 9;
+    }
+    [zoom=18]{
+      line-width: 20;
+    }
+    [zoom=19]{
+      line-width: 34;
+    }
   }
   [highway='residential'],[highway='unclassified'],[highway='road']{
     [zoom>=14][zoom<16]{
@@ -692,6 +989,15 @@
       line-join: round;
       line-cap: round; 
     }
+    [zoom=17]{
+      line-width: 8;
+    }
+    [zoom=18]{
+      line-width: 19;
+    }
+    [zoom=19]{
+      line-width: 33;
+    }
   }
   [highway='pedestrian']{
     [zoom>=16]{
@@ -700,6 +1006,15 @@
       line-join: round;
       line-cap: round;        
     }
+    [zoom=17]{
+      line-width: 8;
+    }
+    [zoom=18]{
+      line-width: 19;
+    }
+    [zoom=19]{
+      line-width: 33;
+    }
   }
   [highway='living_street']{
     [zoom>=15]{
@@ -707,6 +1022,15 @@
       line-width: 4;
       line-join: round;        
       line-cap: round;
+    }
+    [zoom=17]{
+      line-width: 8;
+    }
+    [zoom=18]{
+      line-width: 19;
+    }
+    [zoom=19]{
+      line-width: 33;
     }
   }
   [highway='service']{
@@ -721,6 +1045,15 @@
       line-width: 4;
       line-join: round;
       line-cap: round;         
+    }
+    [zoom=17]{
+      line-width: 8;
+    }
+    [zoom=18]{
+      line-width: 19;
+    }
+    [zoom=19]{
+      line-width: 33;
     }
   }
 }
@@ -1390,6 +1723,21 @@
         line-width: 7; 
       }
     }
+    [zoom=17]{
+      ::case{
+        line-width: 13;
+      }
+    }
+    [zoom=18]{
+      ::case{
+        line-width: 24;
+      }
+    }
+    [zoom=19]{
+      ::case{
+        line-width: 38;
+      }
+    }
   }
   [highway='trunk'],[highway='trunk_link']{
     [zoom=12]{
@@ -1408,6 +1756,21 @@
       ::case{
         line-color: @brigdeCase;
         line-width: 8; 
+      }
+    }
+    [zoom=17]{
+      ::case{
+        line-width: 14;
+      }
+    }
+    [zoom=18]{
+      ::case{
+        line-width: 26;
+      }
+    }
+    [zoom=19]{
+      ::case{
+        line-width: 40;
       }
     }
   }
@@ -1430,6 +1793,21 @@
         line-width: 8;
       }
     }
+    [zoom=17]{
+      ::case{
+        line-width: 14;
+      }
+    }
+    [zoom=18]{
+      ::case{
+        line-width: 26;
+      }
+    }
+    [zoom=19]{
+      ::case{
+        line-width: 40;
+      }
+    }
   }
   [highway='secondary'],[highway='secondary_link']{
     [zoom>=13][zoom<15]{
@@ -1442,6 +1820,21 @@
       ::case{
         line-color: @brigdeCase;
         line-width: 7;
+      }
+    }
+    [zoom=17]{
+      ::case{
+        line-width: 13;
+      }
+    }
+    [zoom=18]{
+      ::case{
+        line-width: 24;
+      }
+    }
+    [zoom=19]{
+      ::case{
+        line-width: 38;
       }
     }
   }
@@ -1458,6 +1851,21 @@
         line-width: 6;
       }
     }
+    [zoom=17]{
+      ::case{
+        line-width: 11;
+      }
+    }
+    [zoom=18]{
+      ::case{
+        line-width: 22;
+      }
+    }
+    [zoom=19]{
+      ::case{
+        line-width: 36;
+      }
+    }
   }
   [highway='residential'],[highway='unclassified'],[highway='road']{
     [zoom>=14][zoom<16]{
@@ -1470,6 +1878,21 @@
       ::case{
         line-color: @brigdeCase;
         line-width: 5.5;
+      }
+    }
+    [zoom=17]{
+      ::case{
+        line-width: 10;
+      }
+    }
+    [zoom=18]{
+      ::case{
+        line-width: 21;
+      }
+    }
+    [zoom=19]{
+      ::case{
+        line-width: 35;
       }
     }
   }
@@ -1486,6 +1909,21 @@
         line-width: 5;
       }
     }
+    [zoom=17]{
+      ::case{
+        line-width: 10;
+      }
+    }
+    [zoom=18]{
+      ::case{
+        line-width: 21;
+      }
+    }
+    [zoom=19]{
+      ::case{
+        line-width: 35;
+      }
+    }
   }
   [highway='pedestrian']{
     [zoom>=14][zoom<16]{
@@ -1498,6 +1936,21 @@
       ::case{
         line-color: @brigdeCase;
         line-width: 5;      
+      }
+    }
+    [zoom=17]{
+      ::case{
+        line-width: 10;
+      }
+    }
+    [zoom=18]{
+      ::case{
+        line-width: 21;
+      }
+    }
+    [zoom=19]{
+      ::case{
+        line-width: 35;
       }
     }
   }
@@ -1873,6 +2326,21 @@
         line-cap: round;      
       }
     }
+    [zoom=17]{
+      ::fill{
+        line-width: 11;
+      }
+    }
+    [zoom=18]{
+      ::fill{
+        line-width: 22;
+      }
+    }
+    [zoom=19]{
+      ::fill{
+        line-width: 36;
+      }
+    }
   }
   [highway='trunk'],[highway='trunk_link']{
     [zoom=12]{
@@ -1897,6 +2365,21 @@
         line-width: 6;
         line-join: round;
         line-cap: round;      
+      }
+    }
+    [zoom=17]{
+      ::fill{
+        line-width: 12;
+      }
+    }
+    [zoom=18]{
+      ::fill{
+        line-width: 24;
+      }
+    }
+    [zoom=19]{
+      ::fill{
+        line-width: 38;
       }
     }
   }
@@ -1925,6 +2408,21 @@
         line-cap: round;      
       }
     }
+    [zoom=17]{
+      ::fill{
+        line-width: 12;
+      }
+    }
+    [zoom=18]{
+      ::fill{
+        line-width: 24;
+      }
+    }
+    [zoom=19]{
+      ::fill{
+        line-width: 38;
+      }
+    }
   }
   [highway='secondary'],[highway='secondary_link']{
     [zoom>=13][zoom<15]{
@@ -1941,6 +2439,21 @@
         line-width: 5;
         line-join: round;
         line-cap: round;
+      }
+    }
+    [zoom=17]{
+      ::fill{
+        line-width: 11;
+      }
+    }
+    [zoom=18]{
+      ::fill{
+        line-width: 22;
+      }
+    }
+    [zoom=19]{
+      ::fill{
+        line-width: 36;
       }
     }
   }
@@ -1961,6 +2474,21 @@
         line-cap: round;
       }
     }
+    [zoom=17]{
+      ::fill{
+        line-width: 9;
+      }
+    }
+    [zoom=18]{
+      ::fill{
+        line-width: 20;
+      }
+    }
+    [zoom=19]{
+      ::fill{
+        line-width: 34;
+      }
+    }
   }
   [highway='road'],[highway='residential'],[highway='unclassified']{
     [zoom>=14][zoom<16]{
@@ -1977,6 +2505,21 @@
         line-width: 4;
         line-join: round;
         line-cap: round;
+      }
+    }
+    [zoom=17]{
+      ::fill{
+        line-width: 8;
+      }
+    }
+    [zoom=18]{
+      ::fill{
+        line-width: 19;
+      }
+    }
+    [zoom=19]{
+      ::fill{
+        line-width: 33;
       }
     }
   }
@@ -1997,6 +2540,21 @@
         line-cap: round;       
       }
     }
+    [zoom=17]{
+      ::fill{
+        line-width: 8;
+      }
+    }
+    [zoom=18]{
+      ::fill{
+        line-width: 19;
+      }
+    }
+    [zoom=19]{
+      ::fill{
+        line-width: 33;
+      }
+    }
   }
   [highway='pedestrian']{
     [zoom>=16]{
@@ -2005,6 +2563,21 @@
         line-width: 4;
         line-join: round;
         line-cap: round;
+      }
+    }
+    [zoom=17]{
+      ::fill{
+        line-width: 8;
+      }
+    }
+    [zoom=18]{
+      ::fill{
+        line-width: 19;
+      }
+    }
+    [zoom=19]{
+      ::fill{
+        line-width: 33;
       }
     }
   }
