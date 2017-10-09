@@ -5,10 +5,10 @@
 
 //setting roads
 @railway: rgb(153,153,153);
-@primaryroadCase: #575757;
+@primaryroadCase: #91919c;
 @primaryroad: #91919c;
-@roadCase:#575757;
-@3dRoadCase:#575757;
+@roadCase:#91919c;
+@3dRoadCase:#91919c;
 @road: #91919c;
 /*@direaction: #9b9b9b;*/
 @direaction: #ffffff;
