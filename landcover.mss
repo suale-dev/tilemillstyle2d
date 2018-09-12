@@ -51,9 +51,10 @@
       polygon-fill: rgb(170,203,175);
     }
   }  
-  /*[landuse='residential'][zoom>=13]{
+  [landuse='residential'][zoom>=13]{
     polygon-fill: rgb(221,221,221);
   }
+  /*
   [landuse='garages'][zoom>=13]{
     polygon-fill: rgb(153,153,102);
     polygon-opacity: 0.2;
@@ -468,4 +469,5 @@
             line-dasharray: 4,3;
         }
     }
+
 }

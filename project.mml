@@ -50,15 +50,15 @@
     {
       "geometry": "polygon",
       "extent": [
-        -179.99999692067183,
+        -180,
         -85.051,
-        179.99999692067183,
-        83.66602
+        180,
+        83.6664731
       ],
       "id": "coast-poly",
       "class": "",
       "Datasource": {
-        "file": "world_boundaries/processed_p.shp",
+        "file": "world_boundaries/land-polygons-split-3857.zip",
         "id": "coast-poly",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -68,66 +68,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "coast-poly"
-    },
-    {
-      "geometry": "raster",
-      "extent": [
-        99.99958357546717,
-        4.999604856943355,
-        110.00017640366231,
-        25.000417126729932
-      ],
-      "id": "terrain_sh",
-      "class": "",
-      "Datasource": {
-        "file": "world_boundaries/srtm-3785-hs.tif"
-      },
-      "layer": null,
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "terrain_sh",
-      "status": "off"
-    },
-    {
-      "geometry": "raster",
-      "extent": [
-        99.99958357546717,
-        4.999604856943355,
-        110.00017640366231,
-        25.000417126729932
-      ],
-      "id": "terrain_slope",
-      "class": "",
-      "Datasource": {
-        "file": "world_boundaries/srtm-3785-slopeshade.tif"
-      },
-      "layer": null,
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "terrain_slope",
-      "status": "off"
-    },
-    {
-      "geometry": "raster",
-      "extent": [
-        99.99958357546717,
-        4.999604856943355,
-        110.00017640366231,
-        25.000417126729932
-      ],
-      "id": "terrain_color",
-      "class": "",
-      "Datasource": {
-        "file": "world_boundaries/srtm-3785-color.tif"
-      },
-      "layer": null,
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "terrain_color",
-      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -150,29 +90,6 @@
       "srs": "",
       "advanced": {},
       "name": "ocean"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        -180,
-        -85.051,
-        180,
-        85.051
-      ],
-      "id": "bathymetry",
-      "class": "",
-      "Datasource": {
-        "file": "world_boundaries/10m-bathymetry.zip",
-        "id": "bathymetry",
-        "project": "tilemillstyle2d",
-        "srs": ""
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "bathymetry",
-      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -256,11 +173,14 @@
         "geometry_field": "",
         "extent_cache": "custom",
         "extent": "-20037508,-19929239,20037508,19929239",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "host": "localhost",
         "port": "5432",
         "user": "maptile",
-        "password": "maptile"
+        "password": "maptile",
+        "id": "landcover",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "landcover",
       "class": "",
@@ -288,7 +208,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "landcover",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -315,7 +235,7 @@
         "geometry_field": "",
         "extent_cache": "custom",
         "extent": "-20037508,-19929239,20037508,19929239",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "host": "localhost",
         "port": "5432",
         "user": "maptile",
@@ -326,8 +246,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-tourism",
-      "status": "off"
+      "name": "landcover-tourism"
     },
     {
       "geometry": "polygon",
@@ -344,11 +263,14 @@
         "geometry_field": "",
         "extent_cache": "custom",
         "extent": "-20037508,-19929239,20037508,19929239",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "host": "localhost",
         "port": "5432",
         "user": "maptile",
-        "password": "maptile"
+        "password": "maptile",
+        "id": "landcover-landuse",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "landcover-landuse",
       "class": "",
@@ -372,7 +294,7 @@
         "geometry_field": "",
         "extent_cache": "custom",
         "extent": "-20037508,-19929239,20037508,19929239",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "host": "localhost",
         "port": "5432",
         "user": "maptile",
@@ -400,7 +322,7 @@
         "geometry_field": "",
         "extent_cache": "custom",
         "extent": "-20037508,-19929239,20037508,19929239",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "host": "localhost",
         "port": "5432",
         "user": "maptile",
@@ -433,7 +355,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "landcover_line",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -464,7 +386,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "sports_grounds",
       "class": "",
@@ -493,7 +415,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "water-lines-casing",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -524,7 +446,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "water_areas",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -555,7 +477,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "water-areas-overlay",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -586,7 +508,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "glaciers-text",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -617,7 +539,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "water-lines-low-zoom",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -648,7 +570,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "water_lines",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -679,7 +601,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "dam",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -710,7 +632,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "marinas-area",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -741,7 +663,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "piers-area",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -772,7 +694,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "piers",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -803,7 +725,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "locks",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -834,7 +756,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "tunnels",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -865,7 +787,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "citywalls",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -896,7 +818,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "castle_walls_line",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -927,7 +849,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "castle_walls",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -958,14 +880,15 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "landuse_overlay",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landuse_overlay"
+      "name": "landuse_overlay",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -986,7 +909,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "turning_circle-casing",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1018,7 +941,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "footbikecycle-tunnels",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1049,7 +972,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "tracks-tunnels",
       "class": "",
@@ -1077,7 +1000,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "line-features",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1108,7 +1031,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "polygon-barriers",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1139,7 +1062,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "highway-area-casing",
       "class": "",
@@ -1167,7 +1090,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "minor-roads-casing",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1198,7 +1121,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "highway-area-fill",
       "class": "",
@@ -1226,7 +1149,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "buildings-lz",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1258,7 +1181,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "buildings",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1290,7 +1213,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "tracks-notunnel-nobridge",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1321,7 +1244,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "minor-roads-fill",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1348,7 +1271,7 @@
         "geometry_field": "",
         "extent_cache": "custom",
         "extent": "-20037508,-19929239,20037508,19929239",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "host": "localhost",
         "port": "5432",
         "user": "maptile",
@@ -1383,7 +1306,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "turning_circle-fill",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1393,7 +1316,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "turning_circle-fill"
+      "name": "turning_circle-fill",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -1414,7 +1338,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "ferry-routes",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1445,7 +1369,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "aerialways",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1476,7 +1400,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "roads-highway",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1503,7 +1427,7 @@
         "geometry_field": "",
         "extent_cache": "custom",
         "extent": "-20037508,-19929239,20037508,19929239",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "host": "localhost",
         "port": "5432",
         "user": "maptile",
@@ -1535,7 +1459,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "waterway-bridges",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1566,7 +1490,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "access-pre_bridges",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1598,7 +1522,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "direction_pre_bridges",
       "class": "directions",
@@ -1626,7 +1550,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "bridges_layer0",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1657,7 +1581,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_access0",
       "class": "access",
@@ -1685,7 +1609,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_directions0",
       "class": "directions",
@@ -1713,7 +1637,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_layer1",
       "class": "bridges_casing bridges_casing2 bridges_fill",
@@ -1741,7 +1665,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "bridges_access1",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -1772,7 +1696,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_directions1",
       "class": "directions",
@@ -1800,7 +1724,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_layer2",
       "class": "bridges_casing bridges_casing2 bridges_fill",
@@ -1828,7 +1752,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_access2",
       "class": "access",
@@ -1856,7 +1780,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_directions2",
       "class": "directions",
@@ -1884,7 +1808,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_layer3",
       "class": "bridges_casing bridges_casing2 bridges_fill",
@@ -1912,7 +1836,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_access3",
       "class": "access",
@@ -1940,7 +1864,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_directions3",
       "class": "directions",
@@ -1968,7 +1892,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_layer4",
       "class": "bridges_casing bridges_casing2 bridges_fill",
@@ -1996,7 +1920,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_access4",
       "class": "access",
@@ -2024,7 +1948,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_directions4",
       "class": "directions",
@@ -2052,7 +1976,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_layer5",
       "class": "bridges_casing bridges_casing2 bridges_fill",
@@ -2080,7 +2004,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "bridges_access5",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2111,7 +2035,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "bridges_directions5",
       "class": "directions",
@@ -2139,7 +2063,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "trams",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2170,7 +2094,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "guideways",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2201,7 +2125,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "admin-01234",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2232,7 +2156,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "admin-5678",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2263,7 +2187,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "admin-other",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2295,7 +2219,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "placenames-large",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2326,7 +2250,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "placenames-capital",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2357,7 +2281,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "placenames-medium",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2388,7 +2312,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "placenames-small",
       "class": "suburb village hamlet",
@@ -2416,7 +2340,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "amenity-stations",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2448,14 +2372,15 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-stations-poly",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-stations-poly"
+      "name": "amenity-stations-poly",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2476,14 +2401,15 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-symbols",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols"
+      "name": "amenity-symbols",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2504,14 +2430,15 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-symbols-man-made",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-man-made"
+      "name": "amenity-symbols-man-made",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2532,14 +2459,15 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-symbols-natural",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-natural"
+      "name": "amenity-symbols-natural",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2560,7 +2488,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "amenity-symbols-poly",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2592,14 +2520,15 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-symbols-poly-man-made",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly-man-made"
+      "name": "amenity-symbols-poly-man-made",
+      "status": "off"
     },
     {
       "geometry": "unknown",
@@ -2620,7 +2549,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "amenity-symbols-poly-natural",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2630,7 +2559,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-symbols-poly-natural"
+      "name": "amenity-symbols-poly-natural",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2651,7 +2581,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-points-other",
       "class": "",
@@ -2680,7 +2610,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-points-shop",
       "class": "",
@@ -2709,7 +2639,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-points-tourism",
       "class": "",
@@ -2738,7 +2668,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "amenity-points",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2770,15 +2700,17 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp",
+        "id": "amenity-points-poly-other",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "amenity-points-poly-other",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-other",
-      "status": "off"
+      "name": "amenity-points-poly-other"
     },
     {
       "geometry": "polygon",
@@ -2799,7 +2731,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-points-poly-shop",
       "class": "",
@@ -2828,7 +2760,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "amenity-points-poly-tourism",
       "class": "",
@@ -2857,7 +2789,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "amenity-points-poly",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2889,7 +2821,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "power_line",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2899,7 +2831,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_line"
+      "name": "power_line",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -2920,7 +2853,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "power_minorline",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2930,7 +2863,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_minorline"
+      "name": "power_minorline",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2951,7 +2885,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "power_towers",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2961,7 +2895,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_towers"
+      "name": "power_towers",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -2982,7 +2917,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "power_poles",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -2992,7 +2927,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "power_poles"
+      "name": "power_poles",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -3013,7 +2949,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "roads-text-ref-low-zoom",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3044,7 +2980,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "highway-junctions",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3075,7 +3011,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "roads-text-ref",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3106,7 +3042,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "roads-text-name",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3137,7 +3073,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "text-other",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3169,7 +3105,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "text-tourism",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3201,7 +3137,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "text-natural",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3233,7 +3169,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "text-shop",
       "class": "",
@@ -3262,7 +3198,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "text",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3294,7 +3230,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "text-poly-other",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3326,7 +3262,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "text-poly-tourism",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3358,7 +3294,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "text-poly-natural",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3390,7 +3326,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp"
+        "dbname": "osm_cp"
       },
       "id": "text-poly-shop",
       "class": "",
@@ -3419,7 +3355,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "text-poly",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3451,7 +3387,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "area-text",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3483,7 +3419,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "interpolation_lines",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3514,7 +3450,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "housenumbers",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3546,7 +3482,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "housenames",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3578,7 +3514,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "misc_boundaries",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -3609,7 +3545,7 @@
         "port": "5432",
         "user": "maptile",
         "password": "maptile",
-        "dbname": "osm-cp",
+        "dbname": "osm_cp",
         "id": "theme_park",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over"
@@ -3683,6 +3619,69 @@
       "srs": "",
       "advanced": {},
       "name": "country-name"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        102.12105268578456,
+        8.563847698816778,
+        111.7727124844415,
+        23.429130996920463
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,place,name from planet_osm_point where  place='island' ) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11368063.5842546,956892.736716125,12442481.438351,2683997.92924796",
+        "dbname": "osm_cp",
+        "host": "localhost",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "id": "text-island",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "text-island",
+      "class": "text-island",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-island"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.05838288579369,
+        8.179066498869185,
+        111.78277528444012,
+        23.494036196912955
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select area, way, way_area, place, name from planet_osm_polygon  where place='island' and name !=''  order by way_area desc) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11361087.2140315,913597.696143625,12443601.6241228,2691874.3054587",
+        "dbname": "osm_cp",
+        "host": "localhost",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "id": "biendao",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "biendao",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "biendao",
+      "status": "off"
     }
   ],
   "scale": 1,

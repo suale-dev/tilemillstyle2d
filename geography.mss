@@ -456,6 +456,13 @@ Map {
     }
 
 }
+  #amenity-points-poly-other{
+        [zoom>=10]{
+         
+        polygon-fill:rgb(68,68,68);
+        polygon-opacity: 0.4;
+     }
+  }
 
 #islands {
   polygon-opacity:1;
