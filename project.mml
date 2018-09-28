@@ -92,29 +92,6 @@
       "name": "ocean"
     },
     {
-      "geometry": "polygon",
-      "extent": [
-        -179.12960815429688,
-        -53.16742324828472,
-        178.4432525634766,
-        70.99272918701169
-      ],
-      "id": "builtup",
-      "class": "",
-      "Datasource": {
-        "file": "world_boundaries/builtup_area.shp",
-        "id": "builtup",
-        "project": "tilemillstyle2d",
-        "srs": ""
-      },
-      "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "builtup",
-      "status": "off"
-    },
-    {
       "geometry": "linestring",
       "extent": [
         -140.99778,
@@ -2710,7 +2687,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "amenity-points-poly-other"
+      "name": "amenity-points-poly-other",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -3571,8 +3549,8 @@
         "file": "world_boundaries/10m-admin-0-boundary-lines-land.zip"
       },
       "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "border-countries"
     },
@@ -3682,6 +3660,37 @@
       "advanced": {},
       "name": "biendao",
       "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.05838288579369,
+        8.179066498869185,
+        109.67098458473359,
+        23.494036196912955
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion \nfrom planet_osm_polygon \nwhere landuse in ('DGT','ODT', 'SKC', 'SON','TSC','DGD','CQP','CAN','TON','DBV','DVH','DCH','DYT','TIN','DDT') \n order by z_order,way_area desc) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11361087.2140315,913597.696143625,12208518.1587695,2691874.3054587",
+        "dbname": "osm_cp",
+        "host": "localhost",
+        "port": "5432",
+        "user": "maptile",
+        "password": "maptile",
+        "id": "datnendiachinh",
+        "project": "tilemillstyle2d",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "datnendiachinh",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "datnendiachinh"
     }
   ],
   "scale": 1,

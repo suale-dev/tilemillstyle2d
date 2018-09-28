@@ -51,10 +51,11 @@
       polygon-fill: rgb(170,203,175);
     }
   }  
+   
   [landuse='residential'][zoom>=13]{
     polygon-fill: rgb(221,221,221);
   }
-  /*
+ /*
   [landuse='garages'][zoom>=13]{
     polygon-fill: rgb(153,153,102);
     polygon-opacity: 0.2;
@@ -469,5 +470,95 @@
             line-dasharray: 4,3;
         }
     }
+ }
 
-}
+
+#datnendiachinh {
+      
+      [landuse='DGT'] [zoom>=16]{
+      polygon-fill:#FFAA32;
+      polygon-opacity:0.5;
+      }
+      [landuse='ODT'] [zoom>=16]{
+      polygon-fill:#FFA0FF;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='SKC'] [zoom>=16]{
+      polygon-fill:#FAAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='SON'] [zoom>=16]{
+      polygon-fill:#A0FFFF;
+      polygon-opacity:0.5;
+      }
+      [landuse='TSC'] [zoom>=16]{
+      polygon-fill:#FFAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='DGD'] [zoom>=16]{
+      polygon-fill:#FFAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='CQP'] [zoom>=16]{
+      polygon-fill:#FF6450;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='CAN'] [zoom>=16]{
+      polygon-fill:#FF5046;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='TON'] [zoom>=16]{
+      polygon-fill:#FFAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='DBV'] [zoom>=16]{
+      polygon-fill:#FFAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='DVH'] [zoom>=16]{
+      polygon-fill:#FFAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='DCH'] [zoom>=16]{
+      polygon-fill:#FFAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='DYT'] [zoom>=16]{
+      polygon-fill:#FFAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='TIN'] [zoom>=16]{
+      polygon-fill:#FFAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+      [landuse='DDT'] [zoom>=16]{
+      polygon-fill:#FFAAA0;
+      polygon-opacity:0.5;
+      line-color:rgb(128,128,128);
+      line-width: 0.5;
+      }
+  }
