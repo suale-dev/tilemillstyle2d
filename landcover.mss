@@ -92,10 +92,10 @@
       polygon-fill:@grassColor;
     }
   }
-  
+  /*
   [landuse='residential'][zoom>=10][zoom<17]{
     polygon-fill: @grassColor;
-  }
+  }*/
   /*3d style
   [landuse='residential'][zoom>=17]{
     polygon-fill: @grassColor;
@@ -137,19 +137,23 @@
   [landuse='meadow'],[landuse='grass']{
     [zoom>=10]{
       polygon-fill: @grassColor;
+      polygon-pattern-file:url("symbols/conendiachinh.png");
     }
     /*3d style*/
     [zoom>=17]{
       polygon-fill: @grassColor;
+      polygon-pattern-file:url("symbols/conendiachinh.png");
     }
   }
   [leisure='park'],[leisure='recreation_ground']{
     [zoom>=10][zoom<17]{
       polygon-fill: @grassColor;
+      
     }
     /*3d style*/
     [zoom>=17]{
       polygon-fill:@grassColor;
+      polygon-pattern-file:url("symbols/park_bg.png");
     }
   }
   
@@ -175,6 +179,7 @@
   /*3d style*/
   [leisure='golf_course'][zoom>=17]{
     polygon-fill:  @grassColor;
+    polygon-pattern-file: url("symbols/golf_course.png");
   }
   
   [landuse='allotments']{
@@ -192,15 +197,18 @@
   [landuse='forest']{
     [zoom>=8][zoom<14]{
       polygon-fill: @grassColor;
+      polygon-pattern-file:url("symbols/conendiachinh.png");
     }
     [zoom>=14][zoom<17]{
       /*polygon-pattern-file: url("symbols/forest.png");*/
  	polygon-fill:@grassColor;
+   
     }
     /*3d style*/
     [zoom>=17]{
       /*polygon-pattern-file: url("symbols/forest.png");*/
        polygon-fill: @grassColor;	
+       polygon-pattern-file:url("symbols/forest_bg.png");
     }
   }
   
@@ -214,6 +222,7 @@
   
   [landuse='farm'],[landuse='farmland'][zoom>=9][zoom<17]{
     polygon-fill: @grassColor;
+    polygon-pattern-file:url("symbols/conendiachinh.png");
   }
   /*3d style*/
   [landuse='farm'],[landuse='farmland'][zoom>=17]{
@@ -274,6 +283,7 @@
   [landuse='brownfield'],[landuse='landfill'],[landuse='greenfield'],[landuse='construction']{
     [zoom>=10][zoom<17]{
       polygon-fill: @grassColor;
+      polygon-pattern-file:url("symbols/conendiachinh.png");
      
     }
     /*3d style
@@ -339,10 +349,12 @@
   
   [natural='grassland'][zoom>=10]{
     polygon-fill:@grassColor;
+    polygon-pattern-file:url("symbols/conendiachinh.png");
   }
   /*3d style*/
   [natural='grassland'][zoom>=17]{
     polygon-fill:@grassColor;
+    polygon-pattern-file:url("symbols/conendiachinh.png");
   }
   
   [natural='scrub']{
@@ -499,7 +511,7 @@
   [leisure='stadium']{
     [zoom>=10]{
       polygon-fill: @grassColor;
- 
+      polygon-pattern-file:url("symbols/conendiachinh.png");
     }
   }
   [leisure='track'][zoom>=10][zoom<17]{
@@ -514,6 +526,7 @@
   
   [leisure='pitch'][zoom>=10][zoom<17]{
     polygon-fill: @grassColor;
+    polygon-pattern-file:url("symbols/conendiachinh.png");
     line-color: rgb(136,136,136);
     line-width: 0.5;
   }
@@ -674,4 +687,83 @@
             line-dasharray: 4,3;
         }
     }
+}
+#datnendiachinh {
+     
+      [landuse='DGT'] [zoom>=20]{
+        line-color:#FFAA32;
+      }
+      [landuse='ODT'] [zoom>=16]{
+      line-color:#FFA0FF;
+      line-width: 1;
+       
+      }
+      [landuse='SKC'] [zoom>=16]{
+      line-color:#FAAAA0;
+       
+      
+      line-width: 1;
+      }
+      [landuse='SON'] [zoom>=16]{
+      line-color:#A0FFFF;
+        
+      }
+      [landuse='TSC'] [zoom>=16]{
+      line-color:#FFAAA0;
+      line-width: 1;
+      
+      }
+      [landuse='DGD'] [zoom>=16]{
+      line-color:#FFAAA0;
+      line-width: 1;
+      
+      }
+      [landuse='CQP'] [zoom>=16]{
+      line-color:#FF6450;
+      line-width: 1;
+      }
+      [landuse='CAN'] [zoom>=16]{
+      line-color:#FF5046;
+      line-width: 1;
+       
+      }
+      [landuse='TON'] [zoom>=16]{
+      line-color:#FFAAA0;
+      line-width: 1;
+       
+      }
+      [landuse='DBV'] [zoom>=16]{
+      line-color:#FFAAA0;
+      line-width: 1;
+      
+      }
+      [landuse='DVH'] [zoom>=16]{
+      line-color:#FFAAA0;
+      line-width: 1;
+      
+      }
+      [landuse='DCH'] [zoom>=16]{
+      line-color:#FFAAA0;
+       
+      
+      line-width: 1;
+      }
+      [landuse='DYT'] [zoom>=16]{
+      line-color:#FFAAA0;
+      line-width: 1;
+        
+      }
+      [landuse='TIN'] [zoom>=16]{
+      line-color:#FFAAA0;
+      line-width: 1;
+        
+      }
+      [landuse='DDT'] [zoom>=16]{
+      line-color:#FFAAA0;
+      line-width: 1;
+      
+      }
+  } 
+#nencodiachinh{
+   polygon-pattern-file: url('symbols/bg_diachinh_b.png');
 }

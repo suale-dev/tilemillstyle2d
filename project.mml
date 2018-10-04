@@ -50,15 +50,15 @@
     {
       "geometry": "polygon",
       "extent": [
-        -179.99999692067183,
+        -180,
         -85.051,
-        179.99999692067183,
-        83.66602
+        180,
+        83.6664731
       ],
       "id": "coast-poly",
       "class": "",
       "Datasource": {
-        "file": "world_boundaries/processed_p.shp",
+        "file": "world_boundaries/land-polygons-split-3857.zip",
         "id": "coast-poly",
         "project": "tilemillstyle2d",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
@@ -72,24 +72,21 @@
     {
       "geometry": "polygon",
       "extent": [
-        -179.12960815429688,
-        -53.16742324828472,
-        178.4432525634766,
-        70.99272918701169
+        106.6813814,
+        10.7403457,
+        108.3391235,
+        16.2155286
       ],
-      "id": "builtup",
+      "id": "nencodiachinh",
       "class": "",
       "Datasource": {
-        "file": "world_boundaries/builtup_area.shp",
-        "id": "builtup",
-        "project": "tilemillstyle2d",
-        "srs": ""
+        "file": "world_boundaries/danang_hcm_a_boundaries.zip"
       },
       "layer": null,
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "builtup"
+      "name": "nencodiachinh"
     },
     {
       "geometry": "linestring",
@@ -3535,10 +3532,10 @@
     {
       "geometry": "linestring",
       "extent": [
-        -141.00554866607175,
-        -55.12092376716174,
-        140.977626994236,
-        70.0753103641985
+        -180,
+        -85.051,
+        180,
+        85.051
       ],
       "id": "border-countries",
       "class": "",
@@ -3546,8 +3543,8 @@
         "file": "world_boundaries/10m-admin-0-boundary-lines-land.zip"
       },
       "layer": null,
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "border-countries"
     },
@@ -3572,6 +3569,35 @@
       "srs": "",
       "advanced": {},
       "name": "border-city"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        102.05838288579369,
+        8.179066498869185,
+        109.67098458473359,
+        23.494036196912955
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion from planet_osm_polygon where landuse is not null or leisure is not null or aeroway in ('apron','aerodrome') or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard','prison') or military in ('barracks','danger_area') or \"natural\" in ('field','beach','desert','heath','mud','grassland','wood','sand','scrub') or power in ('station','sub_station','generator') or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo') or highway in ('services','rest_area') order by z_order,way_area desc) as _subquery",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "11361087.2140315,913597.696143625,12208518.1587695,2691874.3054587",
+        "dbname": "osm_cp",
+        "host": "localhost",
+        "port": "5432",
+        "user": "mapapi",
+        "password": "123456"
+      },
+      "id": "datnendiachinh",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "datnendiachinh",
+      "status": "off"
     }
   ],
   "scale": 1,
