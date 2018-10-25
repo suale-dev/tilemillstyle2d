@@ -222,11 +222,12 @@
   
   [landuse='farm'],[landuse='farmland'][zoom>=9][zoom<17]{
     polygon-fill: @grassColor;
-    polygon-pattern-file:url("symbols/conendiachinh.png");
+    
   }
   /*3d style*/
   [landuse='farm'],[landuse='farmland'][zoom>=17]{
     polygon-fill: @grassColor;
+    polygon-pattern-file:url("symbols/conendiachinh.png");
   }
   
   

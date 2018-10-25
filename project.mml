@@ -72,15 +72,15 @@
     {
       "geometry": "polygon",
       "extent": [
-        106.6813814,
-        10.7403457,
-        108.3391235,
-        16.2155286
+        102.14441,
+        7.8911481,
+        115.5792779,
+        23.393395
       ],
       "id": "nencodiachinh",
       "class": "",
       "Datasource": {
-        "file": "world_boundaries/danang_hcm_a_boundaries.zip"
+        "file": "world_boundaries/vietnam_shape.zip"
       },
       "layer": null,
       "srs-name": "autodetect",
