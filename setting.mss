@@ -10,7 +10,7 @@
 @town-name-sizeS: 10; //size of town name with zoom>=9 & <12
 @town-name-sizeM: 13; //size of town name with zoom>=12 & <14
 @town-name-sizeL: 15; //size of town name with zoom>=14
-
+ 
 @village-name-sizeS: 10;
 @village-name-sizeM: 12;
  

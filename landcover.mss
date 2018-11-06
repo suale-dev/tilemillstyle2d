@@ -142,12 +142,12 @@
       line-color: rgb(255,0,0);
       line-width: 0.3
     }
-  }
+  }*/
   [landuse='industrial'],[landuse='railway']{
     [zoom>=13]{
       polygon-fill: rgb(223,209,214);
     }
-  }*/
+  }
   
   //[landuse='commercial'][zoom>=13]{
   //  polygon-fill: rgb(239,200,200);
@@ -360,7 +360,7 @@
         line-dasharray: 6,2;
         line-color: @boundary-color;
     }
-    [zoom > 8][ zoom < 10][way_area>=200000000] {
+    [zoom > 8][ zoom < 10] {
         text-face-name: @bold-fonts;
         text-wrap-width: 14;
         text-size: 8;
