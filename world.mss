@@ -1,3 +1,13 @@
+#hsa-tsa{
+ line-color: #ffffff;
+ line-width: 1.5;
+ text-name: [name];
+ text-fill: @text-lowzoom;
+ text-size:8;
+ text-halo-fill: rgba(255,255,255,0.8);
+ text-halo-radius:1;
+   text-face-name: @book-fonts;
+}
 #necountries{
   [zoom >=1][zoom < 4]{
     line-color: @necountriescolor;

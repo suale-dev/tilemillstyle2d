@@ -6,7 +6,7 @@
 @city-names-sizeS: 9; //size of city name with zoom = 7
 @city-names-sizeM: 12; //size of city name with zoom >=8 & <11
 @city-names-sizeL: 16; //size of city name with zoom zoom>=11 & zoom<15
-
+ 
 @town-name-sizeS: 10; //size of town name with zoom>=9 & <12
 @town-name-sizeM: 13; //size of town name with zoom>=12 & <14
 @town-name-sizeL: 15; //size of town name with zoom>=14
@@ -50,7 +50,7 @@
 @water: hsl(199,35%,55%);
 @defaultland: rgb(242,239,233);
 
-@max-zoom: 19;
+@max-zoom: 22;
 
 /*3d style*/
 @3droad:#878793;

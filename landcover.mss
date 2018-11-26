@@ -9,7 +9,7 @@
     polygon-fill: @water;
     line-color: rgb(0,0,255);
     line-width: 0.5;
-  }
+  } 
   [leisure='playground'][zoom >= 13][zoom<=@max-zoom]{
     polygon-fill: rgb(204,255,241) ;
     line-color: rgb(102,102,102);

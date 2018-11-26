@@ -3375,7 +3375,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "area-text"
+      "name": "area-text",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -3657,8 +3658,7 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "biendao",
-      "status": "off"
+      "name": "biendao"
     },
     {
       "geometry": "polygon",
@@ -3690,6 +3690,28 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "datnendiachinh"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        110.981353,
+        8.6418842,
+        117.8690527,
+        17.3192083
+      ],
+      "id": "hsa-tsa",
+      "class": "hsa-tsa",
+      "Datasource": {
+        "file": "world_boundaries/HSa-TruongSa.zip",
+        "id": "hsa-tsa",
+        "project": "tilemillstyle2d",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "hsa-tsa"
     }
   ],
   "scale": 1,
