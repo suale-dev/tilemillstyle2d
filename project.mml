@@ -18,8 +18,8 @@
   "Stylesheet": [
     "setting.mss",
     "world.mss",
-    "geography.mss",
     "landcover.mss",
+    "geography.mss",
     "building.mss",
     "road.mss",
     "text.mss"
@@ -3670,7 +3670,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion \nfrom planet_osm_polygon \nwhere landuse in ('DGT','ODT', 'SKC', 'SON','TSC','DGD','CQP','CAN','TON','DBV','DVH','DCH','DYT','TIN','DDT') \n order by z_order,way_area desc) as _subquery",
+        "table": "(select way,aeroway,amenity,landuse,leisure,man_made,military,\"natural\",power,tourism,name,highway, case when religion in ('christian','jewish') then religion else 'INT-generic'::text end as religion \nfrom planet_osm_polygon \nwhere landuse in ('NNP', 'SXN', 'CHN', 'LUA', 'LUC', 'LUK', 'LUN', 'COC', 'HNK', 'BHK', 'NHK', 'CLN', 'LNC', 'LNQ', 'LNK', 'LNP', 'RSX', 'RSN', 'RST', 'RSK', 'RSM', 'RPH', 'RPN', 'RPT', 'RPK', 'RPM', 'RDD', 'RDN', 'RDT', 'RDK', 'RDM', 'NTS', 'TSL', 'TSN', 'LMU', 'NKH', 'PNN', 'OTC', 'ONT', 'ODT', 'CDG', 'CTS', 'TSC', 'TSK', 'CQP', 'CAN', 'CSK', 'SKK', 'SKC', 'SKS', 'SKX', 'CCC', 'DGT', 'DTL', 'DNL', 'DBV', 'DVH', 'DYT', 'DGD', 'DTT', 'DKH', 'DXH', 'DCH', 'DDT', 'DRA', 'TTN', 'TON', 'TIN', 'NTD', 'SMN', 'SON', 'MNC', 'PNK', 'CSD', 'BCS', 'DCS', 'NCS', 'MVB', 'MVT', 'MVR', 'MVK', 'DSN', 'DTS', 'DNG', 'DSK', 'SKN', 'SKT', 'TMD', 'DDL', 'DSH', 'DKV', 'DCK', '', 'DNT', 'KDT', 'KBT', 'KĐD', 'CNC', 'KKT') \n order by z_order,way_area desc) as _subquery",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",

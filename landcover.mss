@@ -475,90 +475,636 @@
 
 #datnendiachinh {
       
-      [landuse='DGT'] [zoom>=16]{
-      polygon-fill:#FFAA32;
-      polygon-opacity:0.5;
-      }
-      [landuse='ODT'] [zoom>=16]{
-      polygon-fill:#FFA0FF;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='SKC'] [zoom>=16]{
-      polygon-fill:#FAAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='SON'] [zoom>=16]{
-      polygon-fill:#A0FFFF;
-      polygon-opacity:0.5;
-      }
-      [landuse='TSC'] [zoom>=16]{
-      polygon-fill:#FFAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='DGD'] [zoom>=16]{
-      polygon-fill:#FFAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='CQP'] [zoom>=16]{
-      polygon-fill:#FF6450;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='CAN'] [zoom>=16]{
-      polygon-fill:#FF5046;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='TON'] [zoom>=16]{
-      polygon-fill:#FFAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='DBV'] [zoom>=16]{
-      polygon-fill:#FFAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='DVH'] [zoom>=16]{
-      polygon-fill:#FFAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='DCH'] [zoom>=16]{
-      polygon-fill:#FFAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='DYT'] [zoom>=16]{
-      polygon-fill:#FFAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='TIN'] [zoom>=16]{
-      polygon-fill:#FFAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
-      [landuse='DDT'] [zoom>=16]{
-      polygon-fill:#FFAAA0;
-      polygon-opacity:0.5;
-      line-color:rgb(128,128,128);
-      line-width: 0.5;
-      }
+     [landuse='CAN'] [zoom>=6]{
+    polygon-fill:#FF5046;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='CQP'] [zoom>=6]{
+    polygon-fill:#FF6450;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='CSK'] [zoom>=6]{
+    polygon-fill:#FFA0AA;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DBV'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DGD'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DGT'] [zoom>=6]{
+    polygon-fill:#FFAA32;
+    polygon-opacity:0.5;
+}
+[landuse='DTL'] [zoom>=6]{
+    polygon-fill:#AAFFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DVH'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DYT'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='GT'] [zoom>=6]{
+    polygon-fill:#FFAA32;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ODT'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='TON'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='TSC'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='TSK'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='TTN'] [zoom>=6]{
+    polygon-fill:#AAFFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='NH'] [zoom>=6]{
+    polygon-fill:#CCCCCC;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='TV'] [zoom>=6]{
+    polygon-fill:#AAFFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='BCS'] [zoom>=6]{
+    polygon-fill:#FFFFFE;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='LNK'] [zoom>=6]{
+    polygon-fill:#FFD7AA;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='NTD'] [zoom>=6]{
+    polygon-fill:#D2D2D2;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='BHK'] [zoom>=6]{
+    polygon-fill:#FFF0B4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DTT'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='SKC'] [zoom>=6]{
+    polygon-fill:#FAAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='TSN'] [zoom>=6]{
+    polygon-fill:#AAFFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DCH'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='TIN'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DNL'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DRA'] [zoom>=6]{
+    polygon-fill:#CDAACD;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DXH'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='COC'] [zoom>=6]{
+    polygon-fill:#E6E682;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DKH'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='MNC'] [zoom>=6]{
+    polygon-fill:#B4FFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DDT'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='LNQ'] [zoom>=6]{ 
+    polygon-fill:#FFD7AA;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='LUC'] [zoom>=6]{
+    polygon-fill:#FFFF64;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='LUK'] [zoom>=6]{
+    polygon-fill:#FFFF64;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='NKH'] [zoom>=6]{
+    polygon-fill:#FFFFB4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='SON'] [zoom>=6]{
+    polygon-fill:#A0FFFF;
+    polygon-opacity:0.5;
+}
+[landuse='ODT+BHK'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='SXN'] [zoom>=6]{
+    polygon-fill:#FFFC6E;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='CHN'] [zoom>=6]{
+    polygon-fill:#FFFC78;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='LUA'] [zoom>=6]{
+    polygon-fill:#FFFC82;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='LUN'] [zoom>=6]{
+    polygon-fill:#FFFCB4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='HNK'] [zoom>=6]{
+    polygon-fill:#FFF0B4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='NHK'] [zoom>=6]{
+    polygon-fill:#FFF0B4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='CLN'] [zoom>=6]{
+    polygon-fill:#FFD2A0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='LNC'] [zoom>=6]{
+    polygon-fill:#FFD7AA;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='LNP'] [zoom>=6]{
+    polygon-fill:#AAFF32;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RSX'] [zoom>=6]{
+    polygon-fill:#B4FFB4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RSN'] [zoom>=6]{
+    polygon-fill:#B4FFB4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RST'] [zoom>=6]{
+    polygon-fill:#B4FFB4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RSK'] [zoom>=6]{
+    polygon-fill:#B4FFB4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RSM'] [zoom>=6]{
+    polygon-fill:#B4FFB4;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RPH'] [zoom>=6]{
+    polygon-fill:#BEFF1E;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RPN'] [zoom>=6]{
+    polygon-fill:#BEFF1E;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RPT'] [zoom>=6]{
+    polygon-fill:#BEFF1E;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RPK'] [zoom>=6]{
+    polygon-fill:#BEFF1E;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RPM'] [zoom>=6]{
+    polygon-fill:#BEFF1E;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RDD'] [zoom>=6]{
+    polygon-fill:#6EFF64;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RDN'] [zoom>=6]{
+    polygon-fill:#6EFF64;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RDT'] [zoom>=6]{
+    polygon-fill:#6EFF64;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RDK'] [zoom>=6]{
+    polygon-fill:#6EFF64;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='RDM'] [zoom>=6]{
+    polygon-fill:#6EFF64;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='NTS'] [zoom>=6]{
+    polygon-fill:#AAFFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='TSL'] [zoom>=6]{
+    polygon-fill:#AAFFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='LMU'] [zoom>=6]{
+    polygon-fill:#FFFFFE;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='PNN'] [zoom>=6]{
+    polygon-fill:#FFFF64;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='OTC'] [zoom>=6]{
+    polygon-fill:#FFB4FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='CTS'] [zoom>=6]{
+    polygon-fill:#FFA0AA;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='SKK'] [zoom>=6]{
+    polygon-fill:#FAAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='SKS'] [zoom>=6]{
+    polygon-fill:#CDAACD;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='SKX'] [zoom>=6]{
+    polygon-fill:#CDAACD;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='CCC'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='TTN'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT+BHK'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='SMM'] [zoom>=6]{
+    polygon-fill:#B4FFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='PNK'] [zoom>=6]{
+    polygon-fill:#FFAAA0;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='CSD'] [zoom>=6]{
+    polygon-fill:#FFFFFE;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='DCS'] [zoom>=6]{
+    polygon-fill:#FFFFFE;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='NCS'] [zoom>=6]{
+    polygon-fill:#E6E6C8;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='MVB'] [zoom>=6]{
+    polygon-fill:#B4FFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='MVT'] [zoom>=6]{
+    polygon-fill:#B4FFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='MVR'] [zoom>=6]{
+    polygon-fill:#B4FFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='MVK'] [zoom>=6]{
+    polygon-fill:#B4FFFF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT+LNK'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT+LNQ'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT+LNC'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT+LUC'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT+LUK'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT+CLN'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ODT+LNK'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ODT+LNQ'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ODT+LNC'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ODT+CLN'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ODT+LUC'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ODT+LUK'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT+NHK'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ODT+NHK'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ONT+HNK'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='ODT+HNK'] [zoom>=6]{
+    polygon-fill:#FFA0FF; 
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}  
+[landuse='ONT+COC'] [zoom>=6]{
+    polygon-fill:#FFD0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+} 
+[landuse='ODT+COC'] [zoom>=6]{
+    polygon-fill:#FFA0FF;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='NH1'] [zoom>=6]{
+    polygon-fill:#B2B2B2;
+    polygon-opacity:0.5; 
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='NH3'] [zoom>=6]{
+    polygon-fill:#000;
+    polygon-opacity:0.5;
+    line-color:rgb(128,128,128);
+    line-width: 0.5;
+}
+[landuse='GT1'] [zoom>=6]{ 
+    polygon-fill:#E1E1E1;
+    polygon-opacity:0.5; 
+    line-color:rgb(128,128,128);
+    line-width: 0.5;  
+}
   }

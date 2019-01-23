@@ -602,7 +602,7 @@
     }
    
   }
-  [highway='tertiary'][tunnel!='yes']{
+  [highway='tertiary'][tunnel!='yes'],[highway='tertiary_link'][tunnel!='yes']{
     [zoom=13]{      
       line-color: @roadCase;
       line-width: 6;
@@ -1066,6 +1066,13 @@
         line-join: round;  
         line-cap: round; 
       }
+       /*3d style*/
+      [zoom>=17]{
+        line-color: @road;
+        line-width: 14;
+        line-join: round;  
+        line-cap: round; 
+      }
     }
   }
   [highway='construction'][zoom=16]{
@@ -1247,7 +1254,7 @@
       line-cap: round; 
     }
   }
-  [highway='tertiary'][tunnel!='yes']{
+  [highway='tertiary'][tunnel!='yes'],  [highway='tertiary_link'][tunnel!='yes']{
     [zoom=13]{
       line-color: @road;
       line-width: 4.5;
