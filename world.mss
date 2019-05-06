@@ -49,6 +49,12 @@
     line-width: 0.5;
   }
 }
+#border-city-vn {
+  [zoom>=7][zoom <= @max-zoom]{
+    line-color: @border-city;
+    line-width: 0.5;
+  }
+}
 #interpolation_lines {
     [zoom>=16][zoom <= @max-zoom] {
         line-width: 1;

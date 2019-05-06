@@ -39,13 +39,15 @@
         "file": "world_boundaries/shoreline_300.shp",
         "id": "world",
         "project": "tilemillstyle2d",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "type": "shape"
       },
       "layer": null,
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "world"
+      "name": "world",
+      "layerId": "world"
     },
     {
       "geometry": "polygon",
@@ -67,7 +69,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "coast-poly"
+      "name": "coast-poly",
+      "layerId": "coast-poly"
     },
     {
       "geometry": "polygon",
@@ -89,7 +92,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "ocean"
+      "name": "ocean",
+      "layerId": "ocean"
     },
     {
       "geometry": "linestring",
@@ -105,13 +109,15 @@
         "file": "world_boundaries/ne_110m_admin_0_boundary_lines_land.shp",
         "id": "necountries",
         "project": "tilemillstyle2d",
-        "srs": "+init=epsg:4326"
+        "srs": "+init=epsg:4326",
+        "type": "shape"
       },
       "layer": null,
       "srs-name": "custom",
       "srs": "+init=epsg:4326",
       "advanced": {},
-      "name": "necountries"
+      "name": "necountries",
+      "layerId": "necountries"
     },
     {
       "geometry": "point",
@@ -127,13 +133,15 @@
         "file": "world_boundaries/ne_10m_populated_places.shp",
         "id": "nepopulated",
         "project": "tilemillstyle2d",
-        "srs": ""
+        "srs": "",
+        "type": "shape"
       },
       "layer": null,
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "nepopulated"
+      "name": "nepopulated",
+      "layerId": "nepopulated"
     },
     {
       "geometry": "polygon",
@@ -164,7 +172,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover"
+      "name": "landcover",
+      "layerId": "landcover"
     },
     {
       "geometry": "polygon",
@@ -195,7 +204,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-leisure"
+      "name": "landcover-leisure",
+      "layerId": "landcover-leisure"
     },
     {
       "geometry": "polygon",
@@ -223,7 +233,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-tourism"
+      "name": "landcover-tourism",
+      "layerId": "landcover-tourism"
     },
     {
       "geometry": "polygon",
@@ -254,7 +265,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-landuse"
+      "name": "landcover-landuse",
+      "layerId": "landcover-landuse"
     },
     {
       "geometry": "polygon",
@@ -282,7 +294,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover-natural"
+      "name": "landcover-natural",
+      "layerId": "landcover-natural"
     },
     {
       "geometry": "polygon",
@@ -311,7 +324,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "landcover-amenity",
-      "status": "off"
+      "status": "off",
+      "layerId": "landcover-amenity"
     },
     {
       "geometry": "linestring",
@@ -342,7 +356,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "landcover_line"
+      "name": "landcover_line",
+      "layerId": "landcover_line"
     },
     {
       "geometry": "unknown",
@@ -371,7 +386,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "sports_grounds",
-      "status": "off"
+      "status": "off",
+      "layerId": "sports_grounds"
     },
     {
       "geometry": "linestring",
@@ -402,7 +418,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water-lines-casing"
+      "name": "water-lines-casing",
+      "layerId": "water-lines-casing"
     },
     {
       "geometry": "polygon",
@@ -433,7 +450,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water_areas"
+      "name": "water_areas",
+      "layerId": "water_areas"
     },
     {
       "geometry": "polygon",
@@ -464,7 +482,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water-areas-overlay"
+      "name": "water-areas-overlay",
+      "layerId": "water-areas-overlay"
     },
     {
       "geometry": "unknown",
@@ -495,7 +514,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "glaciers-text"
+      "name": "glaciers-text",
+      "layerId": "glaciers-text"
     },
     {
       "geometry": "linestring",
@@ -526,7 +546,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water-lines-low-zoom"
+      "name": "water-lines-low-zoom",
+      "layerId": "water-lines-low-zoom"
     },
     {
       "geometry": "linestring",
@@ -557,7 +578,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "water_lines"
+      "name": "water_lines",
+      "layerId": "water_lines"
     },
     {
       "geometry": "linestring",
@@ -588,7 +610,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "dam"
+      "name": "dam",
+      "layerId": "dam"
     },
     {
       "geometry": "polygon",
@@ -619,7 +642,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "marinas-area"
+      "name": "marinas-area",
+      "layerId": "marinas-area"
     },
     {
       "geometry": "unknown",
@@ -650,7 +674,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "piers-area"
+      "name": "piers-area",
+      "layerId": "piers-area"
     },
     {
       "geometry": "linestring",
@@ -681,7 +706,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "piers"
+      "name": "piers",
+      "layerId": "piers"
     },
     {
       "geometry": "point",
@@ -712,7 +738,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "locks"
+      "name": "locks",
+      "layerId": "locks"
     },
     {
       "geometry": "linestring",
@@ -743,7 +770,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "tunnels"
+      "name": "tunnels",
+      "layerId": "tunnels"
     },
     {
       "geometry": "linestring",
@@ -774,7 +802,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "citywalls"
+      "name": "citywalls",
+      "layerId": "citywalls"
     },
     {
       "geometry": "linestring",
@@ -805,7 +834,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "castle_walls_line"
+      "name": "castle_walls_line",
+      "layerId": "castle_walls_line"
     },
     {
       "geometry": "unknown",
@@ -836,7 +866,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "castle_walls"
+      "name": "castle_walls",
+      "layerId": "castle_walls"
     },
     {
       "geometry": "unknown",
@@ -865,7 +896,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "landuse_overlay",
-      "status": "off"
+      "status": "off",
+      "layerId": "landuse_overlay"
     },
     {
       "geometry": "point",
@@ -897,7 +929,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "turning_circle-casing",
-      "status": "off"
+      "status": "off",
+      "layerId": "turning_circle-casing"
     },
     {
       "geometry": "linestring",
@@ -928,7 +961,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "footbikecycle-tunnels"
+      "name": "footbikecycle-tunnels",
+      "layerId": "footbikecycle-tunnels"
     },
     {
       "geometry": "linestring",
@@ -956,7 +990,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "tracks-tunnels"
+      "name": "tracks-tunnels",
+      "layerId": "tracks-tunnels"
     },
     {
       "geometry": "linestring",
@@ -987,7 +1022,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "line-features"
+      "name": "line-features",
+      "layerId": "line-features"
     },
     {
       "geometry": "polygon",
@@ -1018,7 +1054,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "polygon-barriers"
+      "name": "polygon-barriers",
+      "layerId": "polygon-barriers"
     },
     {
       "geometry": "unknown",
@@ -1046,7 +1083,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-area-casing"
+      "name": "highway-area-casing",
+      "layerId": "highway-area-casing"
     },
     {
       "geometry": "linestring",
@@ -1077,7 +1115,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-casing"
+      "name": "minor-roads-casing",
+      "layerId": "minor-roads-casing"
     },
     {
       "geometry": "unknown",
@@ -1105,7 +1144,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-area-fill"
+      "name": "highway-area-fill",
+      "layerId": "highway-area-fill"
     },
     {
       "geometry": "unknown",
@@ -1137,7 +1177,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "buildings-lz",
-      "status": "off"
+      "status": "off",
+      "layerId": "buildings-lz"
     },
     {
       "geometry": "polygon",
@@ -1169,7 +1210,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "buildings",
-      "status": "off"
+      "status": "off",
+      "layerId": "buildings"
     },
     {
       "geometry": "linestring",
@@ -1200,7 +1242,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "tracks-notunnel-nobridge"
+      "name": "tracks-notunnel-nobridge",
+      "layerId": "tracks-notunnel-nobridge"
     },
     {
       "geometry": "linestring",
@@ -1231,7 +1274,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill"
+      "name": "minor-roads-fill",
+      "layerId": "minor-roads-fill"
     },
     {
       "geometry": "linestring",
@@ -1262,7 +1306,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "minor-roads-fill-railway"
+      "name": "minor-roads-fill-railway",
+      "layerId": "minor-roads-fill-railway"
     },
     {
       "geometry": "point",
@@ -1294,7 +1339,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "turning_circle-fill",
-      "status": "off"
+      "status": "off",
+      "layerId": "turning_circle-fill"
     },
     {
       "geometry": "linestring",
@@ -1325,7 +1371,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "ferry-routes"
+      "name": "ferry-routes",
+      "layerId": "ferry-routes"
     },
     {
       "geometry": "linestring",
@@ -1356,7 +1403,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "aerialways"
+      "name": "aerialways",
+      "layerId": "aerialways"
     },
     {
       "geometry": "linestring",
@@ -1387,7 +1435,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-highway"
+      "name": "roads-highway",
+      "layerId": "roads-highway"
     },
     {
       "geometry": "linestring",
@@ -1415,7 +1464,8 @@
       "srs-name": "custom",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-railway"
+      "name": "roads-railway",
+      "layerId": "roads-railway"
     },
     {
       "geometry": "linestring",
@@ -1446,7 +1496,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "waterway-bridges"
+      "name": "waterway-bridges",
+      "layerId": "waterway-bridges"
     },
     {
       "geometry": "linestring",
@@ -1478,7 +1529,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "access-pre_bridges",
-      "status": "off"
+      "status": "off",
+      "layerId": "access-pre_bridges"
     },
     {
       "geometry": "linestring",
@@ -1506,7 +1558,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "direction_pre_bridges"
+      "name": "direction_pre_bridges",
+      "layerId": "direction_pre_bridges"
     },
     {
       "geometry": "linestring",
@@ -1537,7 +1590,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer0"
+      "name": "bridges_layer0",
+      "layerId": "bridges_layer0"
     },
     {
       "geometry": "linestring",
@@ -1565,7 +1619,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access0"
+      "name": "bridges_access0",
+      "layerId": "bridges_access0"
     },
     {
       "geometry": "linestring",
@@ -1593,7 +1648,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions0"
+      "name": "bridges_directions0",
+      "layerId": "bridges_directions0"
     },
     {
       "geometry": "linestring",
@@ -1621,7 +1677,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer1"
+      "name": "bridges_layer1",
+      "layerId": "bridges_layer1"
     },
     {
       "geometry": "linestring",
@@ -1652,7 +1709,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access1"
+      "name": "bridges_access1",
+      "layerId": "bridges_access1"
     },
     {
       "geometry": "linestring",
@@ -1680,7 +1738,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions1"
+      "name": "bridges_directions1",
+      "layerId": "bridges_directions1"
     },
     {
       "geometry": "linestring",
@@ -1708,7 +1767,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer2"
+      "name": "bridges_layer2",
+      "layerId": "bridges_layer2"
     },
     {
       "geometry": "linestring",
@@ -1736,7 +1796,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access2"
+      "name": "bridges_access2",
+      "layerId": "bridges_access2"
     },
     {
       "geometry": "linestring",
@@ -1764,7 +1825,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions2"
+      "name": "bridges_directions2",
+      "layerId": "bridges_directions2"
     },
     {
       "geometry": "linestring",
@@ -1792,7 +1854,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer3"
+      "name": "bridges_layer3",
+      "layerId": "bridges_layer3"
     },
     {
       "geometry": "linestring",
@@ -1820,7 +1883,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access3"
+      "name": "bridges_access3",
+      "layerId": "bridges_access3"
     },
     {
       "geometry": "linestring",
@@ -1848,7 +1912,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions3"
+      "name": "bridges_directions3",
+      "layerId": "bridges_directions3"
     },
     {
       "geometry": "linestring",
@@ -1876,7 +1941,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer4"
+      "name": "bridges_layer4",
+      "layerId": "bridges_layer4"
     },
     {
       "geometry": "linestring",
@@ -1904,7 +1970,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access4"
+      "name": "bridges_access4",
+      "layerId": "bridges_access4"
     },
     {
       "geometry": "linestring",
@@ -1932,7 +1999,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions4"
+      "name": "bridges_directions4",
+      "layerId": "bridges_directions4"
     },
     {
       "geometry": "linestring",
@@ -1960,7 +2028,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_layer5"
+      "name": "bridges_layer5",
+      "layerId": "bridges_layer5"
     },
     {
       "geometry": "linestring",
@@ -1991,7 +2060,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_access5"
+      "name": "bridges_access5",
+      "layerId": "bridges_access5"
     },
     {
       "geometry": "linestring",
@@ -2019,7 +2089,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "bridges_directions5"
+      "name": "bridges_directions5",
+      "layerId": "bridges_directions5"
     },
     {
       "geometry": "linestring",
@@ -2050,7 +2121,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "trams"
+      "name": "trams",
+      "layerId": "trams"
     },
     {
       "geometry": "linestring",
@@ -2081,7 +2153,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "guideways"
+      "name": "guideways",
+      "layerId": "guideways"
     },
     {
       "geometry": "linestring",
@@ -2112,7 +2185,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "admin-01234"
+      "name": "admin-01234",
+      "layerId": "admin-01234"
     },
     {
       "geometry": "linestring",
@@ -2143,7 +2217,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "admin-5678"
+      "name": "admin-5678",
+      "layerId": "admin-5678"
     },
     {
       "geometry": "linestring",
@@ -2175,7 +2250,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "admin-other",
-      "status": "off"
+      "status": "off",
+      "layerId": "admin-other"
     },
     {
       "geometry": "point",
@@ -2206,7 +2282,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "placenames-large"
+      "name": "placenames-large",
+      "layerId": "placenames-large"
     },
     {
       "geometry": "point",
@@ -2237,7 +2314,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "placenames-capital"
+      "name": "placenames-capital",
+      "layerId": "placenames-capital"
     },
     {
       "geometry": "point",
@@ -2268,7 +2346,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "placenames-medium"
+      "name": "placenames-medium",
+      "layerId": "placenames-medium"
     },
     {
       "geometry": "point",
@@ -2296,7 +2375,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "placenames-small"
+      "name": "placenames-small",
+      "layerId": "placenames-small"
     },
     {
       "geometry": "point",
@@ -2328,7 +2408,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-stations",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-stations"
     },
     {
       "geometry": "unknown",
@@ -2357,7 +2438,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-stations-poly",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-stations-poly"
     },
     {
       "geometry": "point",
@@ -2386,7 +2468,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-symbols",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-symbols"
     },
     {
       "geometry": "point",
@@ -2415,7 +2498,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-symbols-man-made",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-symbols-man-made"
     },
     {
       "geometry": "point",
@@ -2444,7 +2528,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-symbols-natural",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-symbols-natural"
     },
     {
       "geometry": "unknown",
@@ -2476,7 +2561,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-symbols-poly",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-symbols-poly"
     },
     {
       "geometry": "unknown",
@@ -2505,7 +2591,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-symbols-poly-man-made",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-symbols-poly-man-made"
     },
     {
       "geometry": "unknown",
@@ -2537,7 +2624,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-symbols-poly-natural",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-symbols-poly-natural"
     },
     {
       "geometry": "point",
@@ -2566,7 +2654,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-points-other",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-points-other"
     },
     {
       "geometry": "point",
@@ -2595,7 +2684,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-points-shop",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-points-shop"
     },
     {
       "geometry": "point",
@@ -2624,7 +2714,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-points-tourism",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-points-tourism"
     },
     {
       "geometry": "point",
@@ -2656,7 +2747,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-points",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-points"
     },
     {
       "geometry": "polygon",
@@ -2688,7 +2780,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-points-poly-other",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-points-poly-other"
     },
     {
       "geometry": "polygon",
@@ -2717,7 +2810,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-points-poly-shop",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-points-poly-shop"
     },
     {
       "geometry": "polygon",
@@ -2746,7 +2840,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-points-poly-tourism",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-points-poly-tourism"
     },
     {
       "geometry": "polygon",
@@ -2778,7 +2873,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "amenity-points-poly",
-      "status": "off"
+      "status": "off",
+      "layerId": "amenity-points-poly"
     },
     {
       "geometry": "linestring",
@@ -2810,7 +2906,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "power_line",
-      "status": "off"
+      "status": "off",
+      "layerId": "power_line"
     },
     {
       "geometry": "linestring",
@@ -2842,7 +2939,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "power_minorline",
-      "status": "off"
+      "status": "off",
+      "layerId": "power_minorline"
     },
     {
       "geometry": "point",
@@ -2874,7 +2972,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "power_towers",
-      "status": "off"
+      "status": "off",
+      "layerId": "power_towers"
     },
     {
       "geometry": "point",
@@ -2906,7 +3005,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "power_poles",
-      "status": "off"
+      "status": "off",
+      "layerId": "power_poles"
     },
     {
       "geometry": "linestring",
@@ -2937,7 +3037,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-ref-low-zoom"
+      "name": "roads-text-ref-low-zoom",
+      "layerId": "roads-text-ref-low-zoom"
     },
     {
       "geometry": "point",
@@ -2968,7 +3069,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "highway-junctions"
+      "name": "highway-junctions",
+      "layerId": "highway-junctions"
     },
     {
       "geometry": "linestring",
@@ -2999,7 +3101,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-ref"
+      "name": "roads-text-ref",
+      "layerId": "roads-text-ref"
     },
     {
       "geometry": "linestring",
@@ -3030,7 +3133,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "roads-text-name"
+      "name": "roads-text-name",
+      "layerId": "roads-text-name"
     },
     {
       "geometry": "point",
@@ -3062,7 +3166,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text-other",
-      "status": "off"
+      "status": "off",
+      "layerId": "text-other"
     },
     {
       "geometry": "point",
@@ -3094,7 +3199,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text-tourism",
-      "status": "off"
+      "status": "off",
+      "layerId": "text-tourism"
     },
     {
       "geometry": "point",
@@ -3126,7 +3232,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text-natural",
-      "status": "off"
+      "status": "off",
+      "layerId": "text-natural"
     },
     {
       "geometry": "point",
@@ -3155,7 +3262,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text-shop",
-      "status": "off"
+      "status": "off",
+      "layerId": "text-shop"
     },
     {
       "geometry": "point",
@@ -3187,7 +3295,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text",
-      "status": "off"
+      "status": "off",
+      "layerId": "text"
     },
     {
       "geometry": "polygon",
@@ -3219,7 +3328,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text-poly-other",
-      "status": "off"
+      "status": "off",
+      "layerId": "text-poly-other"
     },
     {
       "geometry": "polygon",
@@ -3251,7 +3361,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text-poly-tourism",
-      "status": "off"
+      "status": "off",
+      "layerId": "text-poly-tourism"
     },
     {
       "geometry": "polygon",
@@ -3283,7 +3394,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text-poly-natural",
-      "status": "off"
+      "status": "off",
+      "layerId": "text-poly-natural"
     },
     {
       "geometry": "polygon",
@@ -3312,7 +3424,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text-poly-shop",
-      "status": "off"
+      "status": "off",
+      "layerId": "text-poly-shop"
     },
     {
       "geometry": "polygon",
@@ -3344,7 +3457,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "text-poly",
-      "status": "off"
+      "status": "off",
+      "layerId": "text-poly"
     },
     {
       "geometry": "polygon",
@@ -3376,7 +3490,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "area-text",
-      "status": "off"
+      "status": "off",
+      "layerId": "area-text"
     },
     {
       "geometry": "linestring",
@@ -3407,7 +3522,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "interpolation_lines"
+      "name": "interpolation_lines",
+      "layerId": "interpolation_lines"
     },
     {
       "geometry": "point",
@@ -3439,7 +3555,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "housenumbers",
-      "status": "off"
+      "status": "off",
+      "layerId": "housenumbers"
     },
     {
       "geometry": "point",
@@ -3471,7 +3588,8 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "housenames",
-      "status": "off"
+      "status": "off",
+      "layerId": "housenames"
     },
     {
       "geometry": "polygon",
@@ -3502,7 +3620,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "misc_boundaries"
+      "name": "misc_boundaries",
+      "layerId": "misc_boundaries"
     },
     {
       "geometry": "polygon",
@@ -3533,7 +3652,8 @@
       "srs-name": "custom",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over",
       "advanced": {},
-      "name": "theme_park"
+      "name": "theme_park",
+      "layerId": "theme_park"
     },
     {
       "geometry": "linestring",
@@ -3552,20 +3672,21 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "border-countries"
+      "name": "border-countries",
+      "layerId": "border-countries"
     },
     {
       "geometry": "linestring",
       "extent": [
-        -139.0471919422785,
-        -49.250740248410615,
-        178.44862226797608,
-        81.13822602001464
+        -178.13708564098948,
+        -49.25087001983553,
+        178.44862226790326,
+        81.12853131646705
       ],
       "id": "border-city",
       "class": "",
       "Datasource": {
-        "file": "world_boundaries/10m-admin-1-states-provinces-lines.zip",
+        "file": "world_boundaries/ne_10m_admin_1_states_provinces_lines.zip",
         "id": "border-city",
         "project": "tilemillstyle2d",
         "srs": ""
@@ -3574,7 +3695,28 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "border-city"
+      "name": "border-city",
+      "layerId": "border-city"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        102.321583,
+        9.0127553,
+        109.3904819,
+        23.1285207
+      ],
+      "id": "border-city-vn",
+      "class": "",
+      "Datasource": {
+        "file": "world_boundaries/ne_10m_admin_1_states_provinces_lines_vn.zip"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "border-city-vn",
+      "layerId": "border-city-vn"
     },
     {
       "geometry": "point",
@@ -3596,7 +3738,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "country-name"
+      "name": "country-name",
+      "layerId": "country-name"
     },
     {
       "geometry": "point",
@@ -3627,7 +3770,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "text-island"
+      "name": "text-island",
+      "layerId": "text-island"
     },
     {
       "geometry": "polygon",
@@ -3658,7 +3802,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "biendao"
+      "name": "biendao",
+      "layerId": "biendao"
     },
     {
       "geometry": "polygon",
@@ -3689,7 +3834,8 @@
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "datnendiachinh"
+      "name": "datnendiachinh",
+      "layerId": "datnendiachinh"
     },
     {
       "geometry": "polygon",
@@ -3711,11 +3857,13 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "hsa-tsa"
+      "name": "hsa-tsa",
+      "layerId": "hsa-tsa"
     }
   ],
   "scale": 1,
   "metatile": 2,
   "name": "2D Style",
-  "description": "https://github.com/sua8051/tilemillstyle2d.git"
+  "description": "https://github.com/sua8051/tilemillstyle2d.git",
+  "lastBrowsedFolder": "/home/ad/Documents/MapBox/project/tilemillstyle2d/world_boundaries"
 }
